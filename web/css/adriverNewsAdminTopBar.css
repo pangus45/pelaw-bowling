@@ -1,0 +1,25 @@
+#adminBar {
+  margin-bottom: 60px;
+  position: relative;
+}
+#adminBar #adminBarLeft {
+  margin-left: 20px;
+}
+#adminBar #adminBarLeft a {
+  color: #1E284F;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+#adminBar #adminBarLeft a:hover {
+  color: #1c6db6;
+}
+#adminBar #adminBarRight {
+  position: absolute;
+  right: 0;
+}
+#adminBar #adminBarRight button {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=adriverNewsAdminTopBar.css.map */

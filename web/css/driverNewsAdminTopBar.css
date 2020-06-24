@@ -1,0 +1,43 @@
+#mainDesktopRowWrapper0 {
+  margin-top: 0 !important;
+}
+
+#adminBar {
+  z-index: 999;
+  margin-top: 50px;
+  border-bottom: solid lightgrey 1px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  position: relative;
+}
+#adminBar #indexLink {
+  margin-left: 20px;
+}
+#adminBar a {
+  color: #fcd600;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#adminBar a:hover {
+  color: #1c6db6;
+}
+#adminBar a.active {
+  text-decoration: underline !important;
+}
+#adminBar #adminBarLeft {
+  margin-left: 15px;
+}
+#adminBar #adminBarRight {
+  position: absolute;
+  right: 15px;
+  top: 4px;
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 600px) {
+  #adminBar {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=driverNewsAdminTopBar.css.map */

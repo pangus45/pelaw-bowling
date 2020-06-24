@@ -1,0 +1,13 @@
+#pageContent {
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+}
+
+@media (max-width: 600px) {
+  #pageContent {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+/*# sourceMappingURL=driverNewsIndex.css.map */

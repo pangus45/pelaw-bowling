@@ -1,0 +1,390 @@
+@import "constants";
+@import '../bundles/common/scss/_mixins';
+
+$lightLineColour: rgba(255, 255, 255, .5);
+
+.block-bookingWidgetAll {
+
+  opacity: 0;
+  //text-align: center;
+  padding: 10px;
+
+  #bookingWidgetInner {
+
+    background-color: rgba(255, 214, 0, 0.85);
+    max-width: 450px;
+    width: 40vw;
+    border: white solid 4px;
+    border-radius: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 30px;
+
+    #bookingWidgetLocationLinks {
+
+      width: 100%;
+
+      @include flexbox();
+      //@include justify-content(space-around);
+      @include align-items(stretch);
+
+      margin-bottom: 10px;
+
+      .widgetLocationLink {
+
+        background-color: rgba(255, 255, 255, 0.85);
+        color: $veryDarkGrey;
+
+        padding: 10px;
+        //color: $mineShaft;
+
+        font-weight: 600;
+        text-align: center;
+
+        font-size: 16px;
+
+        @include flex(1);
+        @include flexbox();
+
+        @include justify-content(center);
+        @include align-items(center);
+
+        &:hover{
+          //background-color: $happicabsYellow;
+
+          background-color: white;
+        }
+
+        $tabBorderColour: darken(white, 10%);
+
+        &:nth-child(1) {
+          border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+
+          border-right: solid $tabBorderColour 1px;
+        }
+
+        &:nth-child(2) {
+          border-right-width: 0;
+          border-left-width: 0;
+        }
+
+        &:nth-child(3) {
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          border-left: solid $tabBorderColour 1px;
+        }
+
+        &.active {
+
+          &:nth-child(1) {
+            //border-right: none;
+          }
+
+          &:nth-child(3) {
+            //border-left: none;
+          }
+
+          opacity: 1;
+
+          background-color: $veryDarkGrey;
+          color: $darkGreen;
+
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  .cordicWrap {
+
+    //margin: 50px 0px;
+
+    $bookingFontSize: 20px;
+
+    *:not(.fa) {
+      font-family: "Source Sans Pro", sans-serif !important;
+      font-size: $bookingFontSize !important;
+    }
+
+    .cordicStyles, .form-control {
+      background-color: transparent !important;
+    }
+
+
+    .fontSizeStandard {
+      font-weight: 300 !important;
+    }
+
+    .elePageContentDiv {
+      padding-bottom: 0 !important;
+    }
+
+    // ---Addresses---
+    @mixin addressFont() {
+      color: white;
+      font-weight: 500 !important;
+      //font-size: $bookingFontSize;
+    }
+
+    .form-addressSearch {
+
+      input {
+
+        @include addressFont();
+        margin-bottom: 40px;
+
+        border-top: solid transparent 1px;
+        border-left: solid transparent 1px;
+        border-right: solid transparent 1px;
+        border-bottom: solid $lightLineColour 1px;
+      }
+
+      input::placeholder {
+        @include addressFont();
+      }
+    }
+
+    .addressSearchDiv {
+
+      cursor: text;
+
+      // Remove address field title
+      & > span {
+        display: none;
+      }
+
+      // Dropwdown address list
+      .asCompactShortcutResultsTable {
+        .asAddressResultLabel {
+          color: $veryDarkGrey;
+        }
+      }
+
+      // Fake input after selecting address
+      .asShortcutTable {
+
+        cursor: text;
+
+        .asEditBtn, .asClearBtn {
+          //position: relative;
+          //right: -5px;
+          //font-size: 26px !important;
+          //cursor: pointer;
+
+          display: none;
+        }
+
+        input {
+          //padding-left: 8px;
+          //padding-right: 0;
+          text-overflow: ellipsis;
+          border-bottom: solid $lightLineColour 1px;
+
+          color: white !important;
+          -webkit-text-fill-color: white !important;
+
+          //&:disabled{
+          //  color: white !important;
+          //}
+
+          @include addressFont();
+        }
+      }
+    }
+
+    // ---Date---
+
+    // Date Title
+    .pageContentWrap-isNamePickupTimeCmpntCompact {
+      //margin-top: 30px;
+      //margin-bottom: 30px;
+    }
+
+    // Remove now and later buttons
+    .compactModeToggleDiv {
+      display: none;
+    }
+
+    #dpTableDiv {
+
+      margin-top: 30px;
+      margin-bottom: 25px;
+
+      // Date input
+      .ui-calendar {
+        input {
+          font-weight: 300;
+          color: #555;
+          padding-left: 8px !important;
+        }
+      }
+
+      & > table > tbody {
+
+        @include flexbox();
+      }
+
+      // Date and time rows
+      & > table > tbody > tr {
+        //display: inline-block;
+
+        //@include flexbox();
+
+        //@include flex(1);
+      }
+
+      // Date Cell
+      & > table > tbody > tr:nth-child(1) {
+
+        @include flex(1 1 100%);
+
+        //max-width: 210px;
+        margin-right: 10px;
+        //width: 160px;
+
+        // Calendar left margin
+        & > td:nth-child(1) {
+
+          display: none;
+        }
+
+        // Date Input Cell
+        & > td:nth-child(2) {
+
+          display: block;
+
+          .dpCalendarDiv {
+
+            //width: auto;
+
+            p-calendar > span {
+
+              //width: auto !important;
+
+              .ui-datepicker-compact {
+                min-width: 250px;
+                top: 38px;
+              }
+
+              & > input {
+
+                height: 35px;
+              }
+            }
+          }
+        }
+      }
+
+      // Time cells
+      & > table > tbody > tr:nth-child(2) {
+
+        @include flex(0 0 122px);
+
+        table {
+
+          //width: 110px;
+
+          select {
+            padding-bottom: 3px !important;
+            padding-top: 4px !important;
+            //position: relative;
+            //top: -2px;
+          }
+        }
+      }
+    }
+
+    app-nat-date-picker-cmpnt {
+
+      & > div > div:nth-child(1) {
+        display: none;
+      }
+    }
+
+    // Price
+    app-nat-quotation-cmpnt {
+
+      // inner wrapper
+      & > div {
+
+        padding: 0;
+        padding-left: 2px;
+        margin-bottom: 20px;
+
+        // Price Table Row
+        tr {
+
+          font-weight: 300;
+
+          td {
+            color: $veryDarkGrey;
+          }
+        }
+
+        //PriceLabel
+        td:nth-child(1) {
+          //color: white;
+
+          //font-weight: 300;
+        }
+
+        //Colon
+        td:nth-child(2) {
+          //color: white;
+          //font-weight: 300;
+
+        }
+
+        //Quote
+        td:nth-child(3) {
+          //color: white;
+          //font-weight: 200;
+        }
+      }
+    }
+
+
+    // Payment Types
+    .paymentTypesDiv {
+
+      margin-bottom: 30px;
+
+      // Remove 'choose your payment method'
+      & > div {
+        display: none;
+      }
+
+      // Center pay by card and pay by cash
+      td {
+        //text-align: center;
+      }
+
+    }
+
+    // Cancel Cordic border
+    .form-control {
+      border: none;
+      @include box-shadow-none();
+    }
+
+    // Submit Button
+    button.form-submit {
+      font-size: 20px !important;
+      background-color: $veryDarkGrey;
+      color: $darkGreen;
+      border: none;
+      font-weight: 500;
+
+      @include transition(.3s all);
+
+      &:hover{
+        background-color: black;
+        //border-radius:20px;
+      }
+    }
+  }
+}

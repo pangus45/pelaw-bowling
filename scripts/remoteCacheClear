@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+set PROMPT "$ "
+
+spawn /usr/bin/ssh -p 25522 positive@212.83.166.128
+expect $PROMPT
+send -- "hc\r"
+expect $PROMPT
+send -- "exit\r"

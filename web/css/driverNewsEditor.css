@@ -1,0 +1,40 @@
+#pageContent {
+  margin-top: 100px;
+}
+
+table {
+  width: 100%;
+}
+table .dateWidth {
+  width: 75px;
+}
+table .editWidth {
+  width: 45px;
+}
+table .deleteWidth {
+  width: 57px;
+}
+table .publishedWidth {
+  width: 60px;
+}
+table .priorityWidth {
+  width: 55px;
+}
+table .publishedColumn, table .priorityColumn {
+  text-align: center;
+}
+table th {
+  padding: 5px;
+}
+table td {
+  padding: 5px;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+#topRow {
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=driverNewsEditor.css.map */

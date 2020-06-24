@@ -1,0 +1,55 @@
+.block-textAppLink .textAppLabel {
+  margin-right: 8px;
+  font-size: 20px;
+  font-weight: 300;
+  vertical-align: bottom;
+}
+.block-textAppLink .textAppLinkInput {
+  height: 35px;
+  margin-right: 0;
+  font-size: 18px;
+  color: #4d4d4d;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border: solid lightgrey 1px;
+  border-right: none;
+  padding: 1px 5px;
+}
+.block-textAppLink .textAppLinkInput:focus {
+  outline: none;
+}
+.block-textAppLink .textAppLinkInput::placeholder {
+  color: #969696;
+}
+.block-textAppLink .textAppLinkSendButton {
+  border: none !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  background-color: #ffd600;
+  color: black;
+  margin-left: 0 !important;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 5px 12px;
+}
+.block-textAppLink .textAppLinkSendButton:focus {
+  outline: none;
+}
+.block-textAppLink .textAppLinkSendButton:hover {
+  background-color: #ffde33 !important;
+}
+
+@media (max-width: 600px) {
+  .block-textAppLink {
+    text-align: center;
+  }
+  .block-textAppLink .textAppLabel {
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=textAppLink.css.map */

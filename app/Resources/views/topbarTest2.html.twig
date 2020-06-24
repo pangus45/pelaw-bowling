@@ -1,0 +1,134 @@
+<svg id="topBarSVG" viewBox="0 0 840 550" preserveAspectRatio="none">
+
+  <path id="wiggleBar" width="100%"
+          d="M 841.89,54.22 V 0 H 0 v 67.22 c 0,0 208,-50.43 420.94,-20.8 0,0 3.31407,0.695059 9.50354,1.843048 C 474.5354,56.440968 664.54508,87.603708 841.89,54.22 Z"/>
+
+    {#    oval #}
+{#    <path id="eggStart" width="100%"#}
+{#          d="m 718.77946,23.882805 h 4.09082 c 37.81044,0 67.54459,-114.148709 67.54459,-76.338269 v 48.48628 c 0,37.81045 -30.43946,68.2499 -68.2499,68.2499 h -4.09082 c -37.81045,0 -68.24991,-30.43945 -68.24991,-68.2499 v -48.48628 c 0,-37.81044 31.14477,76.338269 68.95522,76.338269 z"/>#}
+
+{#    <path id="eggFinish" class="targetShape" width="100%"#}
+{#          d="m 719.83743,73.959663 h 4.09082 c 37.81044,0 68.2499,30.439457 68.2499,68.249897 v 48.48627 c 0,37.81045 -30.43946,68.2499 -68.2499,68.2499 h -4.09082 c -37.81045,0 -68.24991,-30.43945 -68.24991,-68.2499 v -48.48627 c 0,-37.81044 30.43946,-68.249897 68.24991,-68.249897 z"/>#}
+{#   #}
+
+    {#    circle #}
+    <path id="eggStart" width="100%"
+          d="m 742.83881,32.790848 c 0.77635,20.446778 -21.56195,36.880725 -40.84732,30.121437 -19.74992,-5.30462 -28.88357,-31.491778 -16.7049,-47.924424 10.9045,-17.307036 38.61915,-18.2884935 50.72059,-1.796166 4.40119,5.51766 6.84881,12.542177 6.83163,19.599153 z"/>
+
+    <path id="eggFinish" class="targetShape" width="100%"
+          d="m 793.28629,161.43187 c 1.95641,51.52588 -54.3361,92.93943 -102.93523,75.90602 -49.7698,-13.36764 -72.78659,-79.35928 -42.09635,-120.76955 27.47934,-43.613727 97.32025,-46.087 127.81588,-4.52634 11.091,13.90451 17.25901,31.60629 17.2157,49.38987 z"/>
+
+</svg>
+
+<div id="desktopTopBar" class="menuSlide">
+
+    <a id="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+
+    <a id="topBarLogoWrapper" href="{{ path('home') }}">
+        <img src="{{ asset('images/logo_happicabs.svg') }}">
+    </a>
+
+    <span id="topBarLeftLinks">
+        <span id="topBarLeftInner">
+            <span id="bookLink" class="topBarDropDownLink topBarLink">BOOK</span>
+            <a href="{{ path('careers') }}" class="topBarLink">DRIVE</a>
+            <a href="{{ path('fareCalculator') }}" class="topBarLink">FARE CALCULATOR</a>
+        </span>
+    </span>
+
+    <div id="phoneIconDropDown" class="topBarDropDown right">
+        <a href="tel: 01245433443">
+            <div>CHELMSFORD</div>
+            <div>(01245) 443 443</div>
+        </a>
+        <a href="tel: 01621883883">
+            <div>MALDON</div>
+            <div>(01621) 883 883</div>
+        </a>
+        <a href="tel: 01245321321">
+            <div>SOUTH WOODHAM</div>
+            <div>(01245) 321 321</div>
+        </a>
+    </div>
+
+    <div id="loginLinkDropDown" class="topBarDropDown right">
+        <a href="http://www.happicabsonline.com/corporate/#/booking">
+            CORPORATE
+        </a>
+        <a href="http://cpaq5838383.rr.nu/DriverDashboard/login">
+            DRIVERS
+        </a>
+    </div>
+
+    <div id="locationLinkDropDown" class="topBarDropDown right">
+        <a href="{{ path('chelmsford') }}">
+            CHELMSFORD
+        </a>
+        <a href="{{ path('maldon') }}">
+            MALDON
+        </a>
+        <a href="{{ path('south-woodham-ferrers') }}">
+            SOUTH WOODHAM
+        </a>
+    </div>
+
+    <div id="bookLinkDropDown" class="topBarDropDown left">
+        <a href="{{ path('appPage') }}">
+            DOWNLOAD APP
+        </a>
+        <a href="http://www.happicabsonline.com/corporate/#/booking">
+            BOOK ONLINE
+        </a>
+        <a href="{{ path('phone') }}">
+            PHONE
+        </a>
+    </div>
+
+
+</div>
+
+{#{% include 'topBarDropdownSVG.html.twig' %}#}
+
+<div id="topBarRight" class="menuSlide">
+    <div id="topBarRightInner">
+        {#        <a id="topBarPhone" class="topBarRightLink" href="skype:+4401912626666?call">0191 262 6666</a>#}
+        {#        <a id="topBarBookOnline" class="topBarRightLink" href="https://book.bluelinetaxis.com">BOOK ONLINE</a>#}
+
+        {#        <a id="topBarDriverNews" class="topBarRightLink" href="{{ path('driverNewsIndex') }}">NEWS</a>#}
+        {#        <a id="topBarDriverPayment" class="topBarRightLink" href="https://blueline.riide.co/">Driver Payment</a>#}
+
+        <span id="locationLink" class="topBarRightLink topBarLink topBarDropDownLink">LOCATION</span>
+        <span id="loginLink" class="topBarRightLink topBarLink topBarDropDownLink">LOGIN</span>
+    </div>
+    <img id="phoneIcon" class="topBarDropDownLink topBarLink" src="{{ asset('images/happicabs_phone.svg') }}" alt="">
+</div>
+
+
+{% if globals.pageId == 'book-online' %}
+
+    <div id="bookOnlineDesktopMenu" class="menuSlide bookOnlineMenu"></div>
+
+{% endif %}
+
+<div id="menuLayout">
+    {#{{ include('menuLinks.html.twig') }}#}
+    {% include '@Common/layout.html.twig' with {'layout': menuLayout} %}
+</div>
+
+<div id="mobileTopBarWrapper">
+    <div id="mobileTopBar">
+        <a id="mobileTopBarHomeLink" href="{{ url('home') }}">Happicabs</a>
+        <div id="mobileMenuToggle">
+            <div class="menuToggleLine"></div>
+            <div class="menuToggleLine"></div>
+            <div class="menuToggleLine"></div>
+        </div>
+    </div>
+    <div id="mobileMenuLinks">{{ include('menuLinks.html.twig') }}</div>
+</div>
+
+<div id="mobileTopBarMediaCheck"></div>

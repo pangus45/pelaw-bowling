@@ -1,0 +1,222 @@
+@import "constants";
+@import "../bundles/common/scss/mixins";
+
+#desktopTopBar {
+  //background-color: yellow !important;
+  //background-color: green !important;
+  //background-color: blue !important;
+}
+
+.desktopLayout, .tabletLayout, .mobileLayout {
+  overflow-x: hidden;
+  //overflow-y: hidden;
+  // fix for Android. Anything with any little part
+  // outside the screen would cause the screen to widen
+  // for fixed elements with right set at
+}
+
+body {
+  //overflow-x: hidden;
+  color: $veryDarkGrey;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body, html {
+  height: 100%;
+
+  //overflow-y: auto !important;
+
+  // fixes Android mess caused by slideFromLeft anim
+}
+
+#cookieBar{
+
+  bottom: 0;
+  background-color: $lightGreen;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  color: white;
+  padding: 15px 20px;
+  z-index: 1000;
+  border-top: black solid .5px;
+
+  #cookieRow{
+    @include flexbox();
+    flex-direction: row;
+
+    #cookieLeft{
+      padding-right: 20px;
+      text-align: justify;
+
+      @include flex(1 1 auto);
+
+      @include flexbox();
+
+      @include align-items(center);
+
+      #moreInfoCookieLink{
+        white-space: nowrap;
+      }
+    }
+
+    #cookieRight{
+
+      #cookieCloseButton{
+
+        cursor: pointer;
+        //position: relative;
+        //top: 50%;
+        //@include translateY(-50%);
+        color: $lightGreen;
+      }
+    }
+  }
+}
+
+#overflowWrapper {
+  //overflow-x: hidden;
+  //overflow-y: auto !important;
+}
+
+body {
+  margin: 0;
+  font-family: $notoSans !important;
+  width: 100%;
+}
+
+.notoSans {
+  font-family: $notoSans;
+}
+
+.lineHeight1 {
+  line-height: 1;
+}
+
+#bodyInner {
+  display: table-row;
+}
+
+footer {
+  height: auto;
+}
+
+.triangleRow {
+  width: 50% !important;
+}
+
+//.oswald{
+//  font-family: 'Oswald', sans-serif;
+//}
+//
+//.lato{
+//  font-family: 'Lato', sans-serif;
+//}
+
+.clickable {
+  cursor: pointer;
+}
+
+.shadow1Direct, .shadow1 .backgroundImage, .shadow1 .fluidHeightRowImage {
+
+  -webkit-box-shadow: 24px 24px 78px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 24px 24px 78px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 24px 24px 78px 0px rgba(0, 0, 0, 0.4);
+}
+
+.block-googleMap.mapBorder {
+
+  position: relative;
+  background-color: black;
+
+  img {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  iframe {
+    //margin: 1%;
+  }
+}
+
+
+//@media only screen and (min-width: $mobileLayoutMaxWidth + 1) {
+
+#menuSlider {
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+  //overflow: hidden;
+}
+
+//}
+
+.boxShadow {
+
+  -webkit-box-shadow: 24px 24px 78px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 24px 24px 78px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 24px 24px 78px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.rootRowWrapper {
+
+  &.fixedRow {
+    //width: calc(100% - #{$sideBarEdgeWidth}) !important;
+  }
+}
+
+
+.mobileHomeImageTop {
+  height: calc(100vh - 50px);
+  background-image: url(../images/mobileHomeTop.jpeg);
+  background-size: cover !important;
+}
+
+.man {
+  @include translateY(-100%);
+}
+
+.flexRow.bootstrap {
+  width: 90%;
+}
+
+
+//@media (min-width: 768px) {
+//
+//  #desktopTopBar {
+//    //background-color: red !important;
+//  }
+//
+//  .flexRow.bootstrap {
+//    width: 700px - $sideBarEdgeWidth !important;
+//  }
+//}
+//
+//@media (min-width: 992px) {
+//  .flexRow.bootstrap {
+//    width: 930px - $sideBarEdgeWidth !important;
+//  }
+//  #desktopTopBar {
+//    //background-color: blue !important;
+//  }
+//
+//}
+//
+//@media (min-width: 1200px) {
+//  .flexRow.bootstrap {
+//    width: 1130px - $sideBarEdgeWidth !important;
+//  }
+//
+//  #desktopTopBar {
+//    //background-color: green !important;
+//  }
+//}

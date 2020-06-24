@@ -1,0 +1,43 @@
+{% block xsolve_cookie_message %}
+    <div id="cookieBar" >
+        <div id="cookieRow" class="flexRow bootstrap">
+            <div id="cookieLeft">
+                <span>
+                {{ 'cookie.message'|trans({}, 'XsolveCookieAcknowledgementBundle') }} <span> </span>
+{#                    <a id="moreInfoCookieLink" target="_blank" href="https://bluelinetaxis.com/blueline-t&c.pdf" >{{ 'cookie.message.moreInfo'|trans({}, 'XsolveCookieAcknowledgementBundle') }}.</a>#}
+                </span>
+            </div>
+            <div id="cookieRight">
+                    <a href="#" class="btn btn-default" id="cookieCloseButton">{{ 'cookie.message.accept'|trans({}, 'XsolveCookieAcknowledgementBundle') }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block xsolve_cookie_message_js %}
+
+    <script type="text/javascript">
+        var cookieBar = document.getElementById('cookieBar'),
+            button = document.getElementById('cookieCloseButton');
+
+        function hideCookieBar() {
+            // cookieBar.style.display = 'none';
+            TweenLite.to(cookieBar, 1, {y: '100%'});
+        }
+
+        function setCookieAccepted() {
+            expiry = new Date();
+            expiry.setTime(expiry.getTime()+({{ cookieExpiryTime }} * 1000 * 60 * 60 * 24));
+            document.cookie = "cookie_law_accepted=1; expires=" + expiry.toGMTString();
+        }
+
+        button.onclick = function() {
+
+            hideCookieBar();
+            setCookieAccepted();
+
+            return false;
+        }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+#pageContent {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+table {
+  width: 100%;
+}
+table th {
+  position: relative;
+}
+table th.date {
+  width: 75px;
+}
+table th.edit {
+  width: 45px;
+}
+table th.delete {
+  width: 57px;
+}
+table th.published {
+  width: 60px;
+}
+table th.priority {
+  width: 55px;
+}
+table th.views {
+  width: 55px;
+  font-size: 10px;
+}
+table th #viewsHeader {
+  position: absolute;
+  top: -16px;
+  left: 18px;
+  font-size: 14px;
+}
+table th.edit, table th.delete, table th.published, table th.priority, table th.views {
+  text-align: center;
+}
+table th {
+  padding: 5px;
+}
+table td {
+  padding: 5px;
+}
+table td.views {
+  text-align: center;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+table .iconColumn {
+  text-align: center;
+  font-size: 20px;
+}
+table .iconColumn a {
+  display: block;
+}
+table .fa-times {
+  color: red;
+  opacity: 0.2;
+}
+table .fa-check {
+  color: green;
+}
+
+#topRow {
+  margin-bottom: 50px;
+}
+
+/*# sourceMappingURL=driverNewsAdmin.css.map */

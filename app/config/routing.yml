@@ -1,0 +1,83 @@
+# Waste of time testing until we move on to full domain - not subdomain
+app:
+  resource: '@AppBundle/Controller/'
+  type: annotation
+
+common:
+  resource: '@CommonBundle/Controller/'
+  type: annotation
+
+home:
+  path: /
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+
+about:
+  path: /about
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+
+activities:
+  path: /activities
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+
+leagues:
+  path: /leagues
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+
+gallery:
+  path: /gallery
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+
+contact:
+  path:     /contact
+  defaults:
+    _controller: AppBundle:Contact:contact
+    sitemap: true
+    js: [js/contact.js]
+    css: [css/contact.css, css/formsCommon.css]
+
+test1:
+  path: /test1
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+    js: [js/test1.js]
+
+test2:
+  path: /test2
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+    js: [js/test2.js]
+
+test3:
+  path: /test3
+  defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
+
+test4:
+  path: /test4
+  defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
+
+test5:
+  path: /test5
+  defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
+
+test6:
+  path: /test6
+  defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
+
+test7:
+  path: /test7
+  defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
+
+test8:
+  path: /test8
+  defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
+
+
+
+# Include common last as has a redirect catch-all controller
+commonYaml:
+  resource: "@CommonBundle/Resources/config/routing.yml"

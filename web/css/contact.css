@@ -1,0 +1,47 @@
+.help-block {
+  color: white !important;
+  background-color: #a94442 !important;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+.help-block ul {
+  margin-bottom: 2px;
+}
+
+.successMessage {
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  color: #2d2d2d;
+  width: 100%;
+}
+.successMessage > div {
+  margin-bottom: 10px;
+}
+
+.block-contactForm .blockBorderContainer, .block-lostPropertyForm .blockBorderContainer {
+  overflow: hidden;
+}
+.block-contactForm form, .block-lostPropertyForm form {
+  width: 100%;
+}
+.block-contactForm form .form-group:nth-child(8), .block-lostPropertyForm form .form-group:nth-child(8) {
+  height: 0;
+  overflow: hidden;
+}
+.block-contactForm form .submitColumn button, .block-lostPropertyForm form .submitColumn button {
+  margin-top: 13px;
+  margin-right: 0;
+}
+.block-contactForm form textarea, .block-lostPropertyForm form textarea {
+  height: 132px;
+}
+.block-contactForm form .consentColumn, .block-lostPropertyForm form .consentColumn {
+  text-align: justify;
+}
+
+#mobileLayout img {
+  display: none;
+}
+
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,1 @@
+function elementTextEffectStart(pElement,pName,pData,pIgnoreDelay){gEFFECTS[pName].function(pElement,pData,pIgnoreDelay)}function fallAndFadeStart(pElement,pData,pIgnoreDelay){TweenLite.from(pElement,pData.duration,{ease:Bounce.easeOut,y:"-100%",opacity:0})}function textFadeStart(pElement,pData,pIgnoreDelay){TweenLite.from(pElement,pData.duration,{opacity:0})}

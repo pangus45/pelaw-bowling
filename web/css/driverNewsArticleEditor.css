@@ -1,0 +1,192 @@
+#pageContent {
+  margin-top: 50px !important;
+}
+
+#articleAdminBar {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 90px;
+}
+#articleAdminBar #status {
+  width: 70%;
+}
+#articleAdminBar #topButtonsInner {
+  position: absolute;
+  right: 0;
+}
+#articleAdminBar a {
+  margin-right: 20px;
+}
+#articleAdminBar #status {
+  font-size: 14px;
+}
+.imageUploadRollover {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.imageUploadRollover:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+.imageUploadRollover i {
+  position: relative;
+  top: 50%;
+  font-size: 10vw;
+  color: white;
+  opacity: 0.4;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.sectionIconWrapper {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: solid lightgrey 1px;
+  border-top: none;
+  padding-right: 3px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+.sectionIconWrapper i {
+  font-size: 30px;
+  margin-left: 5px;
+  color: #fcd600;
+  float: right;
+}
+.sectionIconWrapper i:hover {
+  color: #1c6db6;
+  cursor: pointer;
+}
+.sectionIconWrapper .btn {
+  margin-right: -1px;
+  line-height: 14px;
+  margin-top: 1px;
+}
+.sectionIconWrapper .btn:first-child {
+  margin-left: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.sectionIconWrapper .btn:last-child {
+  margin-right: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.sectionIconWrapper .linkInput {
+  margin-top: 3px;
+  margin-left: 5px;
+  width: 300px;
+  border: solid lightgrey 1px;
+  color: #6e6e6e;
+}
+.sectionIconWrapper .linkButton {
+  margin-right: 5px;
+}
+.sectionIconWrapper .styleButton.wysihtml-command-active {
+  color: #53a0e5;
+}
+.sectionIconWrapper .italicButton {
+  padding-right: 10px;
+}
+#title:hover, #title.hover, #subtitle:hover, #subtitle.hover, #date:hover, #date.hover, .section.hover:hover, .section.hover.hover {
+  outline: solid lightgrey 1px;
+}
+
+#title {
+  display: block !important;
+  cursor: text;
+}
+#title:empty:before {
+  content: "Title";
+  display: block;
+  /* For Firefox */
+  opacity: 0.2;
+}
+
+#subtitle {
+  cursor: text;
+}
+#subtitle:empty:before {
+  content: "Optional Subtitle";
+  display: block;
+  /* For Firefox */
+  opacity: 0.2;
+}
+
+#rightColumn {
+  position: relative;
+}
+#rightColumn #date {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.paragraph {
+  cursor: text;
+}
+.paragraph:empty:before {
+  content: "Paragraph";
+  display: block;
+  /* For Firefox */
+  opacity: 0.2;
+}
+
+.highlight {
+  cursor: text;
+}
+.highlight:empty:before {
+  content: "Highlight";
+  display: block;
+  /* For Firefox */
+  opacity: 0.2;
+}
+
+#sectionAddModal button {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.modal {
+  top: 50% !important;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#imageUploadModal #imageUploadButtonWrapper {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#imageUploadModal img {
+  width: 85px;
+  margin: 10px;
+  border-radius: 10px;
+}
+#imageUploadModal img:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(70%);
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 600px) {
+  #title:hover, #title.hover, #subtitle:hover, #subtitle.hover, #date:hover, #date.hover, .section.hover:hover, .section.hover.hover {
+    outline: solid lightgrey 1px;
+  }
+}
+
+/*# sourceMappingURL=driverNewsArticleEditor.css.map */

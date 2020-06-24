@@ -1,0 +1,225 @@
+#pageContent {
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+
+#index {
+  border-top: solid #fcd600 4px;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+}
+
+#leftColumn {
+  margin-left: 20px;
+  -webkit-box-flex: 1 1 0%;
+  -moz-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  margin-right: 80px;
+}
+#leftColumn #mainImage {
+  width: 100%;
+  border-radius: 20px;
+}
+
+a[data-lightbox] {
+  position: relative;
+  display: block;
+}
+a[data-lightbox]:hover i {
+  opacity: 0.5;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+a[data-lightbox]:hover img {
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  filter: brightness(50%);
+}
+a[data-lightbox] i {
+  opacity: 0;
+  color: white;
+  font-size: 80px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#rightColumn {
+  -webkit-box-flex: 2 1 0%;
+  -moz-box-flex: 2 1 0%;
+  -webkit-flex: 2 1 0%;
+  -ms-flex: 2 1 0%;
+  flex: 2 1 0%;
+  margin-right: 20px;
+}
+#rightColumn #rightColumnTopRow {
+  margin-bottom: 10px;
+}
+#rightColumn #title {
+  width: auto;
+  margin-right: 10px;
+  font-size: 38px;
+  color: #1e284f;
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+#rightColumn #subtitle {
+  color: #206fb7;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#rightColumn #date {
+  font-size: 16px;
+  color: #b9b9b9;
+}
+#rightColumn .paragraph {
+  text-align: justify;
+  font-size: 16px;
+  color: #6e6e6e;
+  margin-bottom: 20px;
+}
+#rightColumn .highlight {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #1e284f;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+#rightColumn .section.images {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+#rightColumn .section.images .imageColumn {
+  -webkit-box-flex: 1 1 0%;
+  -moz-box-flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+#rightColumn .section.images .imageColumn:not(:first-child) {
+  margin-left: 10px;
+}
+#rightColumn .section.images .imageColumn:not(:last-child) {
+  margin-right: 10px;
+}
+#rightColumn .section.images img {
+  width: 100%;
+  border-radius: 20px;
+}
+#article {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  flex-direction: row;
+}
+#article .flexColumn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+#article #mainImageSmallScreen {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  #pageContent {
+    margin-top: 80px;
+  }
+
+  #article {
+    display: block;
+    width: 80%;
+  }
+  #article #mainImage {
+    display: none;
+  }
+  #article #rightColumn {
+    margin-right: 0;
+  }
+  #article #mainImageSmallScreen {
+    display: block;
+    width: 66%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+}
+@media (orientation: portrait) and (max-width: 600px), (orientation: portrait) {
+  #article #rightColumn .section.images {
+    margin-top: 0px;
+    display: block;
+  }
+  #article #rightColumn .section.images .imageColumn {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    display: block;
+  }
+  #article #rightColumn .section.images img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #rightColumn .paragraph {
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #index {
+    border-top: solid #fcd600 1px;
+    padding-top: 1vw;
+  }
+
+  #articleAdminBar {
+    display: none;
+  }
+
+  #pageContent {
+    margin-top: 20px;
+    margin-bottom: 2vw;
+  }
+
+  #article {
+    display: block;
+    width: 90%;
+  }
+  #article #rightColumn #title {
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=driverNewsArticle.css.map */

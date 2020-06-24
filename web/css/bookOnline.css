@@ -1,0 +1,44 @@
+#booking {
+  width: 100%;
+  height: calc(100vh - 50px - 33px);
+  margin-top: 83px;
+}
+
+#bookOnlineDesktopMenu {
+  position: fixed;
+  top: 50px;
+  background-color: white;
+  height: 33px;
+  z-index: 1;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: solid 1px #fcd600;
+  padding-top: 7px;
+}
+#bookOnlineDesktopMenu a {
+  color: #fcd600;
+  margin-right: 50px;
+}
+#bookOnlineDesktopMenu a.current {
+  border-bottom: #D50032 solid 1px;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  #bookOnlineMenu a {
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 600px), screen and (max-height: 600px) {
+  #bookOnlineDesktopMenu {
+    display: none;
+  }
+
+  #booking {
+    height: 2000px;
+    margin-top: 0px;
+  }
+}
+
+/*# sourceMappingURL=bookOnline.css.map */

@@ -1,0 +1,165 @@
+<svg class="menuSlide" id="topBarSVG" viewBox="0 0 840 550" preserveAspectRatio="none">
+
+    {# round and big #}
+    {#    <path id="wiggleBar" width="100%"#}
+    {#          d="M 841.89,54.22 V 0 H 0 v 67.22 c 0,0 208,-50.43 420.94,-20.8 0,0 218.71,45.87 420.95,7.8 z"/>#}
+    <path id="wiggleBulgeLocation" class="targetShape" width="100%"
+          d="M 842.59531,470.35177 841.89,-3e-6 H 9.9999997e-7 V 67.22 C 9.9999997e-7,67.22 208,16.789997 420.94,46.42 c 0,0 -83.16186,591.77846 421.65531,423.93177 z"/>
+
+    {#  More subtle #}
+    <path id="wiggleBar" width="100%"
+          d="M 841.89,54.22 V 0 H 0 v 67.22 c 0,0 208,-50.43 420.94,-20.8 0,0 218.71,45.87 420.95,7.8 z"/>
+
+    <path id="wiggleBulgeLogin" class="targetShape" width="100%"
+          d="M 843.30062,138.85697 841.89,0 H 0 v 67.22 c 0,0 208,-50.43 420.94,-20.8 0,0 75.53246,151.66621 422.36062,92.43697 z"/>
+
+    {#        half#}
+{#    <path id="halfScreenBulge" class="targetShape" width="100%"#}
+{#          d="M 841.89,54.22 V 0 H 0 v 595.28003 c 0,0 530.86374,738.18867 420.94,-548.86003 0,0 218.71,45.87 420.95,7.8 z"/>#}
+
+    {#  Squarer #}
+    {#    <path id="wiggleBar" width="100%"#}
+    {#          d="M 841.89,54.22 V -3e-6 H 9.9999997e-7 V 67.22 C 9.9999997e-7,67.22 208,16.789997 420.94,46.42 c 0,0 1.87074,0.39235 5.42618,1.074361 C 461.25402,54.186614 658.35422,88.769087 841.89,54.22 Z"/>#}
+
+    {#    <path id="wiggleBulge"  class="targetShape" width="100%" d="M 841.89,468.94115 841.89,-3.0000001e-6 H -2e-6 V 67.22 c 0,0 193.188532,-44.787538 406.128532,-15.157535 0,0 -18.58319,368.563175 11.06865,409.447745 20.85623,28.757 241.15704,41.98003 424.69282,7.43094 z"/>#}
+
+</svg>
+
+{#<div id="menuRightHalf">#}
+
+{#    <div id="menuRightHalfNumbers">#}
+{#        <a href="tel: 01245433443">#}
+{#            <div>CHELMSFORD</div>#}
+{#            <div>(01245) 443 443</div>#}
+{#        </a>#}
+{#        <a href="tel: 01621883883">#}
+{#            <div>MALDON</div>#}
+{#            <div>(01621) 883 883</div>#}
+{#        </a>#}
+{#        <a href="tel: 01245321321">#}
+{#            <div>SOUTH WOODHAM</div>#}
+{#            <div>(01245) 321 321</div>#}
+{#        </a>#}
+{#    </div>#}
+
+{#    <div id="menuRightHalfSocial">#}
+{#        <img src="{{ asset('images/happicabs_facebook-01.svg') }}" alt="">#}
+{#        <img src="{{ asset('images/happicabs_instagram-01.svg') }}" alt="">#}
+{#        <img src="{{ asset('images/happicabs_linkedin-01.svg') }}" alt="">#}
+{#        <img src="{{ asset('images/happicabs_twitter-01.svg') }}" alt="">#}
+{#    </div>#}
+
+{#</div>#}
+
+<div id="desktopTopBar" class="menuSlide">
+
+    <a id="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+
+    <a id="topBarLogoWrapper" href="{{ path('home') }}">
+        <img src="{{ asset('images/logo_happicabs.svg') }}">
+    </a>
+
+    <span id="topBarLeftLinks">
+        <span id="topBarLeftInner">
+            <span id="bookLink" class="topBarDropDownLink topBarLink">BOOK</span>
+            <a href="{{ path('careers') }}" class="topBarLink">DRIVE</a>
+            <a href="{{ path('fareCalculator') }}" class="topBarLink">FARE CALCULATOR</a>
+        </span>
+    </span>
+
+    <div id="phoneIconDropDown" class="topBarDropDown right">
+        <a href="tel: 01245433443">
+            <div>CHELMSFORD</div>
+            <div>(01245) 443 443</div>
+        </a>
+        <a href="tel: 01621883883">
+            <div>MALDON</div>
+            <div>(01621) 883 883</div>
+        </a>
+        <a href="tel: 01245321321">
+            <div>SOUTH WOODHAM</div>
+            <div>(01245) 321 321</div>
+        </a>
+    </div>
+
+    <div id="loginLinkDropDown" class="topBarDropDown right">
+        <a href="http://www.happicabsonline.com/corporate/#/booking">
+            CORPORATE
+        </a>
+        <a href="http://cpaq5838383.rr.nu/DriverDashboard/login">
+            DRIVERS
+        </a>
+    </div>
+
+    <div id="locationLinkDropDown" class="topBarDropDown right">
+        <a href="{{ path('chelmsford') }}">
+            CHELMSFORD
+        </a>
+        <a href="{{ path('maldon') }}">
+            MALDON
+        </a>
+        <a href="{{ path('south-woodham-ferrers') }}">
+            SOUTH WOODHAM
+        </a>
+    </div>
+
+    <div id="bookLinkDropDown" class="topBarDropDown left">
+        <a href="{{ path('appPage') }}">
+            DOWNLOAD APP
+        </a>
+        <a href="http://www.happicabsonline.com/corporate/#/booking">
+            BOOK ONLINE
+        </a>
+        <a href="{{ path('phone') }}">
+            PHONE
+        </a>
+    </div>
+
+
+</div>
+
+{#{% include 'topBarDropdownSVG.html.twig' %}#}
+
+<div id="topBarRight" class="menuSlide">
+    <div id="topBarRightInner">
+        {#        <a id="topBarPhone" class="topBarRightLink" href="skype:+4401912626666?call">0191 262 6666</a>#}
+        {#        <a id="topBarBookOnline" class="topBarRightLink" href="https://book.bluelinetaxis.com">BOOK ONLINE</a>#}
+
+        {#        <a id="topBarDriverNews" class="topBarRightLink" href="{{ path('driverNewsIndex') }}">NEWS</a>#}
+        {#        <a id="topBarDriverPayment" class="topBarRightLink" href="https://blueline.riide.co/">Driver Payment</a>#}
+
+        <span id="locationLink" class="topBarRightLink topBarLink topBarDropDownLink">LOCATION</span>
+        <span id="loginLink" class="topBarRightLink topBarLink topBarDropDownLink">LOGIN</span>
+    </div>
+    <img id="phoneIcon" class="topBarDropDownLink topBarLink" src="{{ asset('images/happicabs_phone.svg') }}" alt="">
+</div>
+
+
+{% if globals.pageId == 'book-online' %}
+
+    <div id="bookOnlineDesktopMenu" class="menuSlide bookOnlineMenu"></div>
+
+{% endif %}
+
+<div id="menuLayout">
+    {#{{ include('menuLinks.html.twig') }}#}
+    {% include '@Common/layout.html.twig' with {'layout': menuLayout} %}
+</div>
+
+<div id="mobileTopBarWrapper">
+    <div id="mobileTopBar">
+        <a id="mobileTopBarHomeLink" href="{{ url('home') }}">Happicabs</a>
+        <div id="mobileMenuToggle">
+            <div class="menuToggleLine"></div>
+            <div class="menuToggleLine"></div>
+            <div class="menuToggleLine"></div>
+        </div>
+    </div>
+    <div id="mobileMenuLinks">{{ include('menuLinks.html.twig') }}</div>
+</div>
+
+<div id="mobileTopBarMediaCheck"></div>

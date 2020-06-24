@@ -1,0 +1,74 @@
+# Config specific to this site
+
+framework:
+  assets:
+    version: 'v36'
+
+parameters:
+
+    site_from_address: 'dev@positivemint.com'
+#    site_from_address: 'contact@blueline-group.com'
+
+    locale: en
+
+    app.locales: en
+
+    app.defaultFont: Noto Sans
+
+    app.fonts:
+      Source Sans Pro:
+        class: notoSans
+        weights:
+          Regular: 400
+          Bold: 700
+
+    app.styleConstants:
+      TB: 60px
+
+    app.articleTypes:
+
+      blog:
+        image:
+          type: image
+        date:
+          type: date
+          flags: [includeInAdmin]
+        title:
+          type: text
+          flags: [includeInAdmin]
+        subTitle:
+          type: text
+        body:
+          type: simpleHtml
+        priority:
+          type: bool
+#          icon: exclamation
+        published:
+          type: bool
+#          icon: tickCross
+
+#        moreHtml:
+#          type: simpleHtml
+
+      position:
+        date:
+          type: date
+        title:
+          type: text
+        description:
+          type: text
+
+
+# Twig Configuration
+twig:
+  globals:
+    legacyFlags:
+      renderPTags
+    siteBlocks:
+      facebook: Facebook
+#      contactForm: Contact Form
+#      lostPropertyForm: Lost Property Form
+
+swiftmailer:
+  disable_delivery: true
+#  delivery_addresses: ['contact@blueline-group.com'] This overrides to address set in code - use at your peril

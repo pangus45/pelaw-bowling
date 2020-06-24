@@ -1,0 +1,36 @@
+{% set location = app.request.get('location') %}
+
+<div id="bookingWidgetInner">
+
+    <div id="bookingWidgetLocationLinks">
+
+        {% set chelmsfordClass = 'chelmsford' == location ? 'active' : '' %}
+        {% set maldonClass = 'maldon' == location ? 'active' : '' %}
+        {% set swfClass = 'south-woodham-ferrers' == location ? 'active' : '' %}
+        {% set withamClass = 'witham' == location ? 'active' : '' %}
+
+        <a href="{{ path('homeLocation', {location:'chelmsford'}) }}" class="widgetLocationLink {{ chelmsfordClass }}" >Chelmsford</a>
+        <a href="{{ path('homeLocation', {location:'south-woodham-ferrers'}) }}" class="widgetLocationLink {{ swfClass }}" >South Woodham Ferrers</a>
+        <a href="{{ path('homeLocation', {location:'maldon'}) }}" class="widgetLocationLink {{ maldonClass }}" >Maldon</a>
+{#        <a href="{{ path('homeLocation', {location:'witham'}) }}" class="widgetLocationLink {{ withamClass }}" >Witham</a>#}
+
+    </div>
+
+    <div class="cordicWrap">
+
+        {% if 'chelmsford' == location %}
+            {% set urlSuffix = 'consumer' %}
+        {% elseif 'maldon' == location %}
+            {% set urlSuffix = 'consumermaldon' %}
+        {% elseif 'south-woodham-ferrers' == location %}
+            {% set urlSuffix = 'consumerswf' %}
+        {% elseif 'witham' == location %}
+            {% set urlSuffix = 'consumerwitham' %}
+        {% endif %}
+
+<quote-widget-element websiteurl="http://www.happicabsonline.com/{{urlSuffix}}"
+              redirecturl="http://www.happicabsonline.com/{{urlSuffix}}" >
+</quote-widget-element>
+
+</div>
+</div>

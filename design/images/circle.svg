@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 841.89 595.28"
+   version="1.1"
+   id="svg1260"
+   sodipodi:docname="circle.svg"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+  <metadata
+     id="metadata1264">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>morph menu happicabs</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="996"
+     id="namedview1262"
+     showgrid="false"
+     inkscape:zoom="0.79290414"
+     inkscape:cx="420.94501"
+     inkscape:cy="297.64001"
+     inkscape:window-x="0"
+     inkscape:window-y="35"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1260" />
+  <defs
+     id="defs1250">
+    <style
+       id="style1248">.cls-1{fill:#3178bd;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title1252">morph menu happicabs</title>
+  <g
+     id="Layer_2"
+     data-name="Layer 2">
+    <rect
+       class="cls-1"
+       width="841.89001"
+       height="595.28003"
+       id="rect1254"
+       x="0"
+       y="0"
+       style="fill:#3178bd" />
+  </g>
+  <g
+     id="Layer_1"
+     data-name="Layer 1">
+    <path
+       class="cls-2"
+       d="M841.89,54.22V0H0V67.22s208-50.43,420.94-20.8C420.94,46.42,639.65,92.29,841.89,54.22Z"
+       id="path1257" />
+  </g>
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:#fcd600;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 793.28629,161.43187 c 1.95641,51.52588 -54.3361,92.93943 -102.93523,75.90602 -49.7698,-13.36764 -72.78659,-79.35928 -42.09635,-120.76955 27.47934,-43.613727 97.32025,-46.087 127.81588,-4.52634 11.091,13.90451 17.25901,31.60629 17.2157,49.38987 z"
+     id="path1815"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:#fcd600;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 742.83881,32.790848 c 0.77635,20.446778 -21.56195,36.880725 -40.84732,30.121437 -19.74992,-5.30462 -28.88357,-31.491778 -16.7049,-47.924424 10.9045,-17.307036 38.61915,-18.2884935 50.72059,-1.796166 4.40119,5.51766 6.84881,12.542177 6.83163,19.599153 z"
+     id="path1815-3"
+     inkscape:connector-curvature="0" />
+</svg>

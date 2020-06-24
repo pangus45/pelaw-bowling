@@ -1,0 +1,177 @@
+{% if success is defined %}
+
+<div class="contactInnerWrapper">
+
+    {% if not success %}
+
+        {% include '@Common/textPartsTextOnly.html.twig' %}
+
+    {% endif %}
+
+    {% set form = attribute(blocks, blockName) %}
+
+    {% form_theme form 'form-businessApplicationForm.html.twig' %}
+
+    {% if success %}
+        <div class="successMessage">
+            <div>Thanks for your enquiry</div>
+            Your message has been received
+            and we'll be in touch as soon as possible
+        </div>
+    {% else %}
+
+        {% set colClasses='col-xs-6 col-md-4' %}
+        {% set widerColClasses='col-md-6' %}
+
+        {#{{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}#}
+        {#for debugging old browsers without html5 validation#}
+        {{ form_start(form) }}
+
+        <h3>Company Details</h3>
+        <div class="row">
+            <div class="{{ colClasses }}">
+                {{ form_row(form.companyName) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.tradingName) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.industry) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.regNumber) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.address) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.address2) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.town) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.county) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.postCode) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.businessLandlineNumber) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.companyEmail) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.preferredVehicle) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.accountPurpose) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.otherPurpose) }}
+            </div>
+            <div class="col-xs-12">
+                {{ form_row(form.message) }}
+            </div>
+        </div>
+
+        <h3>Your Details</h3>
+        <div class="row">
+            <div class="{{ colClasses }}">
+                {{ form_row(form.title) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.firstName) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.lastName) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.personalEmail) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.personalLandlineNumber) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.mobileNumber) }}
+            </div>
+        </div>
+
+        <h3>Your Priority Account</h3>
+
+        <div class="row priorityAccountRow">
+            <div class="{{ colClasses }}">
+                {{ form_row(form.monthlyCredit) }}
+            </div>
+            <div class="{{ colClasses }}">
+                {{ form_row(form.paymentMethod) }}
+            </div>
+        </div>
+
+        <div class="row filesRow">
+            <div class="col-xs-12">
+                <div class="uploadRequest">
+                    Please upload your company letterhead, proof of company address this could be a bank statement or
+                    utility bill and a signed terms and conditions of opening an account with Happicabs.
+                </div>
+                {{ form_row(form.files) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 termsAndConditionsRow">
+                <div>
+                </div>
+                {{ form_row(form.termsAndConditions) }}
+            </div>
+        </div>
+
+        {#        {{ form_widget(form.submit, {attr: {'class' : 'btn btn-default'}}) }}#}
+
+        {{ form_row(form.submit) }}
+
+        {{ form_errors(form) }}
+        {{ form_end(form) }}
+
+        {#        {{ form(form) }}#}
+
+        {#{{ form_start(form) }}#}
+        {#{{ form_errors(form) }}#}
+        {#<div class="form-group">#}
+        {#{{ form_label(form.name) }}#}
+        {#{{ form_widget(form.name, {attr: {'class' : 'form-control'}}) }}#}
+        {#{{ form_errors(form.name, {attr: {'class' : 'help-block'}}) }}#}
+        {#</div>#}
+        {#<div class="form-group">#}
+        {#{{ form_label(form.subject) }}#}
+        {#{{ form_widget(form.subject, {attr: {'class' : 'form-control'}}) }}#}
+        {#{{ form_errors(form.subject, {attr: {'class' : 'help-block'}}) }}#}
+        {#</div>#}
+        {#<div id="contactUrl" class="form-group">#}
+        {#{{ form_label(form.url) }}#}
+        {#{{ form_widget(form.url, {attr: {'class' : 'form-control'}}) }}#}
+        {#{{ form_errors(form.url, {attr: {'class' : 'help-block'}}) }}#}
+        {#</div>#}
+        {#<div class="form-group">#}
+        {#{{ form_label(form.email) }}#}
+        {#{{ form_widget(form.email, {attr: {'class' : 'form-control'}}) }}#}
+        {#{{ form_errors(form.email, {attr: {'class' : 'help-block'}}) }}#}
+        {#</div>#}
+        {#<div class="form-group">#}
+        {#{{ form_label(form.message) }}#}
+        {#{{ form_widget(form.message, {attr: {'class' : 'form-control', 'rows' : 10}}) }}#}
+        {#{{ form_errors(form.message, {attr: {'class' : 'help-block'}}) }}#}
+        {#</div>#}
+
+        {#{{ form_widget(form.pageId) }}#}
+
+        {#{{ form_widget(form.submit, {attr: {'class' : 'btn btn-default'}}) }}#}
+
+        {#{{ form_end(form) }}#}
+
+    {% endif %}
+
+</div>
+
+{% endif %}

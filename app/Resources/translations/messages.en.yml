@@ -1,0 +1,22 @@
+menu:
+  work: WORK
+  about: ABOUT
+  blog: BLOG
+  contact: CONTACT
+  services: SERVICES
+
+contact:
+  labels:
+    subject: Subject
+    email: Email
+    message: Message
+    submit: SUBMIT
+    name: Name
+    url: Url
+  notBlank:
+    subject: You must enter a subject
+    name: You must enter your name
+    email: You must enter an email address
+    message: You must enter a message
+  invalidEmail: The email address you've entered doesn't look like a genuine address.
+

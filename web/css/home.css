@@ -1,0 +1,219 @@
+.block-bookingWidgetAll {
+  opacity: 0;
+  padding: 10px;
+}
+.block-bookingWidgetAll #bookingWidgetInner {
+  background-color: rgba(255, 214, 0, 0.85);
+  max-width: 450px;
+  width: 40vw;
+  border: white solid 4px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks .widgetLocationLink {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #2d2d2d;
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks .widgetLocationLink:hover {
+  background-color: white;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks .widgetLocationLink:nth-child(1) {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-right: solid #e6e6e6 1px;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks .widgetLocationLink:nth-child(2) {
+  border-right-width: 0;
+  border-left-width: 0;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks .widgetLocationLink:nth-child(3) {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: solid #e6e6e6 1px;
+}
+.block-bookingWidgetAll #bookingWidgetInner #bookingWidgetLocationLinks .widgetLocationLink.active {
+  opacity: 1;
+  background-color: #2d2d2d;
+  color: #4a6c2f;
+  cursor: default;
+}
+.block-bookingWidgetAll .cordicWrap *:not(.fa) {
+  font-family: "Source Sans Pro", sans-serif !important;
+  font-size: 20px !important;
+}
+.block-bookingWidgetAll .cordicWrap .cordicStyles, .block-bookingWidgetAll .cordicWrap .form-control {
+  background-color: transparent !important;
+}
+.block-bookingWidgetAll .cordicWrap .fontSizeStandard {
+  font-weight: 300 !important;
+}
+.block-bookingWidgetAll .cordicWrap .elePageContentDiv {
+  padding-bottom: 0 !important;
+}
+.block-bookingWidgetAll .cordicWrap .form-addressSearch input {
+  color: white;
+  font-weight: 500 !important;
+  margin-bottom: 40px;
+  border-top: solid transparent 1px;
+  border-left: solid transparent 1px;
+  border-right: solid transparent 1px;
+  border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
+}
+.block-bookingWidgetAll .cordicWrap .form-addressSearch input::placeholder {
+  color: white;
+  font-weight: 500 !important;
+}
+.block-bookingWidgetAll .cordicWrap .addressSearchDiv {
+  cursor: text;
+}
+.block-bookingWidgetAll .cordicWrap .addressSearchDiv > span {
+  display: none;
+}
+.block-bookingWidgetAll .cordicWrap .addressSearchDiv .asCompactShortcutResultsTable .asAddressResultLabel {
+  color: #2d2d2d;
+}
+.block-bookingWidgetAll .cordicWrap .addressSearchDiv .asShortcutTable {
+  cursor: text;
+}
+.block-bookingWidgetAll .cordicWrap .addressSearchDiv .asShortcutTable .asEditBtn, .block-bookingWidgetAll .cordicWrap .addressSearchDiv .asShortcutTable .asClearBtn {
+  display: none;
+}
+.block-bookingWidgetAll .cordicWrap .addressSearchDiv .asShortcutTable input {
+  text-overflow: ellipsis;
+  border-bottom: solid rgba(255, 255, 255, 0.5) 1px;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  color: white;
+  font-weight: 500 !important;
+}
+.block-bookingWidgetAll .cordicWrap .compactModeToggleDiv {
+  display: none;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv .ui-calendar input {
+  font-weight: 300;
+  color: #555;
+  padding-left: 8px !important;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(1) {
+  -webkit-box-flex: 1 1 100%;
+  -moz-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin-right: 10px;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(1) > td:nth-child(1) {
+  display: none;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(1) > td:nth-child(2) {
+  display: block;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(1) > td:nth-child(2) .dpCalendarDiv p-calendar > span .ui-datepicker-compact {
+  min-width: 250px;
+  top: 38px;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(1) > td:nth-child(2) .dpCalendarDiv p-calendar > span > input {
+  height: 35px;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(2) {
+  -webkit-box-flex: 0 0 122px;
+  -moz-box-flex: 0 0 122px;
+  -webkit-flex: 0 0 122px;
+  -ms-flex: 0 0 122px;
+  flex: 0 0 122px;
+}
+.block-bookingWidgetAll .cordicWrap #dpTableDiv > table > tbody > tr:nth-child(2) table select {
+  padding-bottom: 3px !important;
+  padding-top: 4px !important;
+}
+.block-bookingWidgetAll .cordicWrap app-nat-date-picker-cmpnt > div > div:nth-child(1) {
+  display: none;
+}
+.block-bookingWidgetAll .cordicWrap app-nat-quotation-cmpnt > div {
+  padding: 0;
+  padding-left: 2px;
+  margin-bottom: 20px;
+}
+.block-bookingWidgetAll .cordicWrap app-nat-quotation-cmpnt > div tr {
+  font-weight: 300;
+}
+.block-bookingWidgetAll .cordicWrap app-nat-quotation-cmpnt > div tr td {
+  color: #2d2d2d;
+}
+.block-bookingWidgetAll .cordicWrap .paymentTypesDiv {
+  margin-bottom: 30px;
+}
+.block-bookingWidgetAll .cordicWrap .paymentTypesDiv > div {
+  display: none;
+}
+.block-bookingWidgetAll .cordicWrap .form-control {
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.block-bookingWidgetAll .cordicWrap button.form-submit {
+  font-size: 20px !important;
+  background-color: #2d2d2d;
+  color: #4a6c2f;
+  border: none;
+  font-weight: 500;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.block-bookingWidgetAll .cordicWrap button.form-submit:hover {
+  background-color: black;
+}
+
+/*# sourceMappingURL=home.css.map */

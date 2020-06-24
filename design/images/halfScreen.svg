@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 841.89 595.28"
+   version="1.1"
+   id="svg1260"
+   sodipodi:docname="halfScreen.svg"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)">
+  <metadata
+     id="metadata1264">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>morph menu happicabs</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="996"
+     id="namedview1262"
+     showgrid="false"
+     inkscape:zoom="0.79290414"
+     inkscape:cx="420.94501"
+     inkscape:cy="114.38347"
+     inkscape:window-x="0"
+     inkscape:window-y="35"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1260" />
+  <defs
+     id="defs1250">
+    <style
+       id="style1248">.cls-1{fill:#3178bd;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title1252">morph menu happicabs</title>
+  <g
+     id="Layer_2"
+     data-name="Layer 2">
+    <rect
+       class="cls-1"
+       width="841.89001"
+       height="595.28003"
+       id="rect1254"
+       x="0"
+       y="0"
+       style="fill:#3178bd" />
+  </g>
+  <g
+     id="Layer_1"
+     data-name="Layer 1">
+    <path
+       class="cls-2"
+       d="M 841.89,54.22 V 0 H 0 v 67.22 c 0,0 208,-50.43 420.94,-20.8 0,0 218.71,45.87 420.95,7.8 z"
+       id="path1257"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+  </g>
+  <g
+     id="Layer_1-6"
+     data-name="Layer 1">
+    <path
+       class="cls-2"
+       d="M 841.89,54.22 V 0 H 0 v 595.28003 c 0,0 530.86374,738.18867 420.94,-548.86003 0,0 218.71,45.87 420.95,7.8 z"
+       id="path1257-7"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff"
+       sodipodi:nodetypes="cccccc" />
+  </g>
+</svg>

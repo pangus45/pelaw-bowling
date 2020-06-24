@@ -1,0 +1,44 @@
+<script defer src="{{ asset('js/topBar.js') }}"></script>
+<script defer src="{{ asset('js/sideBar.js') }}"></script>
+{#<script defer src="{{ asset('js/parallax.js') }}"></script>#}
+
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/SplitText.min.js') }}"></script>
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/CustomEase.min.js') }}"></script>
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/CustomBounce.min.js') }}"></script>
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/CustomWiggle.min.js') }}"></script>
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/MorphSVGPlugin.min.js') }}"></script>
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/DrawSVGPlugin.min.js') }}"></script>
+
+{#ease pack has ExpoScaleEase, RoughEase and SlowMo#}
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/EasePack.min.js') }}"></script>
+
+{# findMorphOrigin requires draggable#}
+{#<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/minified/Draggable.min.js') }}"></script>#}
+<script defer src="{{ asset('libs/gsap-shockingly-green/gsap-shockingly-green/findShapeIndex.js') }}"></script>
+
+<script defer src="{{ asset('bundles/common/js/util.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/layout.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/rollover.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/textEffects.js') }}"></script>
+
+{# Element Effects working better for opacities before imageLoader #}
+<script defer src="{{ asset('bundles/common/js/elementEffects.js') }}"></script>
+
+<script defer src="{{ asset('bundles/common/js/imageLoader.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/anims.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/superCarousel.js') }}"></script>
+{#<script defer src="{{ asset('libs/pinballNumberCounter.js') }}"></script>#}
+
+
+{#{% javascripts#}
+    {#'libs/util.js'#}
+    {#'js/topBar.js'#}
+{#'libs/greensock/greensock/src/minified/plugins/TextPlugin.min.js'#}
+{#'bundles/common/js/layout.js'#}
+    {#'bundles/common/js/rollover.js'#}
+    {#'bundles/common/js/textEffects.js'#}
+    {#'bundles/common/js/imageLoader.js'#}
+    {#output='js/prod/allPages.js'#}
+    {#filter='uglifyjs2' %}#}
+    {#<script defer src="{{ asset_url }}"></script>#}
+{#{% endjavascripts %}#}

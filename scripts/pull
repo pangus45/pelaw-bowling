@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+cd ~/hc
+git reset --hard
+git pull
+
+cd ~/hc/src/CommonBundle
+git reset --hard
+git pull
+
+cd ~/hc/scripts
+php ~/hc/bin/console cache:clear --env=prod

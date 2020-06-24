@@ -1,0 +1,34 @@
+.help-block {
+  color: white !important;
+  background-color: #a94442 !important;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+.help-block ul {
+  margin-bottom: 2px;
+}
+
+.successMessage {
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  color: #272727;
+  width: 100%;
+}
+.successMessage > div {
+  margin-bottom: 10px;
+}
+
+.block-contactForm form {
+  width: 100%;
+}
+.block-contactForm form .form-group:nth-child(8) {
+  height: 0;
+  overflow: hidden;
+}
+
+#mobileLayout img {
+  display: none;
+}
+
+/*# sourceMappingURL=business-travel.css.map */

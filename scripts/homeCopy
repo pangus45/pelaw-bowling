@@ -1,0 +1,2 @@
+cp ../web/data/layouts/chelmsford-layout.json ../web/data/layouts/maldon-layout.json
+cp ../web/data/layouts/chelmsford-layout.json ../web/data/layouts/south-woodham-ferrers-layout.json

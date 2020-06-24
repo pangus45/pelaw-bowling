@@ -1,0 +1,45 @@
+.help-block {
+  color: white !important;
+  background-color: #a94442 !important;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+.help-block ul {
+  margin-bottom: 2px;
+}
+
+.successMessage {
+  font-size: 18px;
+  text-align: center;
+  line-height: 30px;
+  color: #2d2d2d;
+  width: 100%;
+}
+.successMessage > div {
+  margin-bottom: 10px;
+}
+
+.block-businessApplicationForm .blockBorderContainer {
+  overflow: hidden;
+}
+.block-businessApplicationForm form .row {
+  margin-bottom: 30px;
+}
+.block-businessApplicationForm form .row.priorityAccountRow {
+  margin-bottom: 20px;
+}
+.block-businessApplicationForm form .row.filesRow {
+  margin-bottom: 10px;
+}
+.block-businessApplicationForm form .termsAndConditionsRow .form-group {
+  margin-left: 4px;
+}
+.block-businessApplicationForm form .uploadRequest {
+  margin-bottom: 15px;
+}
+
+#mobileLayout img {
+  display: none;
+}
+
+/*# sourceMappingURL=businessTravel.css.map */

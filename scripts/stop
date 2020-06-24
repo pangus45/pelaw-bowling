@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+php /var/www/html/bh/bin/console server:stop

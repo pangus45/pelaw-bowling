@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+{% set device = 'desktop' %}
+
+{% if is_tablet() %}
+
+    {% set device = 'tablet' %}
+
+{% elseif is_mobile() %}
+
+    {% set device = 'mobile' %}
+
+{% endif %}
+
+{% set htmlClass = device %}
+
+{% set configBlocks = commonBlocks %}
+
+{# Messy! Must improve - cant merge objects in different yamls at the mo #}
+{% if pageBlocks is defined %}
+
+    {% set configBlocks = configBlocks|merge(pageBlocks) %}
+
+{% endif %}
+
+{% if siteBlocks is defined %}
+
+    {% set configBlocks = siteBlocks|merge(configBlocks) %}
+
+{% endif %}
+
+{% set blocks = configBlocks %}
+
+{% if controllerBlocks is defined %}
+
+    {% set blocks = blocks|merge(controllerBlocks) %}
+
+{% endif %}
+
+{% if 'yes' == layout.data.page.tabletVersion %}
+
+    {% set htmlClass = htmlClass ~ 'hasTabletVersion' %}
+
+{% endif %}
+
+<html id="{{ globals.pageId }}" lang="{{ app.request.locale }}" class="{{ htmlClass }}">
+<head>
+    {{ include('@Common/metatags.html.twig') }}
+
+    {% block headSite %}{% endblock %}
+    {% block headPage %}{% endblock %}
+
+    {% include '@Common/fonts.html.twig' %}
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {% include '@Common/allPagesCss.html.twig' %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+
+        {% stylesheets '@CommonBundle/Resources/public/css/editor.css' output='css/prod/editor.css' %}
+            <link href="{{ asset_url }}" rel="stylesheet">
+        {% endstylesheets %}
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+
+    {% endif %}
+
+    {#css added in routing.yml#}
+    {% set css = app.request.get('css') %}
+
+    {% for file in css %}
+        <link href="{{ asset(file) }}" rel="stylesheet">
+    {% endfor %}
+
+    <link href="{{ asset('css/menuTest.css') }}" rel="stylesheet">
+
+</head>
+<body>
+
+{% include '@Common/earlyLoadJS.html.twig' %}
+
+<script>
+
+    // variables must be added here before we add to them in layout templates
+    var gPageId = '{{ globals.pageId|e('js') }}';
+    var gBaseUrl = '{{ globals.baseUrlGet()|e('js') }}';
+    var gPageHeight = '{{ layout.data.page.height|e('js') }}'
+    var gElementData = {};
+
+</script>
+
+{{ include('topbarTest3.html.twig') }}
+
+{#{% set bodyInnerStyle = '' %}#}
+
+{#{% if '' != layout.data.page.height %}#}
+{#{% set bodyInnerStyle = siteStyles.styleLine('height', layout.data.page.height, ['px', 'vh'], 'px') %}#}
+{#{% endif %}#}
+
+{#<div style="margin-top: 150px;">#}
+{#<div class="lato" style="font-size: 80px; line-height: 60px; background-color: red; color: white;">TEST</div>#}
+{#</div>#}
+
+{% set bodyInnerClass = '' %}
+
+{% if 'yes' == layout.data.page.tabletVersion %}
+
+    {% set bodyInnerClass = bodyInnerClass ~ ' hasTabletVersion' %}
+
+{% endif %}
+
+<div id="menuSlider">
+    <div id="bodyInner" class="{{ bodyInnerClass }}" style="">
+        <div id="layoutMediaQuery"></div>
+        {#add something to the top of every page#}
+        {% include '@Common/pageTop.html.twig' %}
+
+        {#<div class="draggable resizable" style="z-index: 5000; position: absolute; left: 100px; top: 300px; width: 100px; height: 100px; background-color: red;"></div>#}
+        {#{% set footer = false %}#}
+        {% if globals.pageId != 'footer-edit' and globals.pageId != 'menu-edit' %}
+            {% include('@Common/layout.html.twig') %}
+        {% endif %}
+    </div>
+
+    {% set footerClass = '' %}
+
+    {% if 'yes' == footerLayout.data.page.tabletVersion %}
+        {% set footerClass = 'hasTabletVersion' %}
+    {% endif %}
+
+    <footer class="{{ footerClass }}">
+        {#{% set whichLayout = 'footer' %}#}
+        {#{% set footer = true %}#}
+        {% include '@Common/layout.html.twig' with {'layout': footerLayout} %}
+    </footer>
+</div>
+
+<script>
+    // All script added in layout.html.twig and it's offshoots
+    {{ layout.script|raw }}
+
+    var gElementJSData = "{{ layout.elementJSData|json_encode()|e('js') }}";
+    var gAnimTriggerPresets = "{{ siteStyles.animTriggerPresetsGet|json_encode()|e('js') }}";
+    earlyLoadImagesLoad();
+</script>
+
+{#deferring these broke datepicker#}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{#<script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>#}
+
+{% include '@Common/externalJS.html.twig' %}
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/findShapeIndex.js "></script>
+
+{#<script defer src="{{ asset('js/topBar.js') }}"></script>#}
+<script defer src="{{ asset('js/menuTest3.js') }}"></script>
+<script defer src="{{ asset('js/sideBar.js') }}"></script>
+
+<script defer src="{{ asset('libs/greensock-js-shockingly-green/greensock-js-shockingly-green/src/minified/utils/SplitText.min.js') }}"></script>
+<script defer src="{{ asset('libs/greensock-js-shockingly-green/greensock-js-shockingly-green/src/minified/easing/CustomEase.min.js') }}"></script>
+<script defer src="{{ asset('libs/greensock-js-shockingly-green/greensock-js-shockingly-green/src/minified/easing/CustomBounce.min.js') }}"></script>
+<script defer src="{{ asset('libs/greensock-js-shockingly-green/greensock-js-shockingly-green/src/minified/easing/CustomWiggle.min.js') }}"></script>
+<script defer src="{{ asset('libs/greensock-js-shockingly-green/greensock-js-shockingly-green/src/minified/plugins/MorphSVGPlugin.min.js') }}"></script>
+
+<script defer src="{{ asset('bundles/common/js/util.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/layout.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/rollover.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/textEffects.js') }}"></script>
+{#Element Effects working better for opacities before imageLoader#}
+<script defer src="{{ asset('bundles/common/js/elementEffects.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/imageLoader.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/anims.js') }}"></script>
+<script defer src="{{ asset('bundles/common/js/superCarousel.js') }}"></script>
+<script defer src="{{ asset('libs/pinballNumberCounter.js') }}"></script>
+{#{% include '@Common/allPagesJS.html.twig' %}#}
+
+{#js added in routing.yml#}
+{% set js = app.request.get('js') %}
+
+{% for file in js %}
+    <script defer src="{{ asset(file) }}"></script>
+{% endfor %}
+
+
+{% block siteJavascripts %}{% endblock %}
+{% block javascripts %}{% endblock %}
+
+{% if not is_granted('ROLE_ADMIN') %}
+
+    {{ include('@Common/analytics.html.twig') }}
+
+{% endif %}
+
+{% set noEditor = app.request.get('noEditor') %}
+
+{% if not noEditor %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+
+        {{ include('@Common/editor/editor.html.twig') }}
+        {{ include('@Common/editor/editorModals.html.twig') }}
+        {{ include('@Common/editor/editorJs.html.twig') }}
+
+    {% endif %}
+
+{% endif %}
+
+</body>
+</html>
