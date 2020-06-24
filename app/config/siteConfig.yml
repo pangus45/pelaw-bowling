@@ -25,38 +25,38 @@ parameters:
     app.styleConstants:
       TB: 60px
 
-    app.articleTypes:
+#    app.articleTypes:
 
-      blog:
-        image:
-          type: image
-        date:
-          type: date
-          flags: [includeInAdmin]
-        title:
-          type: text
-          flags: [includeInAdmin]
-        subTitle:
-          type: text
-        body:
-          type: simpleHtml
-        priority:
-          type: bool
-#          icon: exclamation
-        published:
-          type: bool
+#      blog:
+#        image:
+#          type: image
+#        date:
+#          type: date
+#          flags: [includeInAdmin]
+#        title:
+#          type: text
+#          flags: [includeInAdmin]
+#        subTitle:
+#          type: text
+#        body:
+#          type: simpleHtml
+#        priority:
+#          type: bool
+##          icon: exclamation
+#        published:
+#          type: bool
 #          icon: tickCross
 
 #        moreHtml:
 #          type: simpleHtml
 
-      position:
-        date:
-          type: date
-        title:
-          type: text
-        description:
-          type: text
+#      position:
+#        date:
+#          type: date
+#        title:
+#          type: text
+#        description:
+#          type: text
 
 
 # Twig Configuration
