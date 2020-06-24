@@ -1,1 +1,1 @@
-/usr/sbin/logrotate -vs /home/positive/www/bl/scripts/contactLogsRotateStatus /home/positive/www/bl/scripts/contactLogsRotate.conf
+/usr/sbin/logrotate -vs /home/positive/www/pb/scripts/contactLogsRotateStatus /home/positive/www/pb/scripts/contactLogsRotate.conf

@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-php /home/pangus0/www/bl/bin/console cache:clear --env=prod --no-debug

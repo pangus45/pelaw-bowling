@@ -5,6 +5,6 @@ set PROMPT "$ "
 
 spawn /usr/bin/ssh -p 25522 positive@212.83.166.128
 expect $PROMPT
-send -- "hc\r"
+send -- "pbc\r"
 expect $PROMPT
 send -- "exit\r"

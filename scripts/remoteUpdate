@@ -14,7 +14,7 @@ send -- "sa\r"
 expect "git_rsa: "
 send -- "$PASS\r"
 expect $PROMPT
-send -- "hp\r"
+send -- "pbp\r"
 expect "*"
 send -- "k\r"
 expect $PROMPT
