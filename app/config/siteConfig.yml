@@ -16,7 +16,7 @@ parameters:
     app.defaultFont: Noto Sans
 
     app.fonts:
-      Source Sans Pro:
+      Noto Sans:
         class: notoSans
         weights:
           Regular: 400
