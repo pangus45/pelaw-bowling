@@ -61,12 +61,12 @@ body, html {
 
 body {
   margin: 0;
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Lato", sans-serif !important;
   width: 100%;
 }
 
-.notoSans {
-  font-family: "Noto Sans", sans-serif;
+.lato {
+  font-family: "Lato", sans-serif;
 }
 
 .lineHeight1 {

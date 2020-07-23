@@ -2,7 +2,7 @@
 
 framework:
   assets:
-    version: 'v36'
+    version: 'v38'
 
 parameters:
 
@@ -13,14 +13,17 @@ parameters:
 
     app.locales: en
 
-    app.defaultFont: Noto Sans
+    app.defaultFont: Lato
 
     app.fonts:
-      Noto Sans:
-        class: notoSans
+      Lato:
+        class: lato
         weights:
+          Thin: 100
+          Light: 300
           Regular: 400
           Bold: 700
+          Black: 900
 
     app.styleConstants:
       TB: 60px
