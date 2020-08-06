@@ -170,6 +170,7 @@
   background-color: white;
   height: 54px;
   position: fixed;
+  border-bottom: solid #7b9f01 3px;
   top: 0px;
   width: 100%;
   z-index: 1000;

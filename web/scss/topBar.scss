@@ -250,6 +250,7 @@ body {
   background-color: white;
   height: $topBarTopHeight;
   position: fixed;
+  border-bottom: solid $mainGreen 3px;
   top: 0px;
   width: 100%;
   z-index: 1000;
