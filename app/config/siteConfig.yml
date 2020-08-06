@@ -2,7 +2,7 @@
 
 framework:
   assets:
-    version: 'v38'
+    version: 'v39'
 
 parameters:
 
@@ -28,11 +28,19 @@ parameters:
     app.styleConstants:
       TB: 60px
 
-#    app.articleTypes:
+    app.articleTypes:
 
-#      blog:
-#        image:
-#          type: image
+      activity:
+        image:
+          type: image
+        title:
+          type: text
+        time:
+          type: text
+        description:
+          type: text
+          rows: 5
+
 #        date:
 #          type: date
 #          flags: [includeInAdmin]
@@ -53,11 +61,15 @@ parameters:
 #        moreHtml:
 #          type: simpleHtml
 
-#      position:
+      album:
 #        date:
 #          type: date
-#        title:
-#          type: text
+        title:
+          type: text
+        images:
+          type: image
+          flags: [multiple]
+
 #        description:
 #          type: text
 
