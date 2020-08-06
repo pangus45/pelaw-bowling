@@ -35,7 +35,7 @@ body, html {
 #cookieBar{
 
   bottom: 0;
-  background-color: $lightGreen;
+  background-color: $mainGreen;
   left: 0px;
   position: fixed;
   width: 100%;
@@ -71,7 +71,7 @@ body, html {
         //position: relative;
         //top: 50%;
         //@include translateY(-50%);
-        color: $lightGreen;
+        color: $mainGreen;
       }
     }
   }

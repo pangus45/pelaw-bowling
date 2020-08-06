@@ -140,6 +140,7 @@ body {
 }
 
 .modal {
+  z-index: 2050 !important;
   font-family: sans-serif;
 }
 .modal label {
@@ -237,7 +238,7 @@ body {
 .editorElementOverlay {
   position: absolute;
   text-align: center;
-  z-index: 1020;
+  z-index: 2020;
   display: table;
   background-color: transparent;
   border: none;
@@ -620,7 +621,7 @@ html.editorActive .editor.keys.showKeyList {
   top: 0;
   font-family: sans-serif;
   left: 0px;
-  z-index: 2000;
+  z-index: 2050;
 }
 #topLeftEditorText > div {
   background: white;

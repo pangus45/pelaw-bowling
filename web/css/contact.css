@@ -1,3 +1,28 @@
+.block form {
+  width: 100%;
+}
+.block form .form-control:focus {
+  border-color: #4a6c2f;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 214, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 214, 0, 0.6);
+}
+.block form button {
+  border: none;
+  background-color: #7b9f01;
+  color: #2d2d2d;
+  font-size: 26px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-bottom: 2px;
+}
+.block form button:hover {
+  background-color: #f8a300;
+  border: none;
+}
+
 .help-block {
   color: white !important;
   background-color: #a94442 !important;
