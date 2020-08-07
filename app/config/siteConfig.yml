@@ -81,8 +81,7 @@ twig:
       renderPTags
     siteBlocks:
       facebook: Facebook
-#      contactForm: Contact Form
-#      lostPropertyForm: Lost Property Form
+      albums: Photo Albums Accordion
 
 swiftmailer:
   disable_delivery: true

@@ -1,0 +1,18 @@
+{% set albums = articleManager.allArticlesOfTypeGet('album') %}
+
+{% for album in albums %}
+
+{#    <div class="albumWrapper">#}
+{#        {{ album.title }}#}
+        <div class="albumTitle">{{ album.title }}</div>
+
+        <div class="albumPhotos row">
+            {% for image in album.images %}
+                <div class="col-xs-4">
+                    <img src="{{ image }}" alt="">
+                </div>
+            {% endfor %}
+        </div>
+{#    </div>#}
+
+{% endfor %}

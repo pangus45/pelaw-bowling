@@ -1,0 +1,63 @@
+//@import "constants";
+@import '../bundles/common/scss/_mixins';
+
+.block-albums {
+
+  @include flexbox();
+
+  .blockBorderContainer {
+
+    @include flexbox();
+    @include flex(1);
+
+    flex-direction: column;
+
+    .albumTitle {
+      padding: 10px 10%;
+      font-size: 20px;
+      font-weight: 300;
+      //border-bottom: solid lightgrey 1px;
+      //border-top: solid lightgrey 1px;
+      border: solid #ece3df 1px;
+
+      &:first-child{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+    }
+
+    //.albumWrapper{
+    //
+    //  &:first-child{
+    //    .albumTitle{
+    //      border-top: none;
+    //    }
+    //  }
+    //}
+
+    .albumPhotos {
+      padding: 10px 0;
+
+      img{
+        width: 100%;
+      }
+
+      //@include flexbox();
+      //
+      //img{
+      //  @include flex(1 1 22%)
+      //}
+    }
+
+    //.contactInnerWrapper {
+    //  @include flex(1);
+    //
+    //  // reinstantiating bootstrap hover for click through
+    //  .btn-default.clickThroughHover {
+    //    color: #333;
+    //    background-color: #e6e6e6;
+    //    border-color: #adadad;
+    //  }
+    //}
+  }
+}
