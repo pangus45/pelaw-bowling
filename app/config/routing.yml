@@ -12,6 +12,13 @@ home:
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
 
+activity:
+  path: /activity/{articleId}
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+    pageId: activity-article
+    articleType: activity
+
 about:
   path: /about
   defaults:
