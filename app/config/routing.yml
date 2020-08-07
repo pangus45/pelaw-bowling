@@ -38,6 +38,8 @@ gallery:
   path: /gallery
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
+    js: [js/albums.js]
+    css: [css/albums.css]
 
 contact:
   path:     /contact
@@ -45,7 +47,7 @@ contact:
     _controller: AppBundle:Contact:contact
     sitemap: true
     js: [js/contact.js]
-    css: [css/contact.css, css/formsCommon.css]
+    css: [css/contact.css]
 
 test1:
   path: /test1

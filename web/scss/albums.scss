@@ -20,27 +20,47 @@
       //border-top: solid lightgrey 1px;
       border: solid #ece3df 1px;
 
+      cursor: pointer;
+
       &:first-child{
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
       }
     }
 
-    //.albumWrapper{
-    //
-    //  &:first-child{
-    //    .albumTitle{
-    //      border-top: none;
-    //    }
-    //  }
-    //}
+
+    $imageSpacing: 20px;
 
     .albumPhotos {
-      padding: 10px 0;
 
-      img{
-        width: 100%;
+      height: 0px;
+      overflow: hidden;
+
+      &:nth-child(2){
+        height: auto;
       }
+
+      margin: 0 -$imageSpacing / 2;
+      margin-top: $imageSpacing;
+
+      .imageColumn{
+
+        //padding: 10px;
+
+        padding-right: $imageSpacing / 2;
+        padding-left: $imageSpacing / 2;
+
+        margin-bottom: $imageSpacing;
+
+        .albumImage{
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
 
       //@include flexbox();
       //

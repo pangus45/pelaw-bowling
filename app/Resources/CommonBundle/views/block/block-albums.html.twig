@@ -2,17 +2,19 @@
 
 {% for album in albums %}
 
-{#    <div class="albumWrapper">#}
-{#        {{ album.title }}#}
-        <div class="albumTitle">{{ album.title }}</div>
+    {#    <div class="albumWrapper">#}
+    {#        {{ album.title }}#}
+    <div class="albumTitle">{{ album.title }}</div>
 
-        <div class="albumPhotos row">
-            {% for image in album.images %}
-                <div class="col-xs-4">
-                    <img src="{{ image }}" alt="">
+    <div class="albumPhotos row">
+        {% for image in album.images %}
+            <div class="col-xs-4 imageColumn" >
+                <div class="albumImage" style="background-image: url({{ image }});">
+
                 </div>
-            {% endfor %}
-        </div>
-{#    </div>#}
+            </div>
+        {% endfor %}
+    </div>
+    {#    </div>#}
 
 {% endfor %}
