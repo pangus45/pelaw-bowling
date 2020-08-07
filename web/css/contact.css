@@ -1,6 +1,9 @@
 .block form {
   width: 100%;
 }
+.block form label {
+  display: none;
+}
 .block form .form-control:focus {
   border-color: #4a6c2f;
   outline: 0;
@@ -17,10 +20,14 @@
   margin-right: auto;
   margin-top: 50px;
   padding-bottom: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
 }
 .block form button:hover {
   background-color: #f8a300;
   border: none;
+  color: white;
 }
 
 .help-block {

@@ -9,6 +9,10 @@
 
     width: 100%;
 
+    label{
+      display: none;
+    }
+
     .form-control:focus {
       border-color: $darkGreen;
       outline: 0;
@@ -27,11 +31,15 @@
       margin-right: auto;
       margin-top: 50px;
       padding-bottom: 2px;
+      padding-left: 30px;
+      padding-right: 30px;
+      color: white;
 
       &:hover{
         //background-color: lighten($mainGreen, 10%);
         background-color: #f8a300;
         border: none;
+        color: white;
       }
     }
   }
