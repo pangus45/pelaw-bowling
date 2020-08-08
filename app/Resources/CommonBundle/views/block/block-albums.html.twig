@@ -6,12 +6,15 @@
     {#        {{ album.title }}#}
     <div class="albumTitle">{{ album.title }}</div>
 
-    <div class="albumPhotos row">
+    <div class="albumPhotos">
         {% for image in album.images %}
-            <div class="col-xs-4 imageColumn" >
-                <div class="albumImage" style="background-image: url({{ image }});">
+            <div class="col-xs-3 imageColumn">
+                <a data-lightbox="{{ album.title }}" href="{{ image }}">
+                    <div class="albumImage" style="background-image: url({{ image }});">
 
-                </div>
+                    </div>
+                </a>
+
             </div>
         {% endfor %}
     </div>

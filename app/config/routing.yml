@@ -38,8 +38,8 @@ gallery:
   path: /gallery
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
-    js: [js/albums.js]
-    css: [css/albums.css]
+    js: [js/albums.js,libs/lightbox2/dist/js/lightbox.min.js]
+    css: [css/albums.css,libs/lightbox2/dist/css/lightbox.css]
 
 contact:
   path:     /contact

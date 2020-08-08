@@ -34,6 +34,7 @@
   overflow: hidden;
   margin: -10px;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 .block-albums .blockBorderContainer .albumPhotos:nth-child(2) {
   height: auto;
@@ -41,7 +42,7 @@
 .block-albums .blockBorderContainer .albumPhotos .imageColumn {
   padding-right: 10px;
   padding-left: 10px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 .block-albums .blockBorderContainer .albumPhotos .imageColumn .albumImage {
   width: 100%;

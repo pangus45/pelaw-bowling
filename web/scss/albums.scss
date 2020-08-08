@@ -30,6 +30,7 @@
 
 
     $imageSpacing: 20px;
+    $halfImageSpacing: $imageSpacing / 2;
 
     .albumPhotos {
 
@@ -40,17 +41,20 @@
         height: auto;
       }
 
-      margin: 0 -$imageSpacing / 2;
+      margin: 0 -$halfImageSpacing;
       margin-top: $imageSpacing;
+      margin-bottom: 0;
 
       .imageColumn{
 
         //padding: 10px;
 
-        padding-right: $imageSpacing / 2;
-        padding-left: $imageSpacing / 2;
+        padding-right: $halfImageSpacing;
+        padding-left: $halfImageSpacing;
 
-        margin-bottom: $imageSpacing;
+        padding-bottom: $imageSpacing;
+
+        //margin-bottom: $imageSpacing;
 
         .albumImage{
           width: 100%;
