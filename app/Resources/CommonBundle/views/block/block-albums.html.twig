@@ -11,7 +11,7 @@
 
         {% set album = articleManager.articleGetByID('album', albumId) %}
 
-{#        Album can be deleted #}
+        {#        Album can be deleted #}
         {% if album is not null %}
 
             {% set albums = albums | merge([album]) %}
@@ -32,16 +32,17 @@
     <div class="albumTitle">{{ album.title }}</div>
 
     <div class="albumPhotos">
-        {% for image in album.images %}
-            <div class="col-xs-3 imageColumn">
-                <a data-lightbox="{{ album.title }}" href="{{ image }}">
-                    <div class="albumImage" style="background-image: url({{ image }});">
+        <div class="albumPhotosInner">
+            {% for image in album.images %}
+                <div class="col-xs-3 imageColumn">
+                    <a data-lightbox="{{ album.title }}" href="{{ image }}">
+                        <div class="albumImage" style="background-image: url({{ image }});">
 
-                    </div>
-                </a>
-
-            </div>
-        {% endfor %}
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
 {% endfor %}

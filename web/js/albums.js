@@ -48,7 +48,7 @@ function albumOpen(pAlbum){
 
     // var height = pAlbum.height();
 
-    TweenMax.from(pAlbum, ALBUM_ANIM_TIME, {height:0});
+    TweenMax.from(pAlbum, ALBUM_ANIM_TIME, {height:0 });
 
     pAlbum.data('open', true);
 }
