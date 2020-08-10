@@ -29,23 +29,28 @@
     }
 
 
-    $imageSpacing: 20px;
+    $imageSpacing: 10px;
     $halfImageSpacing: $imageSpacing / 2;
 
     .albumPhotos {
 
+      background-color: lightgrey;
       height: 0px;
       overflow: hidden;
+
+      padding-left: $halfImageSpacing;
+      padding-right: $halfImageSpacing;
 
       &:nth-child(2){
         height: auto;
       }
 
       //margin: 0 -$halfImageSpacing;
-      margin-top: $imageSpacing;
+      //margin-top: $imageSpacing;
       margin-bottom: 0;
-      margin-left: -$halfImageSpacing;
-      margin-right: -$halfImageSpacing;
+      //margin-left: -$halfImageSpacing;
+      //margin-right: -$halfImageSpacing;
+      padding-top: $imageSpacing;
 
       .imageColumn{
 
@@ -64,6 +69,8 @@
           padding-bottom: 100%;
           background-size: cover;
           background-position: center;
+
+          border-radius: 15px;
         }
       }
 
