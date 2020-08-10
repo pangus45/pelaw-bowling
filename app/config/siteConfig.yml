@@ -40,6 +40,10 @@ parameters:
         description:
           type: text
           rows: 5
+        albums:
+          type: album
+          selectorValue: title
+          flags: [multiple]
 
 #        date:
 #          type: date

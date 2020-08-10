@@ -1,9 +1,29 @@
-{% set albums = articleManager.allArticlesOfTypeGet('album') %}
+{% set albums = [] %}
+
+{% if 'activity-article' == globals.pageId %}
+
+    {% set id =  app.request.get('articleId')  %}
+    {% set type =  app.request.get('articleType') %}
+
+    {% set activity = articleManager.articleGetByID(type, id) %}
+
+    {% for albumId in activity.albums %}
+
+        {% set album = articleManager.articleGetByID('album', albumId) %}
+
+        {% set albums = albums | merge([album]) %}
+
+    {% endfor %}
+
+{% else %}
+
+    {% set albums = articleManager.allArticlesOfTypeGet('album') %}
+
+{% endif %}
+
 
 {% for album in albums %}
 
-    {#    <div class="albumWrapper">#}
-    {#        {{ album.title }}#}
     <div class="albumTitle">{{ album.title }}</div>
 
     <div class="albumPhotos">
@@ -18,6 +38,5 @@
             </div>
         {% endfor %}
     </div>
-    {#    </div>#}
 
 {% endfor %}

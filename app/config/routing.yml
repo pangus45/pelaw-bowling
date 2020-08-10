@@ -18,6 +18,8 @@ activity:
     _controller: CommonBundle:DefaultPage:defaultPage
     pageId: activity-article
     articleType: activity
+    js: [js/albums.js,libs/lightbox2/dist/js/lightbox.min.js]
+    css: [css/albums.css,libs/lightbox2/dist/css/lightbox.css]
 
 about:
   path: /about
