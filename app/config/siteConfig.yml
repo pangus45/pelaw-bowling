@@ -2,7 +2,7 @@
 
 framework:
   assets:
-    version: 'v44'
+    version: 'v45'
 
 parameters:
 
