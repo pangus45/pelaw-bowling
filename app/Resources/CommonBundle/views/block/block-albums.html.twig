@@ -2,7 +2,7 @@
 
 {% if 'activity-article' == globals.pageId %}
 
-    {% set id =  app.request.get('articleId')  %}
+    {% set id =  app.request.get('articleId') %}
     {% set type =  app.request.get('articleType') %}
 
     {% set activity = articleManager.articleGetByID(type, id) %}
@@ -11,7 +11,12 @@
 
         {% set album = articleManager.articleGetByID('album', albumId) %}
 
-        {% set albums = albums | merge([album]) %}
+{#        Album can be deleted #}
+        {% if album is not null %}
+
+            {% set albums = albums | merge([album]) %}
+
+        {% endif %}
 
     {% endfor %}
 
