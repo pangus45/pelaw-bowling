@@ -309,8 +309,11 @@ html#footer-edit .editorWrapper {
   display: none;
 }
 
-html.editorActive .editor.keys.showKeyList {
+html.editorActive .editor.keys.showKeyList.desktopShow {
   display: block;
+}
+html.editorActive .editor.keys.showKeyList.mobileShow {
+  display: none;
 }
 
 .editorWrapperLeft span {
@@ -737,7 +740,37 @@ html.editorActive .editor.keys.showKeyList {
   width: 100%;
 }
 
+html.editMobile .editor.keys.showKeyList.mobileShow {
+  display: block !important;
+}
+html.editMobile .modal {
+  padding-right: 0 !important;
+}
+html.editMobile .modal .mobileHide {
+  display: none !important;
+}
+html.editMobile #editorMobileWrapper {
+  right: 0;
+  top: 0;
+  position: fixed;
+  float: right;
+}
+html.editMobile #editorMobileWrapper span {
+  display: block;
+  background-color: white;
+  margin-bottom: 2px;
+  padding: 3px;
+}
+html.editMobile #elementEditModal .mobileShow {
+  width: 12%;
+  display: inline-block;
+}
+
 @media only screen and (max-width: 600px) {
+  .editor.keys.showKeyList.mobileShow {
+    display: block !important;
+  }
+
   .modal {
     padding-right: 0 !important;
   }
@@ -745,8 +778,17 @@ html.editorActive .editor.keys.showKeyList {
     display: none !important;
   }
 
-  #elementEditModal.linked .linkedHide {
-    display: none;
+  #editorMobileWrapper {
+    right: 0;
+    top: 0;
+    position: fixed;
+    float: right;
+  }
+  #editorMobileWrapper span {
+    display: block;
+    background-color: white;
+    margin-bottom: 2px;
+    padding: 3px;
   }
 
   .modal-lg {
