@@ -34,7 +34,7 @@ function accordionInit() {
     });
 }
 
-var ALBUM_ANIM_TIME = 0.3;
+var ALBUM_ANIM_TIME = 0.5;
 
 function albumOpen(pAlbum){
 

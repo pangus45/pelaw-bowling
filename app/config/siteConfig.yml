@@ -2,7 +2,7 @@
 
 framework:
   assets:
-    version: 'v55'
+    version: 'v56'
 
 parameters:
 
@@ -31,7 +31,9 @@ parameters:
     app.articleTypes:
 
       activity:
-        image:
+        banner:
+          type: image
+        thumbnail:
           type: image
         title:
           type: text
