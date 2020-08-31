@@ -76,6 +76,10 @@ parameters:
           type: image
           flags: [multiple]
 
+#      pdf:
+#        pdf:
+#          type: file
+
 #        description:
 #          type: text
 
