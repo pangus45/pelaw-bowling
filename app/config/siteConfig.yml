@@ -76,9 +76,15 @@ parameters:
           type: image
           flags: [multiple]
 
-#      pdf:
-#        pdf:
-#          type: file
+      pdf:
+        name:
+          type: text
+          info: This name is used to create the filename/url - so if you change it, you'll break any links you've created
+        pdf:
+          type: file
+          mimeTypes: [application/pdf]
+          flags: [useAsPageLink]
+          filenameField: name
 
 #        description:
 #          type: text

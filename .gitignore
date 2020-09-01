@@ -18,6 +18,7 @@
 /src/CommonBundle/
 /web/data/
 /web/images/
+/web/files/
 /web/media/
 .idea
 *.sass-cache
