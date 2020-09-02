@@ -2,7 +2,7 @@
 
 framework:
   assets:
-    version: 'v59'
+    version: 'v61'
 
 parameters:
 
@@ -80,6 +80,7 @@ parameters:
         name:
           type: text
           info: This name is used to create the filename/url - so if you change it, you'll break any links you've created
+          flags: [required]
         pdf:
           type: file
           mimeTypes: [application/pdf]
@@ -93,6 +94,7 @@ parameters:
 # Twig Configuration
 twig:
   globals:
+    articleAdminPage: '/edit/activity'
     legacyFlags:
       renderPTags
     siteBlocks:
