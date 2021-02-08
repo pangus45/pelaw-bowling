@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 php /home/pb.positivemint.com/bin/console cache:clear --env=prod
-chown -R pcpos8169 /home/pb.positivemint.com/var/cache
+chown -R pbpos5141 /home/pb.positivemint.com/var/cache
