@@ -7,7 +7,10 @@ security:
         in_memory:
             memory:
               users:
-                admin:
+                paul:
+                  password: $2y$12$FvUmtVSJ5W3smYe8UYany.EP72hu7UHAdqIYCZ2l.8c/OLmzbi0D6
+                  roles: ROLE_ADMIN
+                victor:
                   password: $2y$12$FvUmtVSJ5W3smYe8UYany.EP72hu7UHAdqIYCZ2l.8c/OLmzbi0D6
                   roles: ROLE_ADMIN
                 editor:

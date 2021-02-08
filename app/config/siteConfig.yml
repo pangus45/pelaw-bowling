@@ -13,6 +13,9 @@ parameters:
 
     app.locales: en
 
+    app.loginUrl: lopbfdsfn2398nfsdf983r
+    app.adminUrl: adpbsdfhnj3984rnsdkf9d
+
     app.defaultFont: Lato
 
     app.fonts:
@@ -31,21 +34,22 @@ parameters:
     app.articleTypes:
 
       activity:
-        banner:
-          type: image
-        thumbnail:
-          type: image
-        title:
-          type: text
-        time:
-          type: text
-        description:
-          type: text
-          rows: 5
-        albums:
-          type: album
-          selectorValue: title
-          flags: [multiple]
+        fields:
+          banner:
+            type: image
+          thumbnail:
+            type: image
+          title:
+            type: text
+          time:
+            type: text
+          description:
+            type: text
+            rows: 5
+          albums:
+            type: album
+            selectorValue: title
+            flags: [multiple]
 
 #        date:
 #          type: date
@@ -68,24 +72,27 @@ parameters:
 #          type: simpleHtml
 
       album:
+        fields:
+
 #        date:
 #          type: date
-        title:
-          type: text
-        images:
-          type: image
-          flags: [multiple]
+          title:
+            type: text
+          images:
+            type: image
+            flags: [multiple]
 
       pdf:
-        name:
-          type: text
-          info: This name is used to create the filename/url - so if you change it, you'll break any links you've created
-          flags: [required]
-        pdf:
-          type: file
-          mimeTypes: [application/pdf]
-          flags: [useAsPageLink]
-          filenameField: name
+        fields:
+          name:
+            type: text
+            info: This name is used to create the filename/url - so if you change it, you'll break any links you've created
+            flags: [required]
+          pdf:
+            type: file
+            mimeTypes: [application/pdf]
+            flags: [useAsPageLink]
+            filenameField: name
 
 #        description:
 #          type: text
@@ -104,3 +111,18 @@ twig:
 swiftmailer:
   disable_delivery: true
 #  delivery_addresses: ['contact@blueline-group.com'] This overrides to address set in code - use at your peril
+
+
+liip_imagine:
+
+  filter_sets:
+
+    galleryThumb:
+
+      quality: 70
+
+      filters:
+
+        scale:
+
+          dim: [ 400,400 ]

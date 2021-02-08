@@ -135,6 +135,10 @@
   cursor: pointer;
 }
 
+.keySectionTop {
+  margin-top: 10px;
+}
+
 body {
   padding-right: 0px !important;
 }
@@ -632,6 +636,16 @@ html.editorActive .editor.keys.showKeyList.mobileShow {
   border-bottom: solid 1px black;
   border-right: solid 1px black;
   display: inline-block;
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 
 #anchorSelectionInOverlay.flash {

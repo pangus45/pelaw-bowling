@@ -11,7 +11,7 @@
 
         {% set album = articleManager.articleGetByID('album', albumId) %}
 
-        {#        Album can be deleted #}
+        {# Album can be deleted #}
         {% if album is not null %}
 
             {% set albums = albums | merge([album]) %}
@@ -33,10 +33,16 @@
 
     <div class="albumPhotos">
         <div class="albumPhotosInner">
+
             {% for image in album.images %}
+
+                {% set url = globals.uploadedImageWebPathGet(image) %}
+
+                {% set filteredUrl = url | imagine_filter('galleryThumb') %}
+
                 <div class="col-xs-3 imageColumn">
-                    <a data-lightbox="{{ album.title }}" href="{{ image }}">
-                        <div class="albumImage" style="background-image: url({{ image }});">
+                    <a data-lightbox="{{ album.title }}" href="{{ filteredUrl }}">
+                        <div class="albumImage" style="background-image: url({{ url }});">
 
                         </div>
                     </a>
