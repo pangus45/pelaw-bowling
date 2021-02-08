@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
 
 set timeout -1
-set PROMPT "$ "
+set PROMPT "~#"
 
 spawn /usr/bin/ssh root@178.62.37.63
 expect $PROMPT
