@@ -3,7 +3,7 @@
 set timeout -1
 set PROMPT "$ "
 
-spawn /usr/bin/ssh -p 25522 positive@212.83.166.128
+spawn /usr/bin/ssh root@178.62.37.63
 expect $PROMPT
 send -- "pbc\r"
 expect $PROMPT

@@ -8,7 +8,7 @@ send_user "Password: "
 expect_user -re "(.*)\n" {set PASS $expect_out(1,string)}
 stty echo
 
-spawn /usr/bin/ssh -p 25522 positive@212.83.166.128
+spawn /usr/bin/ssh root@178.62.37.63
 expect $PROMPT
 send -- "sa\r"
 expect "git_rsa: "

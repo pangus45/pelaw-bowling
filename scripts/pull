@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-cd ~/pb
+cd /home/pb.positivemint.com/src/CommonBundle
 git reset --hard
 git pull
 
-cd ~/pb/src/CommonBundle
+cd /home/pb.positivemint.com
 git reset --hard
 git pull
 
-cd ~/pb/scripts
-php ~/pb/bin/console cache:clear --env=prod
+php /home/pb.positivemint.com/scripts/cacheBust.php
+sh /home/pb.positivemint.com/scripts/cacheClearAndChown
