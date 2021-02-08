@@ -3,16 +3,9 @@
 set timeout -1
 set PROMPT "$ "
 
-stty -echo
-send_user "Password: "
-expect_user -re "(.*)\n" {set PASS $expect_out(1,string)}
-stty echo
-
 spawn /usr/bin/ssh root@178.62.37.63
 expect $PROMPT
 send -- "sa\r"
-expect "git_rsa: "
-send -- "$PASS\r"
 expect $PROMPT
 send -- "pbp\r"
 expect "*"
