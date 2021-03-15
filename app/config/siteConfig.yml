@@ -33,6 +33,17 @@ parameters:
 
     app.articleTypes:
 
+      page:
+        roles: [ ROLE_ADMIN ]
+        flags: [ addRoutes ,multilingual, uniquePageId ]
+        fields:
+          name:
+            type: text
+            flags: [ required,fixed ]
+          url:
+            type: url
+            flags: [ required ]
+
       activity:
         fields:
           banner:
