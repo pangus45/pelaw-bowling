@@ -1,17 +1,20 @@
 <div id="desktopTopBar" class="menuSlide">
 
     <span id="topBarLeftLinks">
-{#        <svg id="burger" viewBox="0 0 100 100" preserveAspectRatio="none">#}
-{#            <path id="burgerPathTopStart" d="M10 10 L90 10"></path>#}
-{#            <path id="burgerPathMiddleStart" d="M10 50 L90 50"></path>#}
-{#            <path id="burgerPathBottomStart" d="M10 90 L90 90"></path>#}
-{#            <path id="burgerPathTopFinish" class="targetPath" d="M20 10 L50 50"></path>#}
-{#            <path id="burgerPathMiddleFinish" class="targetPath" d="M20 90 L80 10"></path>#}
-{#            <path id="burgerPathBottomFinish" class="targetPath" d="M80 90 L50 50"></path>#}
-{#        </svg>#}
+{# <svg id="burger" viewBox="0 0 100 100" preserveAspectRatio="none"> #}
+        {# <path id="burgerPathTopStart" d="M10 10 L90 10"></path> #}
+        {# <path id="burgerPathMiddleStart" d="M10 50 L90 50"></path> #}
+        {# <path id="burgerPathBottomStart" d="M10 90 L90 90"></path> #}
+        {# <path id="burgerPathTopFinish" class="targetPath" d="M20 10 L50 50"></path> #}
+        {# <path id="burgerPathMiddleFinish" class="targetPath" d="M20 90 L80 10"></path> #}
+        {# <path id="burgerPathBottomFinish" class="targetPath" d="M80 90 L50 50"></path> #}
+        {# </svg> #}
         <span id="topBarLeftInner">
-            <a href="{{ path('home') }}" class="topBarLink">PELAW BOWLING CLUB</a>
-{#        <img id="mainLogo" src="{{ asset('images/logo happicabs-01.svg') }}">#}
+            <a id="mainLogoWrapper" href="/">
+            <img id="mainLogo" src="{{ asset('images/logo.svg') }}" alt="">
+                </a>
+{# <a href="{{ path('home') }}" class="topBarLink">PELAW BOWLING CLUB</a> #}
+            {# <img id="mainLogo" src="{{ asset('images/logo happicabs-01.svg') }}"> #}
         </span>
     </span>
 
@@ -23,6 +26,7 @@
         <a id="aboutLink" href="{{ path('about') }}" class="topBarRightLink topBarLink">ABOUT</a>
         <a id="LeaguesLink" href="{{ path('leagues') }}" class="topBarRightLink topBarLink">LEAGUES</a>
         <a id="galleryLink" href="{{ path('gallery') }}" class="topBarRightLink topBarLink">GALLERY</a>
+        <a id="donateLink" href="/donate" class="topBarRightLink topBarLink">DONATE</a>
         <a id="contactLink" href="{{ path('contact') }}" class="topBarRightLink topBarLink">CONTACT</a>
     </div>
 </div>
