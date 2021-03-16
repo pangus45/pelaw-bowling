@@ -58,8 +58,9 @@
   vertical-align: middle;
 }
 #topBarRight a {
-  font-weight: 600;
+  font-weight: 700;
   color: #1d835b;
+  font-size: 16px;
 }
 #topBarRight a:hover {
   color: #67c900;
