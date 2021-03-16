@@ -59,6 +59,10 @@
 }
 #topBarRight a {
   font-weight: 600;
+  color: #1d835b;
+}
+#topBarRight a:hover {
+  color: #67c900;
 }
 
 .topBarLink {

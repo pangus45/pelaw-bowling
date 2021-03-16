@@ -21,6 +21,7 @@ body {
 }
 
 #mainLogoWrapper{
+
   cursor: pointer;
 
   #mainLogo{
@@ -87,6 +88,11 @@ body {
 
   a{
     font-weight: 600;
+    color: #1d835b;
+
+    &:hover{
+      color: #67c900;
+    }
   }
 }
 
