@@ -114,6 +114,86 @@
     display: block;
   }
 }
+html.editMobile #topBarHomeLink, html.editMobile #sideBarToggle {
+  display: none;
+}
+html.editMobile body {
+  padding-top: 0px !important;
+}
+html.editMobile #mobileTopBarMediaCheck {
+  float: left;
+}
+html.editMobile #desktopTopBar {
+  display: none;
+}
+html.editMobile #mobileMenuToggle {
+  display: block;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+}
+html.editMobile #mobileMenuToggle .menuToggleLine {
+  border-color: white;
+}
+html.editMobile #mobileTopBarWrapper {
+  display: block;
+}
+html.editMobile #mobileTopBarWrapper #mobileSocialWrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+html.editMobile #mobileTopBarWrapper #mobileLogoWrapper {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+html.editMobile #mobileTopBarWrapper #mobileLogoWrapper #mobileLogo {
+  height: 40px;
+}
+html.editMobile #mobileTopBarWrapper #mobileTopBar {
+  background-color: #1d835b;
+  height: 60px;
+}
+html.editMobile #mobileTopBarWrapper #mobileMenuLinks {
+  display: none;
+  border-top: solid white 1px;
+  border-bottom: solid white 1px;
+  background-color: #67c900;
+  font-size: 18px;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
+  display: block;
+  margin-left: 0;
+  text-align: center;
+  padding: 10px 0;
+  color: white !important;
+  border-bottom: solid white 1px;
+}
+html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink.lastOfSection {
+  border-bottom: none !important;
+}
+html.editMobile #mobileTopBarWrapper #mobileTopBarLogoText {
+  margin-top: 6px;
+  margin-left: 20px;
+}
+html.editMobile #topBarRightInner {
+  display: none !important;
+}
+html.editMobile #menuSlider {
+  position: relative;
+  background-color: #fff;
+}
+html.editMobile #mobileTopBarWrapper {
+  width: 400px;
+  position: relative;
+}
+
 @media only screen and (max-width: 600px), screen and (max-height: 600px) {
   #topBarHomeLink, #sideBarToggle {
     display: none;
@@ -135,6 +215,7 @@
     display: block;
     top: 20px;
     right: 20px;
+    position: absolute;
   }
   #mobileMenuToggle .menuToggleLine {
     border-color: white;
@@ -169,44 +250,19 @@
     background-color: #67c900;
     font-size: 18px;
     position: absolute;
-    top: 80px;
+    top: 60px;
     width: 100%;
   }
-  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuSocial {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    text-align: center;
-    padding: 10px 0;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuSocial.fb {
-    background-color: #3B5998;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuSocial.twitter {
-    background-color: #1DA1F2;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .taxiGroup {
-    font-weight: normal;
-    font-style: normal;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .topBarLink {
+  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
     display: block;
     margin-left: 0;
     text-align: center;
     padding: 10px 0;
     color: white !important;
-    border-bottom: solid #233766 1px;
+    border-bottom: solid white 1px;
   }
-  #mobileTopBarWrapper #mobileMenuLinks .topBarLink.lastOfSection {
+  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink.lastOfSection {
     border-bottom: none !important;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .topBarLinkTitle {
-    font-weight: bold;
-    font-style: italic;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
   }
   #mobileTopBarWrapper #mobileTopBarLogoText {
     margin-top: 6px;

@@ -1,11 +1,19 @@
 var gMobileMenuOut = false;
+var gSliding = false;
 var gMENU_SLIDE_TIME = 0.5;
 
 $(document).ready(function () {
 
-    gOriginalOverlay = $('#dropdownOverlay').clone();
-
     mobileToggleButtonInit();
+
+    // mobileMenuOpen();
+
+    $(window).resize(function(){
+
+        if(!mobileLayout()){
+            mobileMenuClose();
+        }
+    });
 });
 
 
@@ -39,7 +47,6 @@ function mobileMenuClose() {
     gSliding = true;
 
     var sliderElement = $('#menuSlider');
-
 
     TweenLite.to(sliderElement, gMENU_SLIDE_TIME, {
         marginTop: 0, onComplete: function () {

@@ -3,6 +3,7 @@
 
 
 $topBarTopHeight: 80px;
+$mobileTopBarHeight: 60px;
 //$topBarBottomHeight: 50px;
 //$topBarTotalHeight: 99px;
 
@@ -157,131 +158,128 @@ body {
 }
 
 
-@media only screen and (max-width: $mobileTopBarMaxWidth), screen and (max-height: $mobileTopBarMaxHeight) {
+@mixin topBarMobileLayout{
 
-  #topBarHomeLink, #sideBarToggle {
-    display: none;
-  }
-
-  body {
-    padding-top: 0px !important;
-  }
-
-  #mobileTopBarMediaCheck {
-    float: left;
-  }
-
-  #desktopTopBar {
-    display: none;
-  }
-
-  #mobileMenuToggle{
-
-    display: block;
-    top: 20px;
-    right: 20px;
-
-    .menuToggleLine{
-      border-color: white;
-    }
-  }
-
-  #mobileTopBarWrapper {
-    display: block;
-
-    #mobileSocialWrapper {
-      @include flexbox();
-    }
-
-    #mobileLogoWrapper {
-      position: absolute;
-      left: 10px;
-      top:10px;
-
-      #mobileLogo{
-        height: 40px;
-      }
-    }
-
-    #mobileTopBar {
-      background-color: $darkGreen;
-      height: 60px;
-    }
-
-    #mobileMenuLinks {
-
+    #topBarHomeLink, #sideBarToggle {
       display: none;
+    }
 
-      .mobileMenuSocial {
-        @include flex(1);
-        text-align: center;
-        padding: 10px 0;
+    body {
+      padding-top: 0px !important;
+    }
 
-        &.fb {
-          background-color: $facebookBlue;
-        }
+    #mobileTopBarMediaCheck {
+      float: left;
+    }
 
-        &.twitter {
-          background-color: $twitterBlue;
-        }
-      }
+    #desktopTopBar {
+      display: none;
+    }
 
-      .taxiGroup {
-        font-weight: normal;
-        font-style: normal;
-      }
+    #mobileMenuToggle{
 
-      border-top: solid white 1px;
-      border-bottom: solid white 1px;
-      background-color: $mainGreen;
-
-      font-size: 18px;
+      display: block;
+      top: 20px;
+      right: 20px;
       position: absolute;
-      top: $topBarTopHeight;
-      width: 100%;
 
-      .topBarLink {
-        display: block;
-        margin-left: 0;
-        text-align: center;
-        padding: 10px 0;
-        color: white !important;
+      .menuToggleLine{
+        border-color: white;
+      }
+    }
 
-        border-bottom: solid #233766 1px;
+    #mobileTopBarWrapper {
+      display: block;
 
-        &.lastOfSection {
-          border-bottom: none !important;
+      #mobileSocialWrapper {
+        @include flexbox();
+      }
+
+      #mobileLogoWrapper {
+        position: absolute;
+        left: 10px;
+        top:10px;
+
+        #mobileLogo{
+          height: 40px;
         }
       }
 
-      .topBarLinkTitle {
-        font-weight: bold;
-        font-style: italic;
-        //background-color: $riideBlue;
-        padding-bottom: 8px;
-        margin-bottom: 10px;
-        //color: $bluelineBlue;
+      #mobileTopBar {
+        background-color: $darkGreen;
+        height: $mobileTopBarHeight;
+      }
+
+      #mobileMenuLinks {
+
+        display: none;
+
+        border-top: solid white 1px;
+        border-bottom: solid white 1px;
+        background-color: $mainGreen;
+
+        font-size: 18px;
+        position: absolute;
+        top: $mobileTopBarHeight;
+        width: 100%;
+
+        .mobileMenuLink {
+          display: block;
+          margin-left: 0;
+          text-align: center;
+          padding: 10px 0;
+          color: white !important;
+
+          border-bottom: solid white 1px;
+
+          &.lastOfSection {
+            border-bottom: none !important;
+          }
+        }
+      }
+
+      #mobileTopBarLogoText {
+        margin-top: $mainLogoMarginTop;
+        margin-left: $mainLogoMarginLeft;
       }
     }
 
-    #mobileTopBarLogoText {
-      margin-top: $mainLogoMarginTop;
-      margin-left: $mainLogoMarginLeft;
+    #topBarRightInner {
+      display: none !important;
     }
-  }
 
-  #topBarRightInner {
-    display: none !important;
-  }
-
-  #menuSlider {
-    //border-top: #272727 1px solid;
-    position: relative;
-    background-color: #fff;
-    //min-height: 250px
-  }
+    #menuSlider {
+      position: relative;
+      background-color: #fff;
+    }
 }
 
+html.editMobile{
+
+  @include topBarMobileLayout();
+
+  #mobileTopBarWrapper{
+    width: $editMobileWidth;
+    position: relative;
+  }
+
+  //#mobileMenuToggle{
+  //
+  //  display: block;
+  //  top: 20px;
+  //  right: 20px;
+  //
+  //  .menuToggleLine{
+  //    border-color: white;
+  //  }
+  //}
+}
+
+
+@media only screen and (max-width: $mobileTopBarMaxWidth), screen and (max-height: $mobileTopBarMaxHeight)
+{
+  @include topBarMobileLayout();
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
