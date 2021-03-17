@@ -113,11 +113,11 @@ body {
 
 .menuToggle {
 
+  display: none;
   position: fixed;
   right: 2%;
   top: 30px;
   width: 25px;
-  display: block;
   cursor: pointer;
   z-index: 1000;
 
@@ -149,6 +149,10 @@ body {
 
   #topBarRight{
     display: none;
+  }
+
+  #sideBarToggle{
+    display: block;
   }
 }
 
