@@ -17,50 +17,16 @@ body {
 
 #menuLayout {
 
-  #menuDesktopRow0 {
-
-    a {
-      &:hover {
-
-        //color: white !important;
-
-        .textPart{
-          //color: white !important;
-        }
-      }
-    }
-  }
-
   position: fixed;
   top: 0px;
-  right: 100%;
+  left: 100%;
   height: 100%;
   //width: 33vw;
-  width: 440px;
+  width: 300px;
 
   background-color: $darkGreen;
-  //border-right: solid $mineShaft 1px;
-
-  //@include gradient(left, $sideBarColourList);
 
   z-index: 1000;
-
-  //.socialRow{
-  //
-  //  svg path{
-  //    @include transition(.2s all);
-  //  }
-  //
-  //  svg:hover{
-  //
-  //    cursor: pointer;
-  //
-  //    path{
-  //
-  //      fill: white;
-  //    }
-  //  }
-  //}
 }
 
 #topBarGroupLogoWrapper {

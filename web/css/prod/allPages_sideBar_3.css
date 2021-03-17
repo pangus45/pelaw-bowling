@@ -1,1 +1,1 @@
-body{padding-top:0 !important}#menuLayout{position:fixed;top:0;right:100%;height:100%;width:440px;background-color:#4a6c2f;z-index:1000}#topBarGroupLogoWrapper{cursor:pointer}@media only screen and (max-width:600px),screen and (max-height:600px){#menuLayout{display:none}}
+body{padding-top:0 !important}#menuLayout{position:fixed;top:0;left:100%;height:100%;width:300px;background-color:#1d835b;z-index:1000}#topBarGroupLogoWrapper{cursor:pointer}@media only screen and (max-width:600px),screen and (max-height:600px){#menuLayout{display:none}}
