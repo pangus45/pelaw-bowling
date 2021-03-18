@@ -45,7 +45,7 @@ body {
 
 #desktopTopBar {
 
-  background-color: white;
+  background-color: rgba(255,255,255,$topBarOpacity);
   height: $topBarTopHeight;
   position: fixed;
   border-bottom: solid $mainGreen 3px;
