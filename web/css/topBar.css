@@ -25,7 +25,7 @@
   background-color: white;
   height: 80px;
   position: fixed;
-  border-bottom: solid #67c900 3px;
+  border-bottom: solid #7b9f01 3px;
   top: 0px;
   width: 100%;
   z-index: 1000;
@@ -67,7 +67,7 @@
   left: 23px;
 }
 #topBarRight a:hover {
-  color: #67c900;
+  color: #7b9f01;
 }
 
 #mobileTopBarWrapper {
@@ -161,7 +161,7 @@ html.editMobile #mobileTopBarWrapper #mobileMenuLinks {
   display: none;
   border-top: solid white 1px;
   border-bottom: solid white 1px;
-  background-color: #67c900;
+  background-color: #7b9f01;
   font-size: 18px;
   position: absolute;
   top: 60px;
@@ -247,7 +247,7 @@ html.editMobile #mobileTopBarWrapper {
     display: none;
     border-top: solid white 1px;
     border-bottom: solid white 1px;
-    background-color: #67c900;
+    background-color: #7b9f01;
     font-size: 18px;
     position: absolute;
     top: 60px;

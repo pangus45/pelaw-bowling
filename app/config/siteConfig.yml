@@ -83,10 +83,10 @@ parameters:
 #          type: simpleHtml
 
       album:
+        order: [ order ]
         fields:
-
-#        date:
-#          type: date
+          order:
+            type: order
           title:
             type: text
           images:
