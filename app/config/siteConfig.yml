@@ -6,104 +6,98 @@ framework:
 
 parameters:
 
-    site_from_address: 'dev@positivemint.com'
-#    site_from_address: 'contact@blueline-group.com'
+  site_from_address: 'dev@positivemint.com'
+  #    site_from_address: 'contact@blueline-group.com'
 
-    locale: en
+  locale: en
 
-    app.locales: en
+  app.locales: en
 
-    app.loginUrl: lopbfdsfn2398nfsdf983r
-    app.adminUrl: adpbsdfhnj3984rnsdkf9d
+  app.loginUrl: lopbfdsfn2398nfsdf983r
+  app.adminUrl: adpbsdfhnj3984rnsdkf9d
 
-    app.defaultFont: Lato
+  app.defaultFont: Lato
 
-    app.fonts:
-      Lato:
-        class: lato
-        weights:
-          Thin: 100
-          Light: 300
-          Regular: 400
-          Bold: 700
-          Black: 900
+  app.fonts:
+    Lato:
+      class: lato
+      weights:
+        Thin: 100
+        Light: 300
+        Regular: 400
+        Bold: 700
+        Black: 900
 
-    app.styleConstants:
-      TB: 60px
+  app.styleConstants:
+    TB: 60px
 
-    app.articleTypes:
+  app.articleTypes:
 
-      page:
-        roles: [ ROLE_ADMIN ]
-        flags: [ addRoutes ,multilingual, uniquePageId ]
-        fields:
-          name:
-            type: text
-            flags: [ required,fixed ]
-          url:
-            type: url
-            flags: [ required ]
+    page:
+      roles: [ ROLE_ADMIN ]
+      flags: [ addRoutes ,multilingual, uniquePageId ]
+      fields:
+        name:
+          type: text
+          flags: [ required,fixed ]
+        url:
+          type: url
+          flags: [ required ]
 
-      activity:
-        fields:
-          banner:
-            type: image
-          thumbnail:
-            type: image
-          title:
-            type: text
-          time:
-            type: text
-          description:
-            type: text
-            rows: 5
-          albums:
-            type: album
-            selectorValue: title
-            flags: [multiple]
+    activity:
+      fields:
+        banner:
+          type: image
+        thumbnail:
+          type: image
+        title:
+          type: text
+        time:
+          type: text
+        description:
+          type: text
+          rows: 5
+        albums:
+          type: album
+          selectorValue: title
+          flags: [ multiple ]
 
-#        date:
-#          type: date
-#          flags: [includeInAdmin]
-#        title:
-#          type: text
-#          flags: [includeInAdmin]
-#        subTitle:
-#          type: text
-#        body:
-#          type: simpleHtml
-#        priority:
-#          type: bool
-##          icon: exclamation
-#        published:
-#          type: bool
-#          icon: tickCross
+    news:
+      fields:
+        title:
+          type: text
+        date:
+          type: date
+        category:
+          type: option
+          options: [ News,Fixtures,Results,Social,Rules ]
+        mainText:
+          label: Main Text
+          type: text
+          rows: 10
 
-#        moreHtml:
-#          type: simpleHtml
+    album:
+      order: [ order ]
+      fields:
+        order:
+          type: order
+        title:
+          type: text
+        images:
+          type: image
+          flags: [ multiple ]
 
-      album:
-        order: [ order ]
-        fields:
-          order:
-            type: order
-          title:
-            type: text
-          images:
-            type: image
-            flags: [multiple]
-
-      pdf:
-        fields:
-          name:
-            type: text
-            info: This name is used to create the filename/url - so if you change it, you'll break any links you've created
-            flags: [required]
-          pdf:
-            type: file
-            mimeTypes: [application/pdf]
-            flags: [useAsPageLink]
-            filenameField: name
+    pdf:
+      fields:
+        name:
+          type: text
+          info: This name is used to create the filename/url - so if you change it, you'll break any links you've created
+          flags: [ required ]
+        pdf:
+          type: file
+          mimeTypes: [ application/pdf ]
+          flags: [ useAsPageLink ]
+          filenameField: name
 
 #        description:
 #          type: text

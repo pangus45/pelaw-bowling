@@ -36,6 +36,11 @@ leagues:
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
 
+news:
+  path: /news
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+
 gallery:
   path: /gallery
   defaults:

@@ -12,6 +12,11 @@ $mainLogoMarginTop: 6px;
 
 $topBarOpacity: 1;
 
+
+#articleEditContent{
+  padding-top: 15vh;
+}
+
 body {
   //padding-top: $topBarTopHeight;
 }
@@ -134,7 +139,19 @@ body {
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1400px) {
+
+  #topBarRight {
+    padding-right: 4%;
+  }
+
+  #topBarLeftLinks {
+
+    padding-left: 4%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
 
   #topBarRight {
     padding-right: 2%;
@@ -146,7 +163,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1064px) {
 
   #topBarRight{
     display: none;
