@@ -31,7 +31,7 @@ function accordionInit() {
             }
             else{
 
-                albumClose(album);
+                // albumClose(album);
             }
         });
     });
