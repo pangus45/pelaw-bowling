@@ -22,9 +22,9 @@
   padding: 15px 10%;
   font-size: 20px;
   font-weight: 400;
-  border: solid #7b9f01 2px;
+  border-bottom: solid #1d835b 2px;
   cursor: pointer;
-  color: #7b9f01;
+  color: #1d835b;
 }
 .block-albums .blockBorderContainer .albumPhotos {
   height: 0px;
