@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-cd /home/pb.positivemint.com/src/CommonBundle
+cd /home/pelawcbc.com/src/CommonBundle
 git reset --hard
 git pull
 
-cd /home/pb.positivemint.com
+cd /home/pelawcbc.com
 git reset --hard
 git pull
 
-php /home/pb.positivemint.com/scripts/cacheBust.php
-sh /home/pb.positivemint.com/scripts/cacheClearAndChown
+php /home/pelawcbc.com/scripts/cacheBust.php
+sh /home/pelawcbc.com/scripts/cacheClearAndChown
