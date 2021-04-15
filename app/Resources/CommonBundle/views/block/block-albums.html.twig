@@ -41,8 +41,8 @@
                 {% set filteredUrl = url | imagine_filter('galleryThumb') %}
 
                 <div class="col-xs-6 col-sm-3 imageColumn">
-                    <a data-lightbox="{{ album.title }}" href="{{ filteredUrl }}">
-                        <div class="albumImage" data-imageSrc="{{ url }}" >
+                    <a data-lightbox="{{ album.title }}" href="{{ url }}">
+                        <div class="albumImage" data-imageSrc="{{ filteredUrl }}" >
 
                         </div>
                     </a>
