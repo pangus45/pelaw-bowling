@@ -1,7 +1,65 @@
 @import "constants";
 @import '../bundles/common/scss/_mixins';
 
+
+.block-albums{
+
+  .albumTitle {
+    padding: 15px;
+    margin: 0 10%;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: solid $darkGreen 2px;
+    cursor: pointer;
+    color: $darkGreen;
+  }
+
+  $imageSpacing: 10px;
+  $halfImageSpacing: $imageSpacing / 2;
+
+  .albumPhotos {
+
+    height: 0px;
+    overflow: hidden;
+    //background-color: #f1f1f1;
+    @include flexbox();
+    flex-direction: column;
+
+    &:nth-child(2) {
+      height: auto;
+    }
+  }
+
+  .albumPhotosInner {
+
+    padding: 50px 10%;
+
+    .imageColumn {
+
+      padding-right: $halfImageSpacing;
+      padding-left: $halfImageSpacing;
+      padding-bottom: $imageSpacing;
+
+      .albumImage {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
 .block-albums {
+
+  .plusMinus{
+    float: right;
+    position: relative;
+    top: 5px;
+  }
 
   @include flexbox();
 
@@ -11,54 +69,28 @@
     @include flex(1);
 
     flex-direction: column;
+  }
+}
 
-    .albumTitle {
-      padding: 15px 10%;
-      font-size: 20px;
-      font-weight: 400;
-      border-bottom: solid $darkGreen 2px;
-      cursor: pointer;
-      color: $darkGreen;
-    }
+@mixin mobileAlbums(){
 
-    $imageSpacing: 10px;
-    $halfImageSpacing: $imageSpacing / 2;
+  .block-albums {
 
-    .albumPhotos {
-
-      height: 0px;
-      overflow: hidden;
-      //background-color: #f1f1f1;
-      @include flexbox();
-      flex-direction: column;
-
-      &:nth-child(2) {
-        height: auto;
-      }
-    }
+    flex-direction: column;
 
     .albumPhotosInner {
 
-      padding: 100px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-
-      .imageColumn {
-
-        padding-right: $halfImageSpacing;
-        padding-left: $halfImageSpacing;
-        padding-bottom: $imageSpacing;
-
-        .albumImage {
-          width: 100%;
-          height: 0;
-          padding-bottom: 100%;
-          background-size: cover;
-          background-position: center;
-
-          border-radius: 15px;
-        }
-      }
+      padding: 20px 10%;
     }
   }
+}
+
+html.editMobile{
+  @include mobileAlbums();
+}
+
+// same width as mobile menu for now
+@media (max-width: $mobileLayoutMaxWidth) {
+
+  @include mobileAlbums();
 }

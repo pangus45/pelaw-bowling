@@ -1,3 +1,5 @@
+var ALBUM_ANIM_TIME = 0.5;
+
 $(document).ready(function () {
 
     accordionInit();
@@ -6,7 +8,8 @@ $(document).ready(function () {
 
 function accordionInit() {
 
-    $('.albumPhotos').eq(0).data('open', true);
+    albumOpen($('.mobileLayout .albumPhotos').eq(0));
+    albumOpen($('.desktopLayout .albumPhotos').eq(0));
 
     $('.albumTitle').click(function(){
 
@@ -34,13 +37,18 @@ function accordionInit() {
     });
 }
 
-var ALBUM_ANIM_TIME = 0.5;
-
 function albumOpen(pAlbum){
 
     if(pAlbum.data('open')){
         return;
     }
+
+    var title = pAlbum.prev();
+
+    var plusMinus = title.find('.plusMinus');
+
+    plusMinus.removeClass('fa-plus');
+    plusMinus.addClass('fa-minus');
 
     l('opening');
 
@@ -59,6 +67,13 @@ function albumClose(pAlbum){
     if(!pAlbum.data('open')){
         return;
     }
+
+    var title = pAlbum.prev();
+
+    var plusMinus = title.find('.plusMinus');
+
+    plusMinus.removeClass('fa-minus');
+    plusMinus.addClass('fa-plus');
 
     TweenMax.to(pAlbum, ALBUM_ANIM_TIME, {height:0});
 

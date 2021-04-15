@@ -29,7 +29,7 @@
 
 {% for album in albums %}
 
-    <div class="albumTitle">{{ album.title }}</div>
+    <div class="albumTitle">{{ album.title }}<span class="plusMinus fa fa-plus"></span></div>
 
     <div class="albumPhotos">
         <div class="albumPhotosInner">
@@ -40,9 +40,9 @@
 
                 {% set filteredUrl = url | imagine_filter('galleryThumb') %}
 
-                <div class="col-xs-3 imageColumn">
+                <div class="col-xs-6 col-sm-3 imageColumn">
                     <a data-lightbox="{{ album.title }}" href="{{ filteredUrl }}">
-                        <div class="albumImage" style="background-image: url({{ url }});">
+                        <div class="albumImage" data-imageSrc="{{ url }}" >
 
                         </div>
                     </a>
