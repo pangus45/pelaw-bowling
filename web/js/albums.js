@@ -43,6 +43,9 @@ function albumOpen(pAlbum){
         return;
     }
 
+    staggeredImageLoadCheck(pAlbum.find('.albumImage').eq(0)); // may be loaded already - but this makes sure
+    // the open album gets kicked off
+
     var title = pAlbum.prev();
 
     var plusMinus = title.find('.plusMinus');

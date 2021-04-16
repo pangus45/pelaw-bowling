@@ -34,7 +34,7 @@
     <div class="albumPhotos">
         <div class="albumPhotosInner">
 
-            {% for image in album.images %}
+            {% for index, image in album.images %}
 
                 {% set url = globals.uploadedImageWebPathGet(image) %}
 
@@ -42,9 +42,12 @@
 
                 <div class="col-xs-6 col-sm-3 imageColumn">
                     <a data-lightbox="{{ album.title }}" href="{{ url }}">
-                        <div class="albumImage" data-imageSrc="{{ filteredUrl }}" >
-
-                        </div>
+                        {% if index == 0 %}
+                            <div class="albumImage" data-imageSrc="{{ filteredUrl }}"></div>
+                        {% else %}
+                            <div class="albumImage" data-image-src-staggered="{{ filteredUrl }}"
+                                 data-image-load-delay="0.05"></div>
+                        {% endif %}
                     </a>
                 </div>
             {% endfor %}
