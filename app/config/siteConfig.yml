@@ -2,7 +2,7 @@
 
 framework:
   assets:
-    version: 'v61'
+    version: '61'
 
 parameters:
 
