@@ -53,6 +53,16 @@
         background-position: center;
 
         border-radius: 15px;
+
+        @include transition(.3s all);
+
+        cursor: zoom-in;
+
+        &:hover{
+
+          //filter: sepia(0.5);
+          filter: brightness(0.9);
+        }
       }
     }
   }

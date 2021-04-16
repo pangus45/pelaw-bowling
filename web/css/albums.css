@@ -38,6 +38,14 @@
   background-size: cover;
   background-position: center;
   border-radius: 15px;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  cursor: zoom-in;
+}
+.block-albums .albumPhotosInner .imageColumn .albumImage:hover {
+  filter: brightness(0.9);
 }
 
 .block-albums {

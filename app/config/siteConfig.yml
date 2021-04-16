@@ -129,6 +129,8 @@ liip_imagine:
 
       filters:
 
+        auto_rotate: ~
+
         scale:
 
           dim: [ 400,400 ]
