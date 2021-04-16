@@ -12,6 +12,11 @@
     border-bottom: solid $darkGreen 2px;
     cursor: pointer;
     color: $darkGreen;
+
+    &:hover{
+      color: $mainGreen;
+      //border-bottom: solid $mainGreen 2px;
+    }
   }
 
   $imageSpacing: 10px;

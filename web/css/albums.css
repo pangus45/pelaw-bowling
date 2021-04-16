@@ -7,6 +7,9 @@
   cursor: pointer;
   color: #1d835b;
 }
+.block-albums .albumTitle:hover {
+  color: #7b9f01;
+}
 .block-albums .albumPhotos {
   height: 0px;
   overflow: hidden;
