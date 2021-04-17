@@ -1,3 +1,5 @@
+<pre>
+
 <?php
 
 
@@ -17,4 +19,16 @@
 //}
 //
 
+$file = 'images/rot.jpg';
+
+//print_r(exif_read_data($file));
+
+?>
+
+</pre>
+
+//var_dump(gd_info());
+
+<?php
 echo phpinfo();
+?>

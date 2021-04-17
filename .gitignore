@@ -20,6 +20,7 @@
 /web/images/
 /web/files/
 /web/media/
+/web/info.php
 .idea
 *.sass-cache
 ref
