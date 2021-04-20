@@ -132,6 +132,10 @@ liip_imagine:
 
   filter_sets:
 
+    galleryBigger:
+
+      quality: 70
+
     galleryThumb:
 
       quality: 70

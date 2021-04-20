@@ -38,14 +38,15 @@
 
                 {% set url = globals.uploadedImageWebPathGet(image) %}
 
-                {% set filteredUrl = url | imagine_filter('galleryThumb') %}
+                {% set thumbnailUrl = url | imagine_filter('galleryThumb') %}
+                {% set biggerImage = url | imagine_filter('galleryBigger') %}
 
                 <div class="col-xs-6 col-sm-3 imageColumn">
-                    <a data-lightbox="{{ album.title }}" href="{{ url }}">
+                    <a data-lightbox="{{ album.title }}" href="{{ biggerImage }}">
                         {% if index == 0 %}
-                            <div class="albumImage" data-imageSrc="{{ filteredUrl }}"></div>
+                            <div class="albumImage" data-imageSrc="{{ thumbnailUrl }}"></div>
                         {% else %}
-                            <div class="albumImage" data-image-src-staggered="{{ filteredUrl }}"
+                            <div class="albumImage" data-image-src-staggered="{{ thumbnailUrl }}"
                                  data-image-load-delay="0.05"></div>
                         {% endif %}
                     </a>
