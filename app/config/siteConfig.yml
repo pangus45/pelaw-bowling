@@ -136,6 +136,10 @@ liip_imagine:
 
       quality: 70
 
+      filters:
+
+        auto_rotate: ~
+
     galleryThumb:
 
       quality: 70
