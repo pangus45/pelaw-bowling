@@ -97,6 +97,7 @@ parameters:
           flags: [ multiple ]
 
     pdf:
+      roles: [ ROLE_ADMIN ]
       fields:
         name:
           type: text

@@ -14,7 +14,7 @@ security:
                   password: $2y$12$FvUmtVSJ5W3smYe8UYany.EP72hu7UHAdqIYCZ2l.8c/OLmzbi0D6
                   roles: ROLE_ADMIN
                 editor:
-                  password: $2y$12$9Q1tdU0tLjtigTe3rRYrJ.r/F4PltoSZ5.dX3DMz2tFShkW4I3x.m
+                  password: $2y$12$ROwCAw27sJ7v9DtCnXyD7ealQMJEHlRJtIS7742lv.Y6qxopXr4RS
                   roles: ROLE_EDITOR
 
 
