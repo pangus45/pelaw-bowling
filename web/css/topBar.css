@@ -1,5 +1,9 @@
 #articleEditContent {
-  padding-top: 15vh;
+  padding-top: 120px;
+}
+
+#articleAdminContent {
+  padding-top: 120px;
 }
 
 #bodyInner {
@@ -127,6 +131,12 @@
     display: block;
   }
 }
+html.editMobile #articleEditContent {
+  padding-top: 20px;
+}
+html.editMobile #articleAdminContent {
+  padding-top: 20px;
+}
 html.editMobile #topBarHomeLink, html.editMobile #sideBarToggle {
   display: none;
 }
@@ -208,6 +218,14 @@ html.editMobile #mobileTopBarWrapper {
 }
 
 @media only screen and (max-width: 600px), screen and (max-height: 600px) {
+  #articleEditContent {
+    padding-top: 20px;
+  }
+
+  #articleAdminContent {
+    padding-top: 20px;
+  }
+
   #topBarHomeLink, #sideBarToggle {
     display: none;
   }

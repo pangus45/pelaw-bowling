@@ -33,7 +33,7 @@ parameters:
 
   app.articleTypes:
 
-#   why multilingual!!!
+    #   why multilingual!!!
     page:
       roles: [ ROLE_ADMIN ]
       flags: [ addRoutes ,multilingual, uniquePageId ]
@@ -43,7 +43,7 @@ parameters:
           flags: [ required,fixed ]
         url:
           type: url
-          flags: [ required ]
+          flags: [ required, showInMobileAdmin ]
 
     activity:
       fields:
@@ -51,8 +51,10 @@ parameters:
           type: image
         thumbnail:
           type: image
+          flags: [ showInMobileAdmin ]
         title:
           type: text
+          flags: [ showInMobileAdmin ]
         time:
           type: text
         description:
@@ -67,6 +69,7 @@ parameters:
       fields:
         title:
           type: text
+          flags: [ showInMobileAdmin ]
         date:
           type: date
         category:
@@ -84,6 +87,7 @@ parameters:
           type: order
         title:
           type: text
+          flags: [ showInMobileAdmin ]
         images:
           type: image
           flags: [ multiple ]
@@ -97,7 +101,7 @@ parameters:
         pdf:
           type: file
           mimeTypes: [ application/pdf ]
-          flags: [ useAsPageLink ]
+          flags: [ useAsPageLink, showInMobileAdmin ]
           filenameField: name
 
 #        description:
