@@ -46,6 +46,7 @@ parameters:
           flags: [ required, showInMobileAdmin ]
 
     activity:
+      flags: [ confirmDeletion ]
       fields:
         banner:
           type: image
@@ -66,6 +67,8 @@ parameters:
           flags: [ multiple ]
 
     news:
+      order: [ date ]
+      flags: [ confirmDeletion ]
       fields:
         title:
           type: text
@@ -82,6 +85,7 @@ parameters:
 
     album:
       order: [ order ]
+      flags: [ confirmDeletion ]
       fields:
         order:
           type: order
