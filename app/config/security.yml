@@ -46,6 +46,6 @@ security:
             #form_login: ~
 
     access_control:
-      - { path: ^/post, roles: ROLE_ADMIN }
+      - { path: ^/post, roles: [ROLE_ADMIN, ROLE_EDITOR] }
       - { path: ^/edit, roles: [ROLE_ADMIN, ROLE_EDITOR] }
       - { path: ^/admin, roles: ROLE_ADMIN }
