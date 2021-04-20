@@ -222,6 +222,8 @@ body {
     #mobileTopBarWrapper {
       display: block;
 
+      border-bottom: solid white 1px;
+
       #mobileSocialWrapper {
         @include flexbox();
       }
@@ -246,7 +248,6 @@ body {
         display: none;
 
         border-top: solid white 1px;
-        border-bottom: solid white 1px;
         background-color: $mainGreen;
 
         font-size: 18px;
@@ -263,7 +264,7 @@ body {
 
           border-bottom: solid white 1px;
 
-          &.lastOfSection {
+          &:last-child {
             border-bottom: none !important;
           }
         }

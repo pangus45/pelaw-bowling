@@ -160,6 +160,7 @@ html.editMobile #mobileMenuToggle .menuToggleLine {
 }
 html.editMobile #mobileTopBarWrapper {
   display: block;
+  border-bottom: solid white 1px;
 }
 html.editMobile #mobileTopBarWrapper #mobileSocialWrapper {
   display: -webkit-box;
@@ -183,7 +184,6 @@ html.editMobile #mobileTopBarWrapper #mobileTopBar {
 html.editMobile #mobileTopBarWrapper #mobileMenuLinks {
   display: none;
   border-top: solid white 1px;
-  border-bottom: solid white 1px;
   background-color: #7b9f01;
   font-size: 18px;
   position: absolute;
@@ -198,7 +198,7 @@ html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
   color: white !important;
   border-bottom: solid white 1px;
 }
-html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink.lastOfSection {
+html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink:last-child {
   border-bottom: none !important;
 }
 html.editMobile #mobileTopBarWrapper #mobileTopBarLogoText {
@@ -254,6 +254,7 @@ html.editMobile #mobileTopBarWrapper {
 
   #mobileTopBarWrapper {
     display: block;
+    border-bottom: solid white 1px;
   }
   #mobileTopBarWrapper #mobileSocialWrapper {
     display: -webkit-box;
@@ -277,7 +278,6 @@ html.editMobile #mobileTopBarWrapper {
   #mobileTopBarWrapper #mobileMenuLinks {
     display: none;
     border-top: solid white 1px;
-    border-bottom: solid white 1px;
     background-color: #7b9f01;
     font-size: 18px;
     position: absolute;
@@ -292,7 +292,7 @@ html.editMobile #mobileTopBarWrapper {
     color: white !important;
     border-bottom: solid white 1px;
   }
-  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink.lastOfSection {
+  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink:last-child {
     border-bottom: none !important;
   }
   #mobileTopBarWrapper #mobileTopBarLogoText {
