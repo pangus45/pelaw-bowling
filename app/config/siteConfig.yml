@@ -124,8 +124,9 @@ twig:
       albums: Photo Albums Accordion
 
 swiftmailer:
-  disable_delivery: true
-#  delivery_addresses: ['contact@blueline-group.com'] This overrides to address set in code - use at your peril
+  disable_delivery: false
+#  delivery_addresses: [pelawcbc55@gmail.com]
+#  This overrides to address set in code - use at your peril
 
 
 liip_imagine:

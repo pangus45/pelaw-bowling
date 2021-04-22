@@ -71,7 +71,7 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     auth_mode: login
-    port: 587
+    port: 465
     encryption: tls
     logging: true
     stream-options:

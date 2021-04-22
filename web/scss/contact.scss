@@ -2,23 +2,18 @@
 @import "../bundles/common/scss/mixins";
 
 
-
 .block {
 
   form {
 
     width: 100%;
 
-    label{
-      display: none;
-    }
-
-    input,textarea{
+    input, textarea {
 
       font-size: 16px;
       font-family: $lato !important;
 
-      &::placeholder{
+      &::placeholder {
         font-size: 16px;
         font-family: $lato !important;
       }
@@ -31,7 +26,7 @@
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(74, 108, 47, .6);
     }
 
-    button{
+    button {
       border: none;
       //border: solid transparent 1px;
       background-color: $mainGreen;
@@ -47,7 +42,7 @@
       padding-top: 7px;
       padding-bottom: 4px;
 
-      &:hover{
+      &:hover {
         //background-color: lighten($mainGreen, 10%);
         background-color: #f8a300;
         border: none;
@@ -58,20 +53,19 @@
 }
 
 
-
-.help-block{
+.help-block {
   color: white !important;
   background-color: #a94442 !important;
   padding-top: 2px;
   padding-left: 2px;
 
-  ul{
+  ul {
     margin-bottom: 2px;
   }
 }
 
 
-.successMessage{
+.successMessage {
   font-size: 18px;
   text-align: center;
   line-height: 30px;
@@ -84,20 +78,19 @@
   //margin-top: 50px;
   width: 100%;
 
-  & > div{
+  & > div {
     margin-bottom: 10px;
   }
 }
 
-#mainRow{
+#mainRow {
   //padding-left: 10% !important;
   //padding-right: 10% !important;
   //margin-top: 100px;
 }
 
 
-
-.block-contactForm{
+.block-contactForm {
 
   //max-width: 500px;
   //margin-left: auto;
@@ -107,19 +100,19 @@
     overflow: hidden;
   }
 
-  form{
+  form {
 
     width: 100%;
     //padding: 40px;
     //padding-bottom: 20px;
 
-    .form-group:nth-child(7){
+    .form-group:nth-child(7) {
       height: 0;
       overflow: hidden;
     }
 
-    .submitColumn{
-      button{
+    .submitColumn {
+      button {
         margin-top: 13px;
         margin-right: 0;
         //position: relative;
@@ -128,19 +121,19 @@
       }
     }
 
-    textarea{
+    textarea {
       height: 132px;
     }
 
-    .consentColumn{
+    .consentColumn {
       text-align: justify;
     }
   }
 }
 
 
-#mobileLayout{
-  img{
+#mobileLayout {
+  img {
     display: none;
   }
 }

@@ -1,184 +1,52 @@
-$URL_1 = '/con';
-$URL_2 = 'tact';
 $URL_3 = 'sdfegdds';
 $URL_4 = '39djdfj3';
 
-$(document).ready(function(){
+$(document).ready(function () {
 
-    contactFormInit($URL_1 + $URL_2);
+    contactFormInit();
 
     var clickableElements = 'input, select, button, textarea';
 
-    if(!editorLoaded()){
+    if (!editorLoaded()) {
 
         $(clickableElements).eq(0).focus();
     }
 
-    if (typeof(gEditorLoaded) !== 'undefined') {
+    // if (typeof(gEditorLoaded) !== 'undefined') {
 
-        // debugFill();
-    }
+    debugFill();
+
+    // }
 });
 
-function debugFill(){
+function debugFill() {
 
-    $('#desktopContact_name').val('Joe Bloggs');
-    $('#desktopContact_email').val("jo@jomail.com");
-    $('#desktopContact_subject').val("Schedules");
-    $('#desktopContact_message').val("Just a test message. There\'s no need to do anything.");
+    if (editorIsActive() || -1 != location.href.indexOf('localhost:') || -1 != location.href.indexOf('192.168.')) {
+
+        debugFillSpecific('desktop');
+        debugFillSpecific('mobile');
+    }
 }
 
-function contactFormInit(pUrl) {
 
-    if($('#successMessage').length > 0){
+function debugFillSpecific(pLayout) {
 
-        // Remove all layers for success message
-        var form = $('.block-contactForm');
+    pLayout += 'Contact_';
 
-        if(form.length > 0){
+    // $('#' + pLayout + 'date').val('25/12/2020');
+    $('#' + pLayout + 'name').val('Joe Bloggs');
+    $('#' + pLayout + 'email').val('dev@positivemint.com');
+    $('#' + pLayout + 'subject').val('Schedules');
+    $('#' + pLayout + 'message').val("Just a test - no need to do anything about this email");
+    $('#' + pLayout + 'consent').prop("checked", true);
+}
 
-            var formRow = domClimbTo(form, '.rootRowWrapper');
 
-            formRow.find('.rowLayer').remove();
-            formRow.css('margin-bottom', '100px');
-        }
-    }
+function contactFormInit() {
 
-    setTimeout(function(){
+    setTimeout(function () {
 
         $('#desktopContact_url, #mobileContact_url').val($URL_4 + $URL_3);
 
-    }, 5000);
-
-    // $('form input, form textarea').each(function(pIndex, pInput){
-    //
-    //     var input = $(pInput);
-    //
-    //     input.data('placeholder', input.attr('placeholder'));
-    // });
-
-    // $('form input, form textarea').change(function(){
-    //
-    //     var input = $(this);
-    //
-    //     if('' != input.val() && input.hasClass('missing')){
-    //
-    //         fieldMissingSet(input, false);
-    //     }
-    // });
-
-    // $('form').attr('novalidate', true);
-
-    return;
-
-    $('form').on('submit', function (pEvent) {
-
-        pEvent.preventDefault();
-        // Think this is preventing iphone returning to page after send!
-        // Sort out next time
-
-        // some browsers (IPhone - Safari) don't support required fields
-        // if(isRequiredFieldMissing($('form'))){
-        //     return false;
-        // }
-
-        // $('#popup').modal('show');
-        // $('#modalTitle').text('Sending');
-        // $('#modalBody i').show();
-        // $('#modalBody span').text('');
-
-        alert('Submitting');
-
-        $.post({
-
-            url: pUrl,
-            data: $(this).serialize(),
-            timeout: 10000,
-            success: submitSuccess,
-            error: submitError
-        });
-    });
-}
-
-function fieldMissingSet(pInput, pMissing){
-
-    var placeholder = pInput.data('placeholder');
-
-    if(pMissing){
-
-        pInput.attr('placeholder', 'Please enter: ' + placeholder);
-        pInput.addClass('missing');
-    }
-    else{
-
-        pInput.attr('placeholder', placeholder);
-        pInput.removeClass('missing');
-    }
-}
-
-function isRequiredFieldMissing(pForm){
-
-    // var requiredFields = pForm.find('[required]'); // change to [required] if not using true option as part of the attribute as it is not really needed.
-    var requiredFields = pForm.find('.required input, .required textarea'); // change to [required] if not using true option as part of the attribute as it is not really needed.
-    var missingField = false;
-
-    requiredFields.each(function(pIndex, pInput){
-
-        var input = $(pInput);
-
-        fieldMissingSet(input, false);
-
-        if('' == input.val()){
-
-            fieldMissingSet(input, true);
-
-            if(!missingField){ // set focus for first missing field
-                input.focus();
-            }
-
-            missingField = true;
-        }
-    });
-
-    return missingField;
-}
-
-function submitSuccess(pResponse){
-
-    // alert('success');
-
-    // $(document).empty();
-
-    // $(document).append(pResponse);
-
-    // l('Success');
-    console.log(pResponse);
-    // $('#debug').empty();
-    // $('#debug').append(pResponse);
-
-    // $('#modalTitle').text('Thanks');
-    // $('#modalBody span').text('Your request has been received and we\'ll be in touch shortly.');
-    // $('#modalBody i').hide();
-
-    // $('#contact').find('input,textarea').val('');
-
-    location.reload();
-}
-
-function submitError(pRequest, pStatus, pError){
-
-    // alert('error');
-
-    l('Connection Problem');
-
-    if("timeout" == pStatus) {
-        l('timeout');
-    }
-    else{
-        l('other error');
-    }
-
-    $('#modalTitle').text('Sorry');
-    $('#modalBody i').hide();
-    $('#modalBody span').html('Sorry there was a connection problem.<br>Please click ok and try sending the form again.');
+    }, 2000);
 }
