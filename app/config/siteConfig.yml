@@ -80,7 +80,7 @@ parameters:
           options: [ News,Fixtures,Results,Social,Rules ]
         mainText:
           label: Main Text
-          type: text
+          type: simpleHtml
           rows: 10
 
     album:
