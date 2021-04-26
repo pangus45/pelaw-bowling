@@ -67,7 +67,7 @@ parameters:
           flags: [ multiple ]
 
     news:
-      order: [ date ]
+      order: [ priority, date ]
       flags: [ confirmDeletion ]
       fields:
         title:
@@ -82,6 +82,8 @@ parameters:
           label: Main Text
           type: simpleHtml
           rows: 10
+        priority:
+          type: bool
 
     album:
       order: [ order ]
