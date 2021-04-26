@@ -67,9 +67,11 @@ parameters:
           flags: [ multiple ]
 
     news:
-      order: [ priority, date ]
+      order: [ priority, order, date ]
       flags: [ confirmDeletion ]
       fields:
+        order:
+          type: order
         title:
           type: text
           flags: [ showInMobileAdmin ]
