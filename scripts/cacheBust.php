@@ -8,6 +8,7 @@ $DATA_FILE_PATH = $SCRIPT_DIR . '/version';
 if (!file_exists($DATA_FILE_PATH)) {
 
     $oldVersion = 1;
+
 } else {
 
     $oldVersion = file_get_contents($DATA_FILE_PATH);
