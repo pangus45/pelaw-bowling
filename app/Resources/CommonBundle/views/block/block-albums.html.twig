@@ -39,7 +39,7 @@
                 {% set url = globals.uploadedImageWebPathGet(image) %}
 
                 {% set thumbnailUrl = url | imagine_filter('galleryThumb') %}
-                {% set biggerImage = url | imagine_filter('galleryBigger') %}
+                {% set biggerImage = url %}
 
                 <div class="col-xs-6 col-sm-3 imageColumn">
                     <a data-lightbox="{{ album.title }}" href="{{ biggerImage }}">

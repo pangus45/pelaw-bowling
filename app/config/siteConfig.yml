@@ -137,13 +137,13 @@ liip_imagine:
 
   filter_sets:
 
-    galleryBigger:
-
-      quality: 70
-
-      filters:
-
-        auto_rotate: ~
+#    galleryBigger:
+#
+#      quality: 70
+#
+#      filters:
+#
+#        auto_rotate: ~
 
     galleryThumb:
 
