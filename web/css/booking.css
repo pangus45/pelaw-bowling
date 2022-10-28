@@ -1,0 +1,50 @@
+.green {
+  background-color: green; }
+
+.clubHouse {
+  background-color: brown; }
+
+#bookingFormModal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center; }
+  #bookingFormModal #bookingFormModalInner {
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    width: 95%;
+    max-width: 500px; }
+    #bookingFormModal #bookingFormModalInner form {
+      width: 100%; }
+      #bookingFormModal #bookingFormModalInner form #bookingFormHeading {
+        margin-bottom: 20px; }
+      #bookingFormModal #bookingFormModalInner form #bookingStartTime, #bookingFormModal #bookingFormModalInner form #bookingEndTime, #bookingFormModal #bookingFormModalInner form #bookingDay {
+        display: inline-block;
+        font-weight: 600; }
+      #bookingFormModal #bookingFormModalInner form select {
+        margin-top: 10px; }
+      #bookingFormModal #bookingFormModalInner form label {
+        margin-top: 10px; }
+      #bookingFormModal #bookingFormModalInner form textarea {
+        width: 100%; }
+      #bookingFormModal #bookingFormModalInner form button {
+        width: 100px;
+        display: inline-block;
+        float: right;
+        margin-top: 10px; }
+      #bookingFormModal #bookingFormModalInner form #submitButton {
+        margin-left: 10px; }
+      #bookingFormModal #bookingFormModalInner form #cancelCross {
+        margin-left: 5px; }
+
+/*# sourceMappingURL=booking.css.map */

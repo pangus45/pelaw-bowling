@@ -56,6 +56,14 @@ contact:
     js: [js/contact.js]
     css: [css/contact.css]
 
+booking:
+  path: /booking
+  defaults:
+    _controller: CommonBundle:DefaultPage:defaultPage
+    js: [libs/fullcalendar-5.11.3/lib/main.js,js/booking.js]
+    css: [libs/fullcalendar-5.11.3/lib/main.css,css/booking.css]
+    customTemplate: booking.html.twig
+
 test1:
   path: /test1
   defaults:

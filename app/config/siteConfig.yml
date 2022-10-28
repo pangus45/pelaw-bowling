@@ -35,7 +35,6 @@ parameters:
 
     #   why multilingual!!!
     page:
-      roles: [ ROLE_ADMIN ]
       flags: [ addRoutes ,multilingual, uniquePageId ]
       fields:
         name:
@@ -101,7 +100,6 @@ parameters:
           flags: [ multiple,ordered ]
 
     pdf:
-      roles: [ ROLE_ADMIN ]
       fields:
         name:
           type: text
@@ -126,6 +124,7 @@ twig:
     siteBlocks:
       facebook: Facebook
       albums: Photo Albums Accordion
+      calendar: Calendar
 
 swiftmailer:
   disable_delivery: false
