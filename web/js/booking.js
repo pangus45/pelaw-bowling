@@ -1,6 +1,6 @@
 var KEY = 'AIzaSyDN6C96frpskjFXfW4GT6CxZ_2XhtA79XU';
-var GREEN_ID = 'pelawcbc55@gmail.com';
-var CLUBHOUSE_ID = 'a806e059165f4cbebd629961b4e0e7c25c08817c2c42f5b44ef44e5e4e269866@group.calendar.google.com';
+var GREEN_ID = 'f00bb87e7f8da04abe45d139ece7387fb67d8626521c78590c72e6830e9f93bc@group.calendar.google.com';
+var CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242a8fe@group.calendar.google.com';
 
 
 $(document).ready(function () {
