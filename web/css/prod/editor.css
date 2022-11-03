@@ -1,243 +1,185 @@
 #elementEffectsModal #triggerAdder #triggerAddButton {
-  margin-top: 22px;
-}
+  margin-top: 22px; }
 #elementEffectsModal #triggerAdder #triggerDeleteButton {
   float: right;
   display: none;
-  margin-right: 20px;
-}
+  margin-right: 20px; }
 #elementEffectsModal #triggersWrapper .trigger {
   border: solid black 1px;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
   padding-top: 40px;
-  position: relative;
-}
-#elementEffectsModal #triggersWrapper .trigger .triggerProperties {
-  border-bottom: solid black 1px;
-  margin-right: 0;
-  margin-left: 0;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  font-weight: bold;
-}
-#elementEffectsModal #triggersWrapper .trigger .triggerProperties .form-group {
-  padding: 0;
-  width: 150px;
-  margin-bottom: 0px;
-}
-#elementEffectsModal #triggersWrapper .trigger .triggerProperties label {
-  display: none;
-}
-#elementEffectsModal #triggersWrapper .trigger .triggerRemoveButton {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-}
-#elementEffectsModal #triggersWrapper .trigger .triggerSaveButton {
-  position: absolute;
-  top: 0;
-  right: 42px;
-  width: 104px;
-}
-#elementEffectsModal #triggersWrapper .trigger .triggerNameInput {
-  position: absolute;
-  top: 0;
-  width: 200px;
-  right: 146px;
-}
+  position: relative; }
+  #elementEffectsModal #triggersWrapper .trigger .triggerProperties {
+    border-bottom: solid black 1px;
+    margin-right: 0;
+    margin-left: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-weight: bold; }
+    #elementEffectsModal #triggersWrapper .trigger .triggerProperties .form-group {
+      padding: 0;
+      width: 150px;
+      margin-bottom: 0px; }
+    #elementEffectsModal #triggersWrapper .trigger .triggerProperties label {
+      display: none; }
+  #elementEffectsModal #triggersWrapper .trigger .triggerRemoveButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; }
+  #elementEffectsModal #triggersWrapper .trigger .triggerSaveButton {
+    position: absolute;
+    top: 0;
+    right: 42px;
+    width: 104px; }
+  #elementEffectsModal #triggersWrapper .trigger .triggerNameInput {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    right: 146px; }
 #elementEffectsModal .firstEffectAddButton {
-  margin-top: 5px;
-}
+  margin-top: 5px; }
 #elementEffectsModal .timelineProperties {
   padding-left: 15px;
   padding-bottom: 3px;
-  border-bottom: solid #e6e6e6 1px;
-}
-#elementEffectsModal .timelineProperties .allLabel {
-  font-weight: bold;
-  margin-right: 5px;
-  padding-right: 5px;
-  border-right: solid #d9d9d9 1px;
-}
-#elementEffectsModal .timelineProperties input {
-  width: 60px;
-  display: inline-block;
-  margin-right: 5px;
-}
-#elementEffectsModal .timelineProperties input[name=group] {
-  width: 100px;
-}
+  border-bottom: solid #e6e6e6 1px; }
+  #elementEffectsModal .timelineProperties .allLabel {
+    font-weight: bold;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: solid #d9d9d9 1px; }
+  #elementEffectsModal .timelineProperties input {
+    width: 60px;
+    display: inline-block;
+    margin-right: 5px; }
+    #elementEffectsModal .timelineProperties input[name=group] {
+      width: 100px; }
 #elementEffectsModal #elementEffectsSubmitButton {
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 #elementEffectsModal .elementEffectsRow {
   margin-left: 0;
   margin-right: 0;
-  border-bottom: solid #f0f0f0 1px;
-}
-#elementEffectsModal .elementEffectsRow > * {
-  float: left;
-  width: 60px;
-  padding: 4px !important;
-}
-#elementEffectsModal .elementEffectsRow > *.elementColumn {
-  width: 140px;
-}
-#elementEffectsModal .elementEffectsRow > *.triggerColumn {
-  width: 120px;
-}
-#elementEffectsModal .elementEffectsRow > *.easeColumn {
-  width: 100px;
-}
-#elementEffectsModal .elementEffectsRow > *.easeColumn input {
-  width: 100%;
-}
-#elementEffectsModal .elementEffectsRow > *.propertyColumn {
-  width: 140px;
-}
-#elementEffectsModal .elementEffectsRow > *.fromToColumn {
-  width: 80px;
-}
-#elementEffectsModal .elementEffectsRow > *.elementEffectFieldColumn {
-  width: 150px;
-}
-#elementEffectsModal .elementEffectsRow > *.elementEffectFieldColumn label, #elementEffectsModal .elementEffectsRow > *.elementEffectFieldColumn input[type=text] {
-  width: 100%;
-}
-#elementEffectsModal .elementEffectsRow > *.elementEffectAddRemoveColumn {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-#elementEffectsModal .elementEffectsRow > * .colourWrapper .colourPicker {
-  width: 30px;
-}
-#elementEffectsModal .elementEffectsRow > * .colourWrapper .colourPickerHex {
-  width: 70px !important;
-}
-#elementEffectsModal .elementEffectsRow > * .colourWrapper [name=colourOpacity] {
-  width: 30px;
-}
+  border-bottom: solid #f0f0f0 1px; }
+  #elementEffectsModal .elementEffectsRow > * {
+    float: left;
+    width: 60px;
+    padding: 4px !important; }
+    #elementEffectsModal .elementEffectsRow > *.elementColumn {
+      width: 140px; }
+    #elementEffectsModal .elementEffectsRow > *.triggerColumn {
+      width: 120px; }
+    #elementEffectsModal .elementEffectsRow > *.easeColumn {
+      width: 100px; }
+      #elementEffectsModal .elementEffectsRow > *.easeColumn input {
+        width: 100%; }
+    #elementEffectsModal .elementEffectsRow > *.propertyColumn {
+      width: 140px; }
+    #elementEffectsModal .elementEffectsRow > *.fromToColumn {
+      width: 80px; }
+    #elementEffectsModal .elementEffectsRow > *.elementEffectFieldColumn {
+      width: 150px; }
+      #elementEffectsModal .elementEffectsRow > *.elementEffectFieldColumn label, #elementEffectsModal .elementEffectsRow > *.elementEffectFieldColumn input[type=text] {
+        width: 100%; }
+    #elementEffectsModal .elementEffectsRow > *.elementEffectAddRemoveColumn {
+      padding-bottom: 0;
+      margin-bottom: 0; }
+    #elementEffectsModal .elementEffectsRow > * .colourWrapper .colourPicker {
+      width: 30px; }
+    #elementEffectsModal .elementEffectsRow > * .colourWrapper .colourPickerHex {
+      width: 70px !important; }
+    #elementEffectsModal .elementEffectsRow > * .colourWrapper [name=colourOpacity] {
+      width: 30px; }
 
 @media only screen and (max-width: 1000px) {
   #elementEffectsModal #triggersWrapper .trigger .triggerProperties .form-group {
-    width: 17%;
-  }
+    width: 17%; }
   #elementEffectsModal #triggersWrapper .trigger .triggerNameInput {
-    width: 20%;
-  }
-}
+    width: 20%; } }
 [data-toggle=collapse] {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .keySectionTop {
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 body {
-  padding-right: 0px !important;
-}
+  padding-right: 0px !important; }
 
 .modal {
   z-index: 2050 !important;
-  font-family: sans-serif;
-}
-.modal label {
-  margin-bottom: 2px;
-}
+  font-family: sans-serif; }
+  .modal label {
+    margin-bottom: 2px; }
 
 .freeElementWrapper {
-  min-height: 100px;
-}
+  min-height: 100px; }
 
 #mainImageThumbnail img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 #imageAddToElement {
-  display: inline;
-}
+  display: inline; }
 
 #rowBackgroundImageLabel {
-  margin-top: 25px;
-}
+  margin-top: 25px; }
 
 #elementStyles .colourWrapper {
-  width: 12%;
-}
+  width: 12%; }
 #elementStyles .blockWrapper {
-  width: 15%;
-}
+  width: 15%; }
 #elementStyles .topRow {
-  margin-bottom: 10px;
-}
-#elementStyles .topRow > div:not(.mobileShow) {
-  width: 12%;
-}
+  margin-bottom: 10px; }
+  #elementStyles .topRow > div:not(.mobileShow) {
+    width: 12%; }
 #elementStyles #backgroundOpacityColumn {
-  width: 90px;
-}
+  width: 90px; }
 #elementStyles > div > div:not(.mobileShow) {
   vertical-align: bottom;
   width: 10%;
   display: inline-block;
-  margin-right: 7px;
-}
+  margin-right: 7px; }
 #elementStyles .paddingHorizontal, #elementStyles .marginHorizontal, #elementStyles .forceWidth, #elementStyles .forceHeight {
-  margin-right: 0 !important;
-}
+  margin-right: 0 !important; }
 #elementStyles .paddingVertical, #elementStyles .marginVertical {
-  margin-right: 12px !important;
-}
+  margin-right: 12px !important; }
 
 .textRow {
-  margin-bottom: 0 !important;
-}
+  margin-bottom: 0 !important; }
 
 .textPartFormStyles {
   position: relative;
-  margin-bottom: 2px !important;
-}
-.textPartFormStyles > div > div {
-  width: 11%;
-  display: inline-block;
-  vertical-align: bottom;
-  margin-right: 5px;
-}
-.textPartFormStyles .textColourWrapper {
-  width: 15%;
-}
-.textPartFormStyles .textButtons {
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
-  vertical-align: text-bottom;
-  width: 110px;
-}
-.textPartFormStyles .fontSizeColumn, .textPartFormStyles .bottomPaddingColumn {
-  width: 50px;
-}
+  margin-bottom: 2px !important; }
+  .textPartFormStyles > div > div {
+    width: 11%;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 5px; }
+  .textPartFormStyles .textColourWrapper {
+    width: 15%; }
+  .textPartFormStyles .textButtons {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    vertical-align: text-bottom;
+    width: 110px; }
+  .textPartFormStyles .fontSizeColumn, .textPartFormStyles .bottomPaddingColumn {
+    width: 50px; }
 
 .blockForm {
   border: solid lightgray 1px;
   padding: 5px;
   margin-left: 5px;
-  margin-right: 5px;
-}
+  margin-right: 5px; }
 
 .modal-lg {
   width: 95% !important;
-  max-width: 1000px;
-}
+  max-width: 1000px; }
 
 .blockForm {
-  display: none;
-}
+  display: none; }
 
 .editorElementOverlay {
   position: absolute;
@@ -245,314 +187,234 @@ body {
   z-index: 2020;
   display: table;
   background-color: transparent;
-  border: none;
-}
-.editorElementOverlay .editorElementOverlayInner {
-  position: relative;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.editorElementOverlay .editorElementOverlayInner .projectName {
-  font-weight: bold;
-  font-size: 20px;
-}
-.editorElementOverlay .editorElementOverlayInner div {
-  display: inline-block;
-  margin: 0 auto;
-  background-color: white;
-  padding: 2px;
-  font-size: 12px;
-}
+  border: none; }
+  .editorElementOverlay .editorElementOverlayInner {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    .editorElementOverlay .editorElementOverlayInner .projectName {
+      font-weight: bold;
+      font-size: 20px; }
+    .editorElementOverlay .editorElementOverlayInner div {
+      display: inline-block;
+      margin: 0 auto;
+      background-color: white;
+      padding: 2px;
+      font-size: 12px; }
 
 .image {
-  z-index: 1;
-}
+  z-index: 1; }
 
 html#footer-edit .editorWrapper {
   bottom: auto;
-  top: 0px;
-}
+  top: 0px; }
 
 .editor {
-  display: none;
-}
+  display: none; }
 
 .editorActive .layoutSquare {
-  outline: solid red 1px;
-}
+  outline: solid red 1px; }
 .editorActive .editor {
-  display: block;
-}
+  display: block; }
 
 .editorWrapper {
   font-family: sans-serif;
   position: fixed;
   z-index: 1000;
-  bottom: 0;
-}
-.editorWrapper div {
-  margin-top: 5px;
-}
-.editorWrapper div.right {
-  float: right;
-  margin-right: 1px;
-  border-left: solid 1px black;
-}
-.editorWrapper div span {
-  background: white;
-  padding: 3px;
-  border-bottom: solid 1px black;
-  border-top: solid 1px black;
-}
+  bottom: 0; }
+  .editorWrapper div {
+    margin-top: 5px; }
+    .editorWrapper div.right {
+      float: right;
+      margin-right: 1px;
+      border-left: solid 1px black; }
+    .editorWrapper div span {
+      background: white;
+      padding: 3px;
+      border-bottom: solid 1px black;
+      border-top: solid 1px black; }
 
 .editor.keys {
-  display: none;
-}
+  display: none; }
 
 html.editorActive .editor.keys.showKeyList.desktopShow {
-  display: block;
-}
+  display: block; }
 html.editorActive .editor.keys.showKeyList.mobileShow {
-  display: none;
-}
+  display: none; }
 
 .editorWrapperLeft span {
-  border-right: solid 1px black;
-}
+  border-right: solid 1px black; }
 
 #editorWrapperRight {
-  right: 0px;
-}
-#editorWrapperRight span {
-  float: right;
-  border-left: solid 1px black;
-}
+  right: 0px; }
+  #editorWrapperRight span {
+    float: right;
+    border-left: solid 1px black; }
 
 .colorpicker {
-  z-index: 1100;
-}
+  z-index: 1100; }
 
 .overlay {
   border: dashed 2px yellow;
-  outline: dashed 2px black;
-}
+  outline: dashed 2px black; }
 
 .rowOverlay {
-  outline: dashed 3px #31faff;
-}
+  outline: dashed 3px #31faff; }
 
 #textEffectsModal #textEffectsPreviewWrapper {
   margin-top: 50px;
-  margin-bottom: 50px;
-}
+  margin-bottom: 50px; }
 #textEffectsModal #textEffectsPlayButton {
-  float: right;
-}
+  float: right; }
 #textEffectsModal #textEffectsPreviewText {
-  padding: 100px;
-}
+  padding: 100px; }
 
 #elementEditModal #altTextWrapper {
-  margin-top: 10px;
-}
-#elementEditModal #altTextWrapper label {
-  margin-right: 5px;
-}
-#elementEditModal #altTextWrapper * {
-  display: inline;
-}
-#elementEditModal #altTextWrapper input {
-  width: 90%;
-}
+  margin-top: 10px; }
+  #elementEditModal #altTextWrapper label {
+    margin-right: 5px; }
+  #elementEditModal #altTextWrapper * {
+    display: inline; }
+  #elementEditModal #altTextWrapper input {
+    width: 90%; }
 #elementEditModal .row {
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 #elementEditModal i {
   margin-left: 0px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 #elementEditModal .form-control {
   padding: 0px !important;
-  text-align: center;
-}
-#elementEditModal input[type=color] {
+  text-align: center; }
+#elementEditModal input[type="color"] {
   width: 40%;
-  height: 34px;
-}
+  height: 34px; }
 #elementEditModal #elementEditBorderLabel {
-  margin-left: 5px;
-}
+  margin-left: 5px; }
 #elementEditModal .colourPickerHex {
   width: 60%;
   float: left;
   text-align: center;
-  height: 34px;
-}
+  height: 34px; }
 #elementEditModal .borderWidthWrapper {
   margin-right: -25px !important;
-  width: 200px;
-}
-#elementEditModal .borderWidthWrapper input {
-  width: 25px;
-}
-#elementEditModal .borderWidthWrapper .borderColumn {
-  display: inline-block;
-  width: 30px;
-}
-#elementEditModal .borderWidthWrapper #borderWidthLabel {
-  display: block;
-}
-#elementEditModal .borderWidthWrapper [name=borderWidthLeft], #elementEditModal .borderWidthWrapper [name=borderWidthRight] {
-  position: relative;
-  top: -15px;
-}
-#elementEditModal .borderWidthWrapper [name=borderWidthLeft] {
-  left: 8px;
-}
-#elementEditModal .borderWidthWrapper [name=borderWidthRight] {
-  right: 8px;
-}
+  width: 200px; }
+  #elementEditModal .borderWidthWrapper input {
+    width: 25px; }
+  #elementEditModal .borderWidthWrapper .borderColumn {
+    display: inline-block;
+    width: 30px; }
+  #elementEditModal .borderWidthWrapper #borderWidthLabel {
+    display: block; }
+  #elementEditModal .borderWidthWrapper [name=borderWidthLeft], #elementEditModal .borderWidthWrapper [name=borderWidthRight] {
+    position: relative;
+    top: -15px; }
+  #elementEditModal .borderWidthWrapper [name=borderWidthLeft] {
+    left: 8px; }
+  #elementEditModal .borderWidthWrapper [name=borderWidthRight] {
+    right: 8px; }
 #elementEditModal .borderRadiusWrapper label {
-  font-weight: 700;
-}
+  font-weight: 700; }
 #elementEditModal .borderRadiusWrapper .borderColumn {
   width: 49%;
-  float: left;
-}
+  float: left; }
 #elementEditModal .borderRadiusWrapper input {
-  width: 100%;
-}
+  width: 100%; }
 #elementEditModal .borderInputWrapper {
   width: 6% !important;
-  margin-right: -2px !important;
-}
+  margin-right: -2px !important; }
 #elementEditModal .borderApplyToImageWrapper {
-  width: 6% !important;
-}
+  width: 6% !important; }
 #elementEditModal .hideWrapper {
-  width: 7% !important;
-}
+  width: 7% !important; }
 #elementEditModal .borderColourWrapper {
-  margin-right: -2px !important;
-}
+  margin-right: -2px !important; }
 #elementEditModal #addMoreTextButton {
-  margin-top: 15px;
-}
+  margin-top: 15px; }
 #elementEditModal #noneOption {
-  font-weight: bold;
-}
+  font-weight: bold; }
 #elementEditModal .textButtons input {
   height: 34px;
-  width: 34px;
-}
+  width: 34px; }
 #elementEditModal .textRemoveButton {
-  color: red !important;
-}
+  color: red !important; }
+
 #textParts {
   border-top: solid 1px #dbdbdb;
-  margin-top: 20px;
-}
-#textParts .note-editor .note-resizebar {
-  display: none;
-}
-#textParts .CodeMirror {
-  height: auto !important;
-  padding: 8px 8px;
-  line-height: 22px;
-}
-#textParts .note-myTextColour i {
-  color: red;
-}
-#textParts .note-myTextColour .summerTextColour {
-  width: 60px;
-}
-#textParts .note-myTextBGColour i {
-  background-color: red;
-}
-#textParts .note-myTextBGColour .summerTextBGColour {
-  width: 60px;
-}
-#textParts .summerFontSize {
-  width: 30px;
-}
-#textParts .textPartTextOverrideLabel {
-  cursor: pointer;
-}
-#textParts .hTagWrapper {
-  width: 7% !important;
-}
-#textParts .textPartInfo {
-  margin-bottom: 0 !important;
-}
-#textParts .linkHelp {
-  font-size: 12px;
-}
-#textParts xmp {
-  display: inline;
-}
-#textParts .textareaToolbar {
-  font-size: 20px;
-}
-#textParts .textareaToolbar a {
-  background-color: yellow;
-  border: solid black 1px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-#textParts .textareaToolbar a:hover {
-  background-color: red;
-}
-#textParts .textareaToolbar .wysihtmlTextColourPicker {
-  width: 24px !important;
-  height: 24px !important;
-  position: relative;
-  top: -2px;
-  cursor: pointer;
-}
-#textParts .textareaToolbar .boldButton {
-  font-weight: 900;
-}
-#textParts .textareaToolbar .italicButton {
-  font-style: italic;
-  padding-left: 7px;
-  padding-right: 7px;
-}
-#textParts .textareaToolbar .removeLink, #textParts .textareaToolbar .fontSizeRemove {
-  position: relative;
-  left: -5px;
-}
-#textParts .textareaToolbar .underlineButton {
-  text-decoration: underline !important;
-}
-#textParts .textareaToolbar .showHtml {
-  float: right;
-  height: 26px;
-}
+  margin-top: 20px; }
+  #textParts .note-editor .note-resizebar {
+    display: none; }
+  #textParts .CodeMirror {
+    height: auto !important;
+    padding: 8px 8px;
+    line-height: 22px; }
+  #textParts .note-myTextColour i {
+    color: red; }
+  #textParts .note-myTextColour .summerTextColour {
+    width: 60px; }
+  #textParts .note-myTextBGColour i {
+    background-color: red; }
+  #textParts .note-myTextBGColour .summerTextBGColour {
+    width: 60px; }
+  #textParts .summerFontSize {
+    width: 30px; }
+  #textParts .textPartTextOverrideLabel {
+    cursor: pointer; }
+  #textParts .hTagWrapper {
+    width: 7% !important; }
+  #textParts .textPartInfo {
+    margin-bottom: 0 !important; }
+  #textParts .linkHelp {
+    font-size: 12px; }
+  #textParts xmp {
+    display: inline; }
+  #textParts .textareaToolbar {
+    font-size: 20px; }
+    #textParts .textareaToolbar a {
+      background-color: yellow;
+      border: solid black 1px;
+      padding-left: 2px;
+      padding-right: 2px; }
+    #textParts .textareaToolbar a:hover {
+      background-color: red; }
+    #textParts .textareaToolbar .wysihtmlTextColourPicker {
+      width: 24px !important;
+      height: 24px !important;
+      position: relative;
+      top: -2px;
+      cursor: pointer; }
+    #textParts .textareaToolbar .boldButton {
+      font-weight: 900; }
+    #textParts .textareaToolbar .italicButton {
+      font-style: italic;
+      padding-left: 7px;
+      padding-right: 7px; }
+    #textParts .textareaToolbar .removeLink, #textParts .textareaToolbar .fontSizeRemove {
+      position: relative;
+      left: -5px; }
+    #textParts .textareaToolbar .underlineButton {
+      text-decoration: underline !important; }
+    #textParts .textareaToolbar .showHtml {
+      float: right;
+      height: 26px; }
 
 #seoModal .ogImageWrapper {
-  min-height: 100px;
-}
+  min-height: 100px; }
 #seoModal .seoColumnTitle {
   padding-bottom: 5px;
-  border-bottom: solid lightgray 0.5px;
-}
+  border-bottom: solid lightgray .5px; }
 #seoModal i {
-  cursor: pointer;
-}
+  cursor: pointer; }
 #seoModal .divider {
   margin-bottom: 10px;
-  border-bottom: solid 1px #f5f5f5;
-}
+  border-bottom: solid 1px #f5f5f5; }
 #seoModal .ogTitle {
-  padding-top: 50px;
-}
+  padding-top: 50px; }
 #seoModal a {
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 .thumbnailWrapper {
   margin-top: 5px;
@@ -560,83 +422,65 @@ html.editorActive .editor.keys.showKeyList.mobileShow {
   position: relative;
   height: 100%;
   cursor: pointer;
-  padding-right: 20px;
-}
-.thumbnailWrapper img {
-  margin: 2px;
-  height: 60px;
-  max-width: 100%;
-}
-.thumbnailWrapper .cross {
-  position: absolute;
-  right: 15px;
-  top: -30px;
-  background-color: red;
-  color: white;
-  padding: 0px 2px;
-}
+  padding-right: 20px; }
+  .thumbnailWrapper img {
+    margin: 2px;
+    height: 60px;
+    max-width: 100%; }
+  .thumbnailWrapper .cross {
+    position: absolute;
+    right: 15px;
+    top: -30px;
+    background-color: red;
+    color: white;
+    padding: 0px 2px; }
 
 #responsiveModal button {
-  margin: 10px;
-}
+  margin: 10px; }
 
 #rowEditModal .modal-header {
-  position: relative;
-}
-#rowEditModal .modal-header button {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-}
-#rowEditModal .modal-header #rowNameWrapper * {
-  display: inline;
-}
-#rowEditModal .modal-header h4 {
-  display: inline;
-}
+  position: relative; }
+  #rowEditModal .modal-header button {
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+  #rowEditModal .modal-header #rowNameWrapper * {
+    display: inline; }
+  #rowEditModal .modal-header h4 {
+    display: inline; }
 #rowEditModal #moreStuffButton {
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 #rowEditModal #rowBackgroundFormLabel {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 #rowEditModal #rowBackgroundFormWrapper {
   border: solid 0.5px grey;
   margin-bottom: 10px;
-  padding: 5px;
-}
-#rowEditModal #rowBackgroundFormWrapper .row {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-#rowEditModal #rowBackgroundFormWrapper .row > div {
-  padding-right: 5px !important;
-  padding-left: 5px !important;
-}
+  padding: 5px; }
+  #rowEditModal #rowBackgroundFormWrapper .row {
+    margin-left: -5px;
+    margin-right: -5px; }
+    #rowEditModal #rowBackgroundFormWrapper .row > div {
+      padding-right: 5px !important;
+      padding-left: 5px !important; }
 #rowEditModal .groupLabel {
-  padding-top: 25px;
-}
+  padding-top: 25px; }
 #rowEditModal.rootRow .rowLayerOnly, #rowEditModal.nestedRow .rowLayerOnly {
-  display: none;
-}
+  display: none; }
 #rowEditModal.rowLayer .rootRowOnly, #rowEditModal.nestedRow .rootRowOnly {
-  display: none;
-}
+  display: none; }
 
 #topLeftEditorText {
   position: fixed;
   top: 0;
   font-family: sans-serif;
   left: 0px;
-  z-index: 2050;
-}
-#topLeftEditorText > div {
-  background: white;
-  padding: 3px;
-  border-bottom: solid 1px black;
-  border-right: solid 1px black;
-  display: inline-block;
-}
+  z-index: 2050; }
+  #topLeftEditorText > div {
+    background: white;
+    padding: 3px;
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
+    display: inline-block; }
 
 .flash {
   -webkit-animation-name: flash;
@@ -645,8 +489,7 @@ html.editorActive .editor.keys.showKeyList.mobileShow {
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
 
 #anchorSelectionInOverlay.flash {
   -webkit-animation-name: flash;
@@ -655,8 +498,7 @@ html.editorActive .editor.keys.showKeyList.mobileShow {
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
 
 .freeElementAnchor.flash {
   -webkit-animation-name: outline-flash;
@@ -665,19 +507,17 @@ html.editorActive .editor.keys.showKeyList.mobileShow {
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
-.freeElementAnchor.flash::after {
-  -webkit-animation-name: flash;
-  animation-name: flash;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
+  .freeElementAnchor.flash::after {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite; }
 .freeElementAnchor::after {
-  content: "";
+  content: '';
   padding-top: 30px;
   color: white;
   font-size: 40px;
@@ -696,133 +536,99 @@ html.editorActive .editor.keys.showKeyList.mobileShow {
   background-image: url("/bundles/common/images/anchor.png");
   background-position: center;
   background-size: contain;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 @-webkit-keyframes outline-flash {
   0%, 50%, 100% {
-    outline: dashed yellow 3px;
-  }
+    outline: dashed yellow 3px; }
   25%, 75% {
-    outline: dashed red 3px;
-  }
-}
+    outline: dashed red 3px; } }
 @keyframes outline-flash {
   0%, 50%, 100% {
-    outline: dashed yellow 3px;
-  }
+    outline: dashed yellow 3px; }
   25%, 75% {
-    outline: dashed red 3px;
-  }
-}
+    outline: dashed red 3px; } }
 @-webkit-keyframes flash {
   0%, 50%, 100% {
-    opacity: 1;
-  }
+    opacity: 1; }
   25%, 75% {
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
 @keyframes flash {
   0%, 50%, 100% {
-    opacity: 1;
-  }
+    opacity: 1; }
   25%, 75% {
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
 #columnEditModal #columnBorderWrapper {
-  border: solid grey 0.25px;
+  border: solid grey .25px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 10px;
-  padding: 5px;
-}
-#columnEditModal #columnBorderWrapper .borderColourWrapper label {
-  display: block;
-}
-#columnEditModal #columnBorderWrapper .borderColourWrapper .colourPickerHex {
-  width: 60%;
-}
-#columnEditModal #columnBorderWrapper #columnBorderRadii .borderRadiusCol {
-  width: 49%;
-  float: left;
-}
-#columnEditModal #columnBorderWrapper #columnBorderRadii input {
-  display: block;
-  width: 100%;
-}
+  padding: 5px; }
+  #columnEditModal #columnBorderWrapper .borderColourWrapper label {
+    display: block; }
+  #columnEditModal #columnBorderWrapper .borderColourWrapper .colourPickerHex {
+    width: 60%; }
+  #columnEditModal #columnBorderWrapper #columnBorderRadii .borderRadiusCol {
+    width: 49%;
+    float: left; }
+  #columnEditModal #columnBorderWrapper #columnBorderRadii input {
+    display: block;
+    width: 100%; }
 
 html.editMobile .editor.keys.showKeyList.mobileShow {
-  display: block !important;
-}
+  display: block !important; }
 html.editMobile .modal {
-  padding-right: 0 !important;
-}
-html.editMobile .modal .mobileHide {
-  display: none !important;
-}
+  padding-right: 0 !important; }
+  html.editMobile .modal .mobileHide {
+    display: none !important; }
 html.editMobile #editorMobileWrapper {
   right: 0;
   top: 0;
   position: fixed;
-  float: right;
-}
-html.editMobile #editorMobileWrapper span {
-  display: block;
-  background-color: white;
-  margin-bottom: 2px;
-  padding: 3px;
-}
+  float: right; }
+  html.editMobile #editorMobileWrapper span {
+    display: block;
+    background-color: white;
+    margin-bottom: 2px;
+    padding: 3px; }
 html.editMobile #elementEditModal .mobileShow {
   width: 12%;
-  display: inline-block;
-}
+  display: inline-block; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .editor.keys.showKeyList.mobileShow {
-    display: block !important;
-  }
+    display: block !important; }
 
   .modal {
-    padding-right: 0 !important;
-  }
-  .modal .mobileHide {
-    display: none !important;
-  }
+    padding-right: 0 !important; }
+    .modal .mobileHide {
+      display: none !important; }
 
   #editorMobileWrapper {
     right: 0;
     top: 0;
     position: fixed;
-    float: right;
-  }
-  #editorMobileWrapper span {
-    display: block;
-    background-color: white;
-    margin-bottom: 2px;
-    padding: 3px;
-  }
+    float: right; }
+    #editorMobileWrapper span {
+      display: block;
+      background-color: white;
+      margin-bottom: 2px;
+      padding: 3px; }
 
   .modal-lg {
     width: 100% !important;
-    margin: 0;
-  }
+    margin: 0; }
 
   #textParts xmp {
-    display: inline;
-  }
+    display: inline; }
 
   #elementStyles .colourWrapper {
-    width: 20% !important;
-  }
+    width: 20% !important; }
   #elementStyles > div > div {
     width: 23.5% !important;
     margin-bottom: 10px;
     display: inline-block;
-    margin-right: 7px;
-  }
-}
+    margin-right: 7px; } }
 
 /*# sourceMappingURL=editor.css.map */

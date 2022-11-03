@@ -83,6 +83,11 @@ parameters:
           label: Main Text
           type: simpleHtml
           rows: 10
+        table:
+          label: League Table
+          type: table
+          columns: [150,70,25,25,25,25,25,25,50,50,50,50]
+          heading: [ [ '',Games,W,D,L,W,D,L,F,A,Diff,Points ] ]
         priority:
           type: bool
 
