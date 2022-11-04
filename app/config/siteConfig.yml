@@ -86,8 +86,9 @@ parameters:
         table:
           label: League Table
           type: table
-          columns: [150,70,25,25,25,25,25,25,50,50,50,50]
-          heading: [ [ '',Games,W,D,L,W,D,L,F,A,Diff,Points ] ]
+          columns: [ 150,50,27,27,27,27,27,27,50,50,50,50 ]
+          heading: [ [ '','', [ 'Rinks',3 ],[ 'Aggregate',3 ], [ 'Shots',2 ], '', '' ],[ '',Games,W,D,L,W,D,L,F,A,'Diff','Points' ] ]
+          flags: [ notInAdmin ]
         priority:
           type: bool
 
@@ -141,13 +142,13 @@ liip_imagine:
 
   filter_sets:
 
-#    galleryBigger:
-#
-#      quality: 70
-#
-#      filters:
-#
-#        auto_rotate: ~
+    #    galleryBigger:
+    #
+    #      quality: 70
+    #
+    #      filters:
+    #
+    #        auto_rotate: ~
 
     galleryThumb:
 
