@@ -16,6 +16,9 @@ security:
                 editor:
                   password: $2y$12$ROwCAw27sJ7v9DtCnXyD7ealQMJEHlRJtIS7742lv.Y6qxopXr4RS
                   roles: ROLE_EDITOR
+                editorTest:
+                  password: $2y$12$JkQoGowCjNpKXAt5ms3dBu5Hjw..2lzYuBcY/RPLsA/aChZ3kvfLe
+                  roles: ROLE_EDITOR
 
 
     encoders:

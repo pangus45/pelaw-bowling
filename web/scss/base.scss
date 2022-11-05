@@ -2,6 +2,16 @@
 @import "../bundles/common/scss/mixins";
 
 
+table[data-article-type=league]{
+
+  th:empty{
+    border: none;
+  }
+
+  td{
+    min-width: 30px;
+  }
+}
 
 
 #desktopTopBar {

@@ -35,6 +35,7 @@ parameters:
 
     #   why multilingual!!!
     page:
+      roles: [ ROLE_ADMIN ]
       flags: [ addRoutes ,multilingual, uniquePageId ]
       fields:
         name:
@@ -45,6 +46,7 @@ parameters:
           flags: [ required, showInMobileAdmin ]
 
     activity:
+      roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       flags: [ confirmDeletion ]
       fields:
         banner:
@@ -66,6 +68,7 @@ parameters:
           flags: [ multiple ]
 
     league:
+      roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       flags: [ addRoutes, confirmDeletion ]
       fields:
         association:
@@ -81,11 +84,12 @@ parameters:
           label: League Table
           type: table
           columns: [ 150,50,27,27,27,27,27,27,50,50,50,50 ]
-          heading: [ [ '','', [ 'Rinks',3 ],[ 'Aggregate',3 ], [ 'Shots',2 ], '', '' ],[ '',Games,W,D,L,W,D,L,F,A,'Diff','Points' ] ]
+          heading: [ [ '','', [ 'Rinks',3 ],[ 'Aggregate',3 ], [ 'Shots',2 ], '', '' ],[ Team,Games,W,D,L,W,D,L,F,A,'Diff','Points' ] ]
           flags: [ notInAdmin, positionColumn ]
-
+          sortByColumn: 11
 
     news:
+      roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       order: [ priority, order, date ]
       flags: [ confirmDeletion ]
       fields:
@@ -107,6 +111,7 @@ parameters:
           type: bool
 
     album:
+      roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       order: [ order ]
       flags: [ confirmDeletion ]
       fields:
@@ -120,6 +125,7 @@ parameters:
           flags: [ multiple,ordered ]
 
     pdf:
+      roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       fields:
         name:
           type: text
