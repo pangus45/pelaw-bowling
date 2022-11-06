@@ -2,14 +2,31 @@
 @import "../bundles/common/scss/mixins";
 
 
-table[data-article-type=league]{
+.desktopLayout {
+  table[data-article-type=league] {
 
-  th:empty{
-    border: none;
+    td {
+      min-width: 30px;
+    }
+  }
+}
+
+table[data-article-type=league] {
+
+  tr:nth-child(1){
+    th{
+      //border-top: none;
+    }
   }
 
-  td{
-    min-width: 30px;
+  th {
+    background-color: $darkGreen;
+    color: white;
+
+    &:empty {
+      border: none;
+      background-color: transparent;
+    }
   }
 }
 
@@ -45,7 +62,7 @@ body, html {
   // fixes Android mess caused by slideFromLeft anim
 }
 
-#cookieBar{
+#cookieBar {
 
   bottom: 0;
   background-color: $mainGreen;
@@ -57,11 +74,11 @@ body, html {
   z-index: 1000;
   border-top: black solid .5px;
 
-  #cookieRow{
+  #cookieRow {
     @include flexbox();
     flex-direction: row;
 
-    #cookieLeft{
+    #cookieLeft {
       padding-right: 20px;
       text-align: justify;
 
@@ -71,14 +88,14 @@ body, html {
 
       @include align-items(center);
 
-      #moreInfoCookieLink{
+      #moreInfoCookieLink {
         white-space: nowrap;
       }
     }
 
-    #cookieRight{
+    #cookieRight {
 
-      #cookieCloseButton{
+      #cookieCloseButton {
 
         cursor: pointer;
         //position: relative;
@@ -201,8 +218,6 @@ footer {
 .flexRow.bootstrap {
   width: 90%;
 }
-
-
 
 
 //@media (min-width: 768px) {

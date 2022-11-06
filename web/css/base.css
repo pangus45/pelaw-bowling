@@ -1,7 +1,12 @@
-table[data-article-type=league] th:empty {
-  border: none; }
-table[data-article-type=league] td {
+.desktopLayout table[data-article-type=league] td {
   min-width: 30px; }
+
+table[data-article-type=league] th {
+  background-color: #1d835b;
+  color: white; }
+  table[data-article-type=league] th:empty {
+    border: none;
+    background-color: transparent; }
 
 .desktopLayout, .tabletLayout, .mobileLayout {
   overflow-x: hidden; }

@@ -84,9 +84,12 @@ parameters:
           label: League Table
           type: table
           columns: [ 150,50,27,27,27,27,27,27,50,50,50,50 ]
-          heading: [ [ '','', [ 'Rinks',3 ],[ 'Aggregate',3 ], [ 'Shots',2 ], '', '' ],[ Team,Games,W,D,L,W,D,L,F,A,'Diff','Points' ] ]
+          heading: [ [ '','', [ 'Rinks',3 ],[ 'Aggregate',3 ], [ 'Shots',2 ], '', '' ],[ Team,P,W,D,L,W,D,L,F,A,'Diff','Pts' ] ]
           flags: [ notInAdmin, positionColumn ]
           sortByColumn: 11
+        published:
+          type: bool
+          icon: tickCross
 
     news:
       roles: [ ROLE_ADMIN, ROLE_EDITOR ]
