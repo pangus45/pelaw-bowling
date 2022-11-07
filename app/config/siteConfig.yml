@@ -91,6 +91,19 @@ parameters:
           type: bool
           icon: tickCross
 
+    openTrophy:
+      roles: [ ROLE_ADMIN, ROLE_EDITOR ]
+      label: Open Trophy
+      flags: [ onlyOne, addRoutes ]
+      fields:
+        title:
+          type: text
+        table:
+          type: table
+          columns: [ 100,100,100,100,100,100 ]
+          heading: [ [ '',[ 'Pelaw Open<br>Triples - 3 Wood Competition',3 ],[ 'Pelaw Pairs<br>3 Wood Competition',3 ] ] ]
+          flags: [ notInAdmin ]
+
     news:
       roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       order: [ priority, order, date ]

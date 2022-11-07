@@ -11,13 +11,7 @@
   }
 }
 
-table[data-article-type=league] {
-
-  tr:nth-child(1){
-    th{
-      //border-top: none;
-    }
-  }
+table[data-article-type] {
 
   th {
     background-color: $darkGreen;

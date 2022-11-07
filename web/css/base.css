@@ -1,10 +1,10 @@
 .desktopLayout table[data-article-type=league] td {
   min-width: 30px; }
 
-table[data-article-type=league] th {
+table[data-article-type] th {
   background-color: #1d835b;
   color: white; }
-  table[data-article-type=league] th:empty {
+  table[data-article-type] th:empty {
     border: none;
     background-color: transparent; }
 
