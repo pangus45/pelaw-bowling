@@ -2,6 +2,8 @@ var KEY = 'AIzaSyDN6C96frpskjFXfW4GT6CxZ_2XhtA79XU';
 var GREEN_ID = 'f00bb87e7f8da04abe45d139ece7387fb67d8626521c78590c72e6830e9f93bc@group.calendar.google.com';
 var CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242a8fe@group.calendar.google.com';
 
+var FIRST_HOUR = 7;
+var LAST_HOUR = 22;
 
 $(document).ready(function () {
 
@@ -98,7 +100,7 @@ function dateMinsGet(pDate) {
 
 function hoursOptionsFill(pSelect) {
 
-    for (var hour = 0; hour <= 23; hour++) {
+    for (var hour = FIRST_HOUR; hour <= LAST_HOUR; hour++) {
 
         if (hour < 10) {
             var hour = '0' + hour;
@@ -175,8 +177,8 @@ function calendarsInit() {
             initialView: 'timeGridDay',
             // initialView: 'listWeek',
             contentHeight: 'auto',
-            slotMinTime: '07:00:00',
-            slotMaxTime: '22:00:00',
+            slotMinTime: '0' + FIRST_HOUR + ':00:00',
+            slotMaxTime: LAST_HOUR + ':00:00',
             nowIndicator: true,
             allDaySlot: false,
             googleCalendarApiKey: KEY,
