@@ -36,6 +36,19 @@
 
     form{
 
+      #timeTo{
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      .timeInput{
+        width: 45px;
+        display: inline-block;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-bottom: 9px;
+      }
+
       #bookingFormHeading{
         margin-bottom: 20px;
       }
@@ -75,6 +88,18 @@
         //font-size: 20px;
         margin-left: 5px;
       }
+    }
+  }
+}
+
+
+// same width as mobile menu for now
+@media (max-width: $mobileLayoutMaxWidth) {
+
+  #bookingFormModal {
+
+    #bookingFormModalInner{
+      padding: 5vw;
     }
   }
 }

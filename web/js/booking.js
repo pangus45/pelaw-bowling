@@ -5,7 +5,7 @@ var CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242
 
 $(document).ready(function () {
 
-    calendarInit();
+    calendarsInit();
 
     formInit();
 });
@@ -26,11 +26,25 @@ function formInit() {
 
         return false;
     });
+
+    hoursOptionsFill('#bookingStartTimeHours');
+    hoursOptionsFill('#bookingEndTimeHours');
+
+    minsOptionsFill('#bookingStartTimeMins')
+    minsOptionsFill('#bookingEndTimeMins')
 }
 
 function dateClicked(pInfo) {
 
-    alert('Clicked on: ' + pInfo.dateStr);
+    // alert('Clicked on: ' + pInfo.dateStr);
+
+    // var endTime = JSON.parse(JSON.stringify(pInfo.start));
+
+    var endTime = new Date(pInfo.date);
+
+    endTime.setHours(pInfo.date.getHours() + 1)
+
+    bookingFormPopupActivate(pInfo.date, endTime);
 
     // alert('Coordinates: ' + pInfo.jsEvent.pageX + ',' + info.jsEvent.pageY);
     // alert('Current view: ' + pInfo.view.type);
@@ -47,20 +61,85 @@ function dateSelected(pInfo) {
     // change the day's background color just for fun
     // info.dayEl.style.backgroundColor = 'red';
 
-    var startDate = pInfo.start;
-    var endDate = pInfo.end;
+    bookingFormPopupActivate(pInfo.start, pInfo.end);
+}
 
-    $('#bookingStartTime').text(FullCalendar.formatDate(startDate, {
-        hour: '2-digit',
+
+function dateAMPMGet(pDate) {
+
+    var hours = FullCalendar.formatDate(pDate, {
+        hour: '2-digit'
+    });
+
+    return hours.split(" ")[1];
+}
+
+
+function dateHoursGet(pDate) {
+
+    var hours = FullCalendar.formatDate(pDate, {
+        hour: 'numeric',
+        hour12: false
+    });
+
+    return hours;
+
+    // return hours.split(" ")[0];
+}
+
+function dateMinsGet(pDate) {
+
+    return FullCalendar.formatDate(pDate, {
         minute: '2-digit',
-    }));
+        hour12: false
+    });
+}
 
-    $('#bookingEndTime').text(FullCalendar.formatDate(endDate, {
-        hour: '2-digit',
-        minute: '2-digit',
-    }));
 
-    $('#bookingDay').text(FullCalendar.formatDate(startDate, {
+function hoursOptionsFill(pSelect) {
+
+    for (var hour = 0; hour <= 23; hour++) {
+
+        if (hour < 10) {
+            var hour = '0' + hour;
+        }
+
+        $('<option>').appendTo(pSelect).val(hour).text(hour);
+    }
+}
+
+
+function minsOptionsFill(pSelect) {
+
+    for (var min = 0; min <= 45; min += 30) {
+
+        var option = $('<option>').appendTo(pSelect);
+
+        option.val(min);
+
+        if (0 == min) {
+            option.text('00');
+        } else {
+            option.text(min);
+        }
+    }
+}
+
+
+function bookingFormPopupActivate(pStartTime, pEndTime) {
+
+    var startHours = dateHoursGet(pStartTime);
+    var startMins = dateMinsGet(pStartTime);
+
+    var endHours = dateHoursGet(pEndTime);
+    var endMins = dateMinsGet(pEndTime);
+
+    $('#bookingStartTimeHours').val(startHours);
+    $('#bookingStartTimeMins').val(startMins);
+    $('#bookingEndTimeHours').val(endHours);
+    $('#bookingEndTimeMins').val(endMins);
+
+    $('#bookingDay').text(FullCalendar.formatDate(pStartTime, {
         day: 'numeric',
         month: 'long',
     }));
@@ -72,34 +151,64 @@ function dateSelected(pInfo) {
     gsap.fromTo(modal, .2, {opacity: 0}, {opacity: 1});
 }
 
-function calendarInit() {
 
-    var calendarEl = $('#calendar');
+function eventClicked(pEventInfo) {
 
-    var calendar = new FullCalendar.Calendar(calendarEl[0], {
-        // initialView: 'dayGridWeek',
-        initialView: 'timeGridWeek',
-        // initialView: 'listWeek',
-        contentHeight: 'auto',
-        slotMinTime: '07:00:00',
-        slotMaxTime: '22:00:00',
-        nowIndicator: true,
-        allDaySlot: false,
-        googleCalendarApiKey: KEY,
-        // dateClick: dateClicked,
-        select: dateSelected,
-        selectable: true,
-        eventSources: [
-            {
-                googleCalendarId: GREEN_ID,
-                className: 'green'
-            },
-            {
-                googleCalendarId: CLUBHOUSE_ID,
-                className: 'clubHouse'
-            }
-        ]
+    // pEventInfo.event.url
+
+    pEventInfo.jsEvent.preventDefault();
+}
+
+
+function calendarsInit() {
+
+    var bookingCalendars = $('.bookingCalendar');
+
+    bookingCalendars.each(function () {
+
+        var calendarElement = $(this);
+
+        var options = {
+            locale: 'en-gb',
+            eventClick: eventClicked,
+            // initialView: 'dayGridWeek',
+            initialView: 'timeGridDay',
+            // initialView: 'listWeek',
+            contentHeight: 'auto',
+            slotMinTime: '07:00:00',
+            slotMaxTime: '22:00:00',
+            nowIndicator: true,
+            allDaySlot: false,
+            googleCalendarApiKey: KEY,
+            selectOverlap: true,
+            eventSources: [
+                {
+                    googleCalendarId: GREEN_ID,
+                    className: 'green'
+                },
+                {
+                    googleCalendarId: CLUBHOUSE_ID,
+                    className: 'clubHouse'
+                }
+            ]
+        };
+
+        if (elementIsInMobileLayout(calendarElement)) {
+
+            options.selectable = false;
+            options.dateClick = dateClicked;
+            options.initialView = 'timeGridDay';
+
+        } else {
+
+            options.selectable = true;
+            options.selectMirror = true;
+            options.select = dateSelected;
+            options.initialView = 'timeGridWeek';
+        }
+
+        var calendar = new FullCalendar.Calendar($(this)[0], options);
+
+        calendar.render();
     });
-
-    calendar.render();
 }

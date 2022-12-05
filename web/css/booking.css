@@ -26,6 +26,15 @@
     max-width: 500px; }
     #bookingFormModal #bookingFormModalInner form {
       width: 100%; }
+      #bookingFormModal #bookingFormModalInner form #timeTo {
+        margin-left: 5px;
+        margin-right: 5px; }
+      #bookingFormModal #bookingFormModalInner form .timeInput {
+        width: 45px;
+        display: inline-block;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-bottom: 9px; }
       #bookingFormModal #bookingFormModalInner form #bookingFormHeading {
         margin-bottom: 20px; }
       #bookingFormModal #bookingFormModalInner form #bookingStartTime, #bookingFormModal #bookingFormModalInner form #bookingEndTime, #bookingFormModal #bookingFormModalInner form #bookingDay {
@@ -46,5 +55,9 @@
         margin-left: 10px; }
       #bookingFormModal #bookingFormModalInner form #cancelCross {
         margin-left: 5px; }
+
+@media (max-width: 600px) {
+  #bookingFormModal #bookingFormModalInner {
+    padding: 5vw; } }
 
 /*# sourceMappingURL=booking.css.map */

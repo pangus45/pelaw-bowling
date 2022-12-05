@@ -10,11 +10,14 @@
         <div id="bookingFormModalInner">
             <form>
                 <div id="bookingFormHeading">
-                    Request booking from
-                    <div id="bookingStartTime"></div>
-                    to
-                    <div id="bookingEndTime"></div>
-                    on
+                    Request booking from<br>
+                    <select class="form-control timeInput" id="bookingStartTimeHours"></select>:
+                    <select class="form-control timeInput" id="bookingStartTimeMins"></select>
+                    <span id="timeTo">to</span>
+                    <select class="form-control timeInput" id="bookingEndTimeHours"></select>:
+                    <select class="form-control timeInput" id="bookingEndTimeMins"></select>
+                    <br>
+                    <span>on</span>
                     <div id="bookingDay"></div>
                 </div>
 
@@ -25,11 +28,12 @@
                     <option value="">Clubhouse + Bowling Green</option>
                 </select>
                 <label for="">Name of Organization/Individual</label>
-                <input class="form-control" >
+                <input class="form-control">
                 <label for="">What do you need the facility for</label>
                 <textarea class="form-control" rows="10"></textarea>
                 <button id="submitButton" class="form-control btn btn-primary" type="submit">SUBMIT</button>
-                <button id="bookingFormCancelButton" class="form-control btn btn-default" >CANCEL<span id="cancelCross">❌</span></button>
+                <button id="bookingFormCancelButton" class="form-control btn btn-default">CANCEL<span
+                            id="cancelCross">❌</span></button>
             </form>
 
         </div>
