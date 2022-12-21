@@ -10,21 +10,24 @@
 }
 
 
-.block-calendar{
+.block-calendar {
 
-  .fc-toolbar-title{
+  .fc-toolbar-title {
     font-size: 20px;
     position: relative;
     top: 5px;
   }
-}
 
+  .fc .fc-timegrid-col.fc-day-today {
+    background-color: darken(white, 8%);
+  }
+}
 
 
 #bookingFormModal {
   display: none;
   position: fixed;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0, 0, 0, .5);
   z-index: 1000;
   top: 0;
   left: 0;
@@ -35,7 +38,7 @@
   align-items: center;
   justify-content: center;
 
-  #bookingFormModalInner{
+  #bookingFormModalInner {
     padding: 50px;
     background-color: white;
     border-radius: 10px;
@@ -45,14 +48,14 @@
     width: 95%;
     max-width: 500px;
 
-    form{
+    form {
 
-      #timeTo{
+      #timeTo {
         margin-left: 5px;
         margin-right: 5px;
       }
 
-      .timeInput{
+      .timeInput {
         width: 45px;
         display: inline-block;
         padding-left: 2px;
@@ -60,41 +63,41 @@
         margin-bottom: 9px;
       }
 
-      #bookingFormHeading{
+      #bookingFormHeading {
         margin-bottom: 20px;
       }
 
-      #bookingStartTime, #bookingEndTime, #bookingDay{
+      #bookingStartTime, #bookingEndTime, #bookingDay {
         display: inline-block;
         font-weight: 600;
       }
 
       width: 100%;
 
-      select{
+      select {
         margin-top: 10px;
       }
 
-      label{
+      label {
         margin-top: 10px;
       }
 
-      textarea{
+      textarea {
         width: 100%;
       }
 
-      button{
+      button {
         width: 100px;
         display: inline-block;
         float: right;
         margin-top: 10px;
       }
 
-      #submitButton{
+      #submitButton {
         margin-left: 10px;
       }
 
-      #cancelCross{
+      #cancelCross {
         //color: red;
         //font-size: 20px;
         margin-left: 5px;
@@ -109,7 +112,7 @@
 
   #bookingFormModal {
 
-    #bookingFormModalInner{
+    #bookingFormModalInner {
       padding: 5vw;
     }
   }
