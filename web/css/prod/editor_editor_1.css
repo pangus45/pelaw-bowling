@@ -596,7 +596,7 @@ html.editMobile #elementEditModal .mobileShow {
   width: 12%;
   display: inline-block; }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 600px) {
   .editor.keys.showKeyList.mobileShow {
     display: block !important; }
 

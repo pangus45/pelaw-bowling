@@ -1,33 +1,27 @@
 #articleEditContent {
-  padding-top: 120px;
-}
+  padding-top: 120px; }
 
 #articleAdminContent {
-  padding-top: 120px;
-}
+  padding-top: 120px; }
 
 #bodyInner {
   height: 100%;
-  background-color: white;
-}
+  background-color: white; }
 
 #mainLogoWrapper {
-  cursor: pointer;
-}
-#mainLogoWrapper #mainLogo {
-  height: 50px;
-  margin-top: -2px;
-}
+  cursor: pointer; }
+  #mainLogoWrapper #mainLogo {
+    height: 50px;
+    margin-top: -2px; }
 
 #topBarLine {
   width: 100%;
   position: fixed;
   z-index: 1001;
-  border: black solid 0.5px;
+  border: black solid .5px;
   top: 52px;
   right: 0px;
-  opacity: 0;
-}
+  opacity: 0; }
 
 #desktopTopBar {
   background-color: white;
@@ -36,8 +30,7 @@
   border-bottom: solid #7b9f01 3px;
   top: 0px;
   width: 100%;
-  z-index: 1000;
-}
+  z-index: 1000; }
 
 #topBarLeftLinks {
   display: inline-block;
@@ -45,12 +38,10 @@
   height: 80px;
   top: 0px;
   display: table;
-  padding-left: 8%;
-}
-#topBarLeftLinks #topBarLeftInner {
-  display: table-cell;
-  vertical-align: middle;
-}
+  padding-left: 8%; }
+  #topBarLeftLinks #topBarLeftInner {
+    display: table-cell;
+    vertical-align: middle; }
 
 #topBarRight {
   position: fixed;
@@ -59,32 +50,26 @@
   top: 0px;
   z-index: 1001;
   display: table;
-  padding-right: 8%;
-}
-#topBarRight #topBarRightInner {
-  display: table-cell;
-  vertical-align: middle;
-}
-#topBarRight a {
-  font-weight: 700;
-  color: #1d835b;
-  font-size: 16px;
-  padding: 0 23px;
-  cursor: pointer;
-  position: relative;
-  left: 23px;
-}
-#topBarRight a:hover {
-  color: #7b9f01;
-}
+  padding-right: 8%; }
+  #topBarRight #topBarRightInner {
+    display: table-cell;
+    vertical-align: middle; }
+  #topBarRight a {
+    font-weight: 700;
+    color: #1d835b;
+    font-size: 16px;
+    padding: 0 23px;
+    cursor: pointer;
+    position: relative;
+    left: 23px; }
+    #topBarRight a:hover {
+      color: #7b9f01; }
 
 #mobileTopBarWrapper {
-  display: none;
-}
+  display: none; }
 
 #mobileTopBarMediaCheck {
-  float: none;
-}
+  float: none; }
 
 .menuToggle {
   display: none;
@@ -93,222 +78,170 @@
   top: 30px;
   width: 25px;
   cursor: pointer;
-  z-index: 1000;
-}
-.menuToggle .menuToggleLine {
-  width: 100%;
-  border-top: 2px #1d835b solid;
-  margin-bottom: 6px;
-}
-.menuToggle .menuToggleLine:last-child {
-  margin-bottom: 0;
-}
+  z-index: 1000; }
+  .menuToggle .menuToggleLine {
+    width: 100%;
+    border-top: 2px #1d835b solid;
+    margin-bottom: 6px; }
+    .menuToggle .menuToggleLine:last-child {
+      margin-bottom: 0; }
 
 @media only screen and (max-width: 1400px) {
   #topBarRight {
-    padding-right: 4%;
-  }
+    padding-right: 4%; }
 
   #topBarLeftLinks {
-    padding-left: 4%;
-  }
-}
+    padding-left: 4%; } }
 @media only screen and (max-width: 1200px) {
   #topBarRight {
-    padding-right: 2%;
-  }
+    padding-right: 2%; }
 
   #topBarLeftLinks {
-    padding-left: 2%;
-  }
-}
+    padding-left: 2%; } }
 @media only screen and (max-width: 1064px) {
   #topBarRight {
-    display: none;
-  }
+    display: none; }
 
   #sideBarToggle {
-    display: block;
-  }
-}
+    display: block; } }
 html.editMobile #articleEditContent {
-  padding-top: 20px;
-}
+  padding-top: 20px; }
 html.editMobile #articleAdminContent {
-  padding-top: 20px;
-}
+  padding-top: 20px; }
 html.editMobile #topBarHomeLink, html.editMobile #sideBarToggle {
-  display: none;
-}
+  display: none; }
 html.editMobile body {
-  padding-top: 0px !important;
-}
+  padding-top: 0px !important; }
 html.editMobile #mobileTopBarMediaCheck {
-  float: left;
-}
+  float: left; }
 html.editMobile #desktopTopBar {
-  display: none;
-}
+  display: none; }
 html.editMobile #mobileMenuToggle {
   display: block;
   top: 20px;
   right: 20px;
-  position: absolute;
-}
-html.editMobile #mobileMenuToggle .menuToggleLine {
-  border-color: white;
-}
+  position: absolute; }
+  html.editMobile #mobileMenuToggle .menuToggleLine {
+    border-color: white; }
 html.editMobile #mobileTopBarWrapper {
   display: block;
-  border-bottom: solid white 1px;
-}
-html.editMobile #mobileTopBarWrapper #mobileSocialWrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-html.editMobile #mobileTopBarWrapper #mobileLogoWrapper {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-html.editMobile #mobileTopBarWrapper #mobileLogoWrapper #mobileLogo {
-  height: 40px;
-}
-html.editMobile #mobileTopBarWrapper #mobileTopBar {
-  background-color: #1d835b;
-  height: 60px;
-}
-html.editMobile #mobileTopBarWrapper #mobileMenuLinks {
-  display: none;
-  border-top: solid white 1px;
-  background-color: #7b9f01;
-  font-size: 18px;
-  position: absolute;
-  top: 60px;
-  width: 100%;
-}
-html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
-  display: block;
-  margin-left: 0;
-  text-align: center;
-  padding: 10px 0;
-  color: white !important;
-  border-bottom: solid white 1px;
-}
-html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink:last-child {
-  border-bottom: none !important;
-}
-html.editMobile #mobileTopBarWrapper #mobileTopBarLogoText {
-  margin-top: 6px;
-  margin-left: 20px;
-}
-html.editMobile #topBarRightInner {
-  display: none !important;
-}
-html.editMobile #menuSlider {
-  position: relative;
-  background-color: #fff;
-}
-html.editMobile #mobileTopBarWrapper {
-  width: 400px;
-  position: relative;
-}
-
-@media only screen and (max-width: 600px), screen and (max-height: 600px) {
-  #articleEditContent {
-    padding-top: 20px;
-  }
-
-  #articleAdminContent {
-    padding-top: 20px;
-  }
-
-  #topBarHomeLink, #sideBarToggle {
-    display: none;
-  }
-
-  body {
-    padding-top: 0px !important;
-  }
-
-  #mobileTopBarMediaCheck {
-    float: left;
-  }
-
-  #desktopTopBar {
-    display: none;
-  }
-
-  #mobileMenuToggle {
-    display: block;
-    top: 20px;
-    right: 20px;
-    position: absolute;
-  }
-  #mobileMenuToggle .menuToggleLine {
-    border-color: white;
-  }
-
-  #mobileTopBarWrapper {
-    display: block;
-    border-bottom: solid white 1px;
-  }
-  #mobileTopBarWrapper #mobileSocialWrapper {
+  border-bottom: solid white 1px; }
+  html.editMobile #mobileTopBarWrapper #mobileSocialWrapper {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;
-  }
-  #mobileTopBarWrapper #mobileLogoWrapper {
+    display: flex; }
+  html.editMobile #mobileTopBarWrapper #mobileLogoWrapper {
     position: absolute;
     left: 10px;
-    top: 10px;
-  }
-  #mobileTopBarWrapper #mobileLogoWrapper #mobileLogo {
-    height: 40px;
-  }
-  #mobileTopBarWrapper #mobileTopBar {
+    top: 10px; }
+    html.editMobile #mobileTopBarWrapper #mobileLogoWrapper #mobileLogo {
+      height: 40px; }
+  html.editMobile #mobileTopBarWrapper #mobileTopBar {
     background-color: #1d835b;
-    height: 60px;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks {
+    height: 60px; }
+  html.editMobile #mobileTopBarWrapper #mobileMenuLinks {
     display: none;
     border-top: solid white 1px;
     background-color: #7b9f01;
     font-size: 18px;
     position: absolute;
     top: 60px;
-    width: 100%;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
-    display: block;
-    margin-left: 0;
-    text-align: center;
-    padding: 10px 0;
-    color: white !important;
-    border-bottom: solid white 1px;
-  }
-  #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink:last-child {
-    border-bottom: none !important;
-  }
-  #mobileTopBarWrapper #mobileTopBarLogoText {
+    width: 100%; }
+    html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
+      display: block;
+      margin-left: 0;
+      text-align: center;
+      padding: 10px 0;
+      color: white !important;
+      border-bottom: solid white 1px; }
+      html.editMobile #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink:last-child {
+        border-bottom: none !important; }
+  html.editMobile #mobileTopBarWrapper #mobileTopBarLogoText {
     margin-top: 6px;
-    margin-left: 20px;
-  }
+    margin-left: 20px; }
+html.editMobile #topBarRightInner {
+  display: none !important; }
+html.editMobile #menuSlider {
+  position: relative;
+  background-color: #fff; }
+html.editMobile #mobileTopBarWrapper {
+  width: 400px;
+  position: relative; }
+
+@media only screen and (max-width: 600px), screen and (max-height: 600px) {
+  #articleEditContent {
+    padding-top: 20px; }
+
+  #articleAdminContent {
+    padding-top: 20px; }
+
+  #topBarHomeLink, #sideBarToggle {
+    display: none; }
+
+  body {
+    padding-top: 0px !important; }
+
+  #mobileTopBarMediaCheck {
+    float: left; }
+
+  #desktopTopBar {
+    display: none; }
+
+  #mobileMenuToggle {
+    display: block;
+    top: 20px;
+    right: 20px;
+    position: absolute; }
+    #mobileMenuToggle .menuToggleLine {
+      border-color: white; }
+
+  #mobileTopBarWrapper {
+    display: block;
+    border-bottom: solid white 1px; }
+    #mobileTopBarWrapper #mobileSocialWrapper {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+    #mobileTopBarWrapper #mobileLogoWrapper {
+      position: absolute;
+      left: 10px;
+      top: 10px; }
+      #mobileTopBarWrapper #mobileLogoWrapper #mobileLogo {
+        height: 40px; }
+    #mobileTopBarWrapper #mobileTopBar {
+      background-color: #1d835b;
+      height: 60px; }
+    #mobileTopBarWrapper #mobileMenuLinks {
+      display: none;
+      border-top: solid white 1px;
+      background-color: #7b9f01;
+      font-size: 18px;
+      position: absolute;
+      top: 60px;
+      width: 100%; }
+      #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+        color: white !important;
+        border-bottom: solid white 1px; }
+        #mobileTopBarWrapper #mobileMenuLinks .mobileMenuLink:last-child {
+          border-bottom: none !important; }
+    #mobileTopBarWrapper #mobileTopBarLogoText {
+      margin-top: 6px;
+      margin-left: 20px; }
 
   #topBarRightInner {
-    display: none !important;
-  }
+    display: none !important; }
 
   #menuSlider {
     position: relative;
-    background-color: #fff;
-  }
-}
+    background-color: #fff; } }
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */

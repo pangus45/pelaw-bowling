@@ -2,16 +2,27 @@
 @import '../bundles/common/scss/_mixins';
 
 .green {
-  background-color: green;
+  background-color: #7b9f01;
 }
 
 .clubHouse {
-  background-color: brown;
+  background-color: #69a1dd;
 }
+
+
+.block-calendar{
+
+  .fc-toolbar-title{
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+  }
+}
+
+
 
 #bookingFormModal {
   display: none;
-
   position: fixed;
   background-color: rgba(0,0,0,.5);
   z-index: 1000;

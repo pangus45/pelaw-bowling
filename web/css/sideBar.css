@@ -1,6 +1,5 @@
 body {
-  padding-top: 0 !important;
-}
+  padding-top: 0 !important; }
 
 #menuLayout {
   position: fixed;
@@ -9,17 +8,13 @@ body {
   height: 100%;
   width: 300px;
   background-color: #1d835b;
-  z-index: 1000;
-}
+  z-index: 1000; }
 
 #topBarGroupLogoWrapper {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 @media only screen and (max-width: 600px), screen and (max-height: 600px) {
   #menuLayout {
-    display: none;
-  }
-}
+    display: none; } }
 
 /*# sourceMappingURL=sideBar.css.map */
