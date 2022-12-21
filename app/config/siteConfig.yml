@@ -101,7 +101,7 @@ parameters:
         table:
           type: table
           columns: [ 100,100,100,100,100,100 ]
-          heading: [ [ '',[ 'Pelaw Open<br>Triples - 3 Wood Competition',3 ],[ 'Pelaw Pairs<br>3 Wood Competition',3 ] ] ]
+          heading: [ [ '',[ '<div>Pelaw Open</div><div>Triples - 3 Wood Competition</div>',3 ],[ '<div>Pelaw Pairs</div><div>3 Wood Competition</div>',3 ] ] ]
           flags: [ notInAdmin ]
 
     news:

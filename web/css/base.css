@@ -1,19 +1,22 @@
-.desktopLayout table[data-article-type=league] {
-  font-size: 16px; }
-  .desktopLayout table[data-article-type=league] th {
-    font-weight: 400; }
-  .desktopLayout table[data-article-type=league] td {
-    min-width: 30px; }
+.desktopLayout table[data-article-type=league] th {
+  font-weight: 400; }
+.desktopLayout table[data-article-type=league] td {
+  min-width: 30px; }
 
-table[data-article-type] tr:nth-child(2) th {
-  background-color: #dcdcdc;
-  color: #474747; }
-table[data-article-type] th {
-  background-color: #1d835b;
-  color: white; }
-  table[data-article-type] th:empty {
-    border: none;
-    background-color: transparent !important; }
+table[data-article-type=openTrophy] th div:nth-child(2) {
+  font-weight: 400; }
+
+table[data-article-type] {
+  font-size: 16px; }
+  table[data-article-type] tr:nth-child(2) th {
+    background-color: #dcdcdc;
+    color: #474747; }
+  table[data-article-type] th {
+    background-color: #1d835b;
+    color: white; }
+    table[data-article-type] th:empty {
+      border: none;
+      background-color: transparent !important; }
 
 .desktopLayout, .tabletLayout, .mobileLayout {
   overflow-x: hidden; }

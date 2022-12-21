@@ -5,8 +5,6 @@
 .desktopLayout {
   table[data-article-type=league] {
 
-    font-size: 16px;
-
     th{
       font-weight: 400;
     }
@@ -17,7 +15,20 @@
   }
 }
 
+
+table[data-article-type=openTrophy]{
+
+  th{
+    div:nth-child(2){
+      font-weight: 400;
+    }
+  }
+}
+
+
 table[data-article-type] {
+
+  font-size: 16px;
 
   tr:nth-child(2){
 
