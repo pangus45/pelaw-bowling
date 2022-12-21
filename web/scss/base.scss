@@ -5,6 +5,10 @@
 .desktopLayout {
   table[data-article-type=league] {
 
+    th{
+      font-weight: 400;
+    }
+
     td {
       min-width: 30px;
     }

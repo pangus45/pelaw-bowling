@@ -2,7 +2,7 @@ var KEY = 'AIzaSyDN6C96frpskjFXfW4GT6CxZ_2XhtA79XU';
 var GREEN_ID = 'f00bb87e7f8da04abe45d139ece7387fb67d8626521c78590c72e6830e9f93bc@group.calendar.google.com';
 var CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242a8fe@group.calendar.google.com';
 
-var FIRST_HOUR = 7;
+var FIRST_HOUR = 8;
 var LAST_HOUR = 22;
 
 $(document).ready(function () {
@@ -176,7 +176,9 @@ function calendarsInit() {
             // initialView: 'dayGridWeek',
             initialView: 'timeGridDay',
             // initialView: 'listWeek',
-            contentHeight: 'auto',
+            contentHeight: 1000,
+            expandRows: true,
+            // height: 2000,
             slotMinTime: '0' + FIRST_HOUR + ':00:00',
             slotMaxTime: LAST_HOUR + ':00:00',
             nowIndicator: true,
