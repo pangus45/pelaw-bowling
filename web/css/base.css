@@ -1,14 +1,18 @@
 .desktopLayout table[data-article-type=league] th {
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 16px; }
 .desktopLayout table[data-article-type=league] td {
   min-width: 30px; }
 
+table[data-article-type] tr:nth-child(2) th {
+  background-color: #dcdcdc;
+  color: #474747; }
 table[data-article-type] th {
   background-color: #1d835b;
   color: white; }
   table[data-article-type] th:empty {
     border: none;
-    background-color: transparent; }
+    background-color: transparent !important; }
 
 .desktopLayout, .tabletLayout, .mobileLayout {
   overflow-x: hidden; }
