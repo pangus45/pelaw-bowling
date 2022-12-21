@@ -9,7 +9,7 @@
   position: relative;
   top: 5px; }
 .block-calendar .fc .fc-timegrid-col.fc-day-today {
-  background-color: #ebebeb; }
+  background-color: #f0f0f0; }
 
 #bookingFormModal {
   display: none;
