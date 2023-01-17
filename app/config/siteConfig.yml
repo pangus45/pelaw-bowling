@@ -48,7 +48,10 @@ parameters:
     activity:
       roles: [ ROLE_ADMIN, ROLE_EDITOR ]
       flags: [ confirmDeletion ]
+      order: [ order ]
       fields:
+        order:
+          type: order
         banner:
           type: image
         thumbnail:
