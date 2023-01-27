@@ -43,7 +43,7 @@
         padding-right: 2px;
         margin-bottom: 9px; }
       #bookingFormModal #bookingFormModalInner form #bookingFormHeading {
-        margin-bottom: 20px; }
+        margin-bottom: 10px; }
       #bookingFormModal #bookingFormModalInner form #bookingStartTime, #bookingFormModal #bookingFormModalInner form #bookingEndTime, #bookingFormModal #bookingFormModalInner form #bookingDay {
         display: inline-block;
         font-weight: 600; }
