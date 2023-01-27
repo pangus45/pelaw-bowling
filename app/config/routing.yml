@@ -64,6 +64,17 @@ booking:
     css: [libs/fullcalendar-5.11.3/lib/main.css,css/booking.css]
     customTemplate: booking.html.twig
 
+bookingRequest:
+  path: /bookingRequest
+  methods: POST
+  defaults:
+    _controller: AppBundle\Controller\BookingController::bookingAction
+
+bookingConfirmation:
+  path: /bookingConfirm
+  defaults:
+    _controller: AppBundle\Controller\BookingConfirmController::bookingConfirmAction
+
 test1:
   path: /test1
   defaults:

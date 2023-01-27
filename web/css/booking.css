@@ -49,6 +49,8 @@
         font-weight: 600; }
       #bookingFormModal #bookingFormModalInner form select {
         margin-top: 10px; }
+      #bookingFormModal #bookingFormModalInner form #locationSelector {
+        margin-top: 0; }
       #bookingFormModal #bookingFormModalInner form label {
         margin-top: 10px; }
       #bookingFormModal #bookingFormModalInner form textarea {
@@ -58,7 +60,7 @@
         display: inline-block;
         float: right;
         margin-top: 10px; }
-      #bookingFormModal #bookingFormModalInner form #submitButton {
+      #bookingFormModal #bookingFormModalInner form #bookingFormSubmitButton {
         margin-left: 10px; }
       #bookingFormModal #bookingFormModalInner form #cancelCross {
         margin-left: 5px; }

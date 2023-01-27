@@ -21,19 +21,21 @@
                     <div id="bookingDay"></div>
                 </div>
 
-                <select class="form-control">
+                <label for="">Location</label>
+                <select id="locationSelector" class="form-control">
                     <option value="">- Select Location -</option>
-                    <option value="">Clubhouse</option>
-                    <option value="">Bowling Green</option>
-                    <option value="">Clubhouse + Bowling Green</option>
+                    <option selected value="clubhouse">Clubhouse</option>
+                    <option value="green">Bowling Green</option>
+                    <option value="both">Clubhouse + Bowling Green</option>
                 </select>
                 <label for="">Name of Organization/Individual</label>
-                <input class="form-control">
-                <label for="">What do you need the facility for</label>
-                <textarea class="form-control" rows="10"></textarea>
-                <button id="submitButton" class="form-control btn btn-primary" type="submit">SUBMIT</button>
-                <button id="bookingFormCancelButton" class="form-control btn btn-default">CANCEL<span
-                            id="cancelCross">❌</span></button>
+                <input id="organizationName" class="form-control" value="Joe Bloggs">
+                <label for="">Email</label>
+                <input id="email" class="form-control" value="joebloggs@gmail.com">
+                <label for="">What do you need the facility for?</label>
+                <textarea id="reasonForBooking" class="form-control" rows="10">This is just a test submission</textarea>
+                <button id="bookingFormSubmitButton" class="form-control btn btn-primary" type="submit">SUBMIT</button>
+                <button id="bookingFormCancelButton" class="form-control btn btn-default">CANCEL<span id="cancelCross">❌</span></button>
             </form>
 
         </div>

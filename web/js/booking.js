@@ -32,9 +32,44 @@ function formInit() {
     hoursOptionsFill('#bookingStartTimeHours');
     hoursOptionsFill('#bookingEndTimeHours');
 
-    minsOptionsFill('#bookingStartTimeMins')
-    minsOptionsFill('#bookingEndTimeMins')
+    minsOptionsFill('#bookingStartTimeMins');
+    minsOptionsFill('#bookingEndTimeMins');
+
+    $('#bookingFormSubmitButton').click(bookingFormSubmit);
 }
+
+
+function extraZerosAdd(pNumber) {
+
+    if (0 == pNumber) {
+        return '00';
+    }
+
+    return pNumber;
+}
+
+function bookingFormSubmit() {
+
+    var data = {
+
+        startTime: extraZerosAdd($('#bookingStartTimeHours').val()) + ':' + extraZerosAdd($('#bookingStartTimeMins').val()),
+        endTime: extraZerosAdd($('#bookingEndTimeHours').val()) + ':' + extraZerosAdd($('#bookingEndTimeMins').val()),
+        date: $('#bookingDay').text(),
+        email: $('#email').val(),
+        location: $('#locationSelector').val(),
+        name: $('#organizationName').val(),
+        reason: $('#reasonForBooking').val(),
+        url: '32948rndjf9823rds',
+    };
+
+    $.post('/bookingRequest', data, function (pResponse) {
+
+        if('OK' == pResponse){
+            alert('Thanks. Your booking request has been received and we\'ll be in touch shortly');
+        }
+    });
+}
+
 
 function dateClicked(pInfo) {
 
