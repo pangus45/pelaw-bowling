@@ -28,7 +28,7 @@
   display: none;
   position: fixed;
   background-color: rgba(0, 0, 0, .5);
-  z-index: 1000;
+  z-index: 2000;
   top: 0;
   left: 0;
   width: 100vw;
@@ -39,7 +39,7 @@
   justify-content: center;
 
   #bookingFormModalInner {
-    padding: 50px;
+    padding: 30px 50px;
     background-color: white;
     border-radius: 10px;
     display: flex;
