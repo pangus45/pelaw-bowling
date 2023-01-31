@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pelaw-bowling-temp",
+  "private_key_id": "a39e3feca0fe196c6226738a09fa592c0200165f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDllr5QlUglVHI6\nCjrLFR2j3+k60T0fAC+cFYXnzVtCgR+GQo3ubXrf2Uh/iTKtXWdHRVStfkLlEzdH\nZXGMmbrcDDeZuq3JXXdPoDY89J1xUMJ4cvFBAxqYQHkX3kwenIWHtnmLkdk4u+iK\nnckW7aCfCZyaTBcraVXm2pLFBpshrPJzFpvKq9J7GRQ6r36gdW0osw6FIgKHriPj\nb0Ki/QXVDQLu5rS50hGqiOpOMvvxfC0ZNMb+pDfV6tjWCbJyk+lWkvL7d903AO7T\nhfstCOuw8bIDy9skPPjDBFfcJycy7axY+z3+xU6Q9rRz4epvrYxcG3HbAUFlKl/l\ni1MP3PFxAgMBAAECggEADmvAC4a8799Uh3HCDKSIZpU3bKLc8HgOBYNSlGNRQqWi\nqce/a4UD7VCUHbKr9LjDtnXT4kvmfsYMuFbWYYr8cjrwOR9BMD9HMcCx93Uz+Hym\nonMx1TARORP/pzCm3ltdhc8/5jTkjIw9CIvtqBuH9cVgSU7TO75Tj3sWMfr+vogk\nfh1jpNJrjk3xeh8twfOfdfwql9go2iNSh2C+tW43jq4idRBMugE4JXkBb6kf0evo\nMnKMYpmlfowfS2yBdRcBzkWg7krodK+fM8YkQZW8atbs6T2CW6I3yBRZEe6absYU\nmydci2tkb72qHcAZ/Mrk8kR1nEQHqLOLiekxPl0NoQKBgQD7zRvLp/8VsdHTBRqV\n1ZzrF9yYu+LQz883nXpvKxTIvPp1mykdVEZjXKlNGfLL5bsj1fkNBdZP4F7OyyN3\nh1HWp9d+iOmn3QcW1sKwJUfJ66Yy/O5CJ+7KIaP+dttV6sjK2XoyK22KeIfUIHvf\n44mZa2u1TtP6XzAIpvWJ8r7saQKBgQDpatCCMyaamXyAe3jepcHwYcS7QBLnUm4a\nJ/bfdbw1szC8dC/oSQkTOX9KFBhrTxchDxKhTggzwVUS/rEQ74UuXsrtYN9xS6ru\n4Rk8btUwCc47grgvWV28D2lLipFKbuMHyrE66oMW5DgouAGnXOpY62/4NCPUVTmK\nbbW1vQxbyQKBgDa9HQjF6Z8mu+1604+1E1rMIimV1rX8Jxj5BA+8ttT4uB3u8B4v\nHuokz60yMeT/eRJORsj89t0AcrvTz08BvNnEPQWF7/2NACiH4WT3hcawkr3M3GLH\nWZLZg1QjNIVV9/aZFoZniHWsxCJqOWOvjE8s2gpdK5nnLYMEAKbPfY/ZAoGAcXri\nwEoJ/KOeagCddPF1Zl7B/J9cEWZ77O99EIr248yoZxa9q9rGNLiBcAxxCsq63fGs\nBwwe5Lqbl86HW0p3n2Gqmtm8CCLXiaeaU003DFHYGAqnbS2vapy7fmRx2pQqgEFF\nBPW6och2nSVIeIuty2k7WJpQyQxeGzTXYPH2LjECgYEAxvZmGgXKVMnBAI4Tpk0O\nxIx0W66SZDmOZ4ehtJo8tK8pvU06TMSpoE+zUPVa9doXTxjTzordoyqyN0dvThYI\n34r2hqRVUBe+q3KrgUWjny+sg4ZAaEY0s1JhZgC+jovHGdrmCYMypv/R2FUx22/l\nw0Mcc2MKCbp73C2jrBFnfTI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "pelaw-bowling-service-account@pelaw-bowling-temp.iam.gserviceaccount.com",
+  "client_id": "109570721153092583985",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pelaw-bowling-service-account%40pelaw-bowling-temp.iam.gserviceaccount.com"
+}

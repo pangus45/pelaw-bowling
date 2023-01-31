@@ -18,8 +18,8 @@ activity:
     _controller: CommonBundle:DefaultPage:defaultPage
     pageId: activity-article
     articleType: activity
-    js: [js/albums.js,libs/lightbox2/dist/js/lightbox.min.js]
-    css: [css/albums.css,libs/lightbox2/dist/css/lightbox.css]
+    js: [ js/albums.js,libs/lightbox2/dist/js/lightbox.min.js ]
+    css: [ css/albums.css,libs/lightbox2/dist/css/lightbox.css ]
 
 about:
   path: /about
@@ -45,23 +45,23 @@ gallery:
   path: /gallery
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
-    js: [js/albums.js,libs/lightbox2/dist/js/lightbox.min.js]
-    css: [css/albums.css,libs/lightbox2/dist/css/lightbox.css]
+    js: [ js/albums.js,libs/lightbox2/dist/js/lightbox.min.js ]
+    css: [ css/albums.css,libs/lightbox2/dist/css/lightbox.css ]
 
 contact:
-  path:     /contact
+  path: /contact
   defaults:
     _controller: AppBundle:Contact:contact
     sitemap: true
-    js: [js/contact.js]
-    css: [css/contact.css]
+    js: [ js/contact.js ]
+    css: [ css/contact.css ]
 
 booking:
   path: /booking
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
-    js: [libs/fullcalendar-5.11.3/lib/main.js,js/booking.js]
-    css: [libs/fullcalendar-5.11.3/lib/main.css,css/booking.css]
+    js: [ libs/fullcalendar-5.11.3/lib/main.js,js/booking.js ]
+    css: [ libs/fullcalendar-5.11.3/lib/main.css,css/booking.css ]
     customTemplate: booking.html.twig
 
 bookingRequest:
@@ -71,21 +71,23 @@ bookingRequest:
     _controller: AppBundle\Controller\BookingController::bookingAction
 
 bookingConfirmation:
-  path: /bookingConfirm
+  path: /bookingConfirm/{id}
   defaults:
     _controller: AppBundle\Controller\BookingConfirmController::bookingConfirmAction
+    css: [ css/bookingConfirm.css ]
+    js: [ js/bookingConfirm.js ]
 
 test1:
   path: /test1
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
-    js: [js/test1.js]
+    js: [ js/test1.js ]
 
 test2:
   path: /test2
   defaults:
     _controller: CommonBundle:DefaultPage:defaultPage
-    js: [js/test2.js]
+    js: [ js/test2.js ]
 
 test3:
   path: /test3
@@ -110,7 +112,6 @@ test7:
 test8:
   path: /test8
   defaults: { _controller: CommonBundle:DefaultPage:defaultPage }
-
 
 
 # Include common last as has a redirect catch-all controller

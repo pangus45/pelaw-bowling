@@ -1,0 +1,32 @@
+@import "constants";
+
+#bookingConfirmWrapper{
+  padding-top: 20vh;
+  text-align: center;
+
+
+  #confirmButton{
+    margin-top: 20px;
+  }
+
+  #bookingConfirmedMessage{
+    background-color: $darkGreen;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    margin-top: 50px;
+    padding: 5px 10px;
+    font-weight: 700;
+  }
+
+  input{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #descriptionLabel{
+    margin-top: 50px;
+  }
+}
+

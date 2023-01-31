@@ -1,0 +1,21 @@
+#bookingConfirmWrapper {
+  padding-top: 20vh;
+  text-align: center; }
+  #bookingConfirmWrapper #confirmButton {
+    margin-top: 20px; }
+  #bookingConfirmWrapper #bookingConfirmedMessage {
+    background-color: #1d835b;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    margin-top: 50px;
+    padding: 5px 10px;
+    font-weight: 700; }
+  #bookingConfirmWrapper input {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto; }
+  #bookingConfirmWrapper #descriptionLabel {
+    margin-top: 50px; }
+
+/*# sourceMappingURL=bookingConfirm.css.map */

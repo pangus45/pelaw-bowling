@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Service\BookingManager;
 use CommonBundle\Service\FormsHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -12,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BookingController extends Controller
 {
-    public function bookingAction(Request $pRequest, FormsHelper $pFormsHelper)
+    public function bookingAction(Request $pRequest, FormsHelper $pFormsHelper, BookingManager $pManager)
     {
         $startTime = $pRequest->get('startTime');
         $endTime = $pRequest->get('endTime');
@@ -49,14 +50,17 @@ class BookingController extends Controller
 
         $SUBJECT = 'Booking Request from ' . $name;
 
-        $SEND_TO = ['dev@positivemint.com', 'pelawcbc55@gmail.com'];
+//        $SEND_TO = ['dev@positivemint.com', 'pelawcbc55@gmail.com'];
+        $SEND_TO = ['dev@positivemint.com'];
 
         $pFormsHelper->lineLog(json_encode($data));
 
-        $pFormsHelper->mailSend($data,
-            $SEND_TO,
-            'bookingEmail.html.twig',
-            $email, $SUBJECT);
+        $pManager->bookingCreate($startTime, $endTime, $date, $location, $name, $email, $reason);
+
+//        $pFormsHelper->mailSend($data,
+//            $SEND_TO,
+//            'bookingEmail.html.twig',
+//            $email, $SUBJECT);
 
         return new Response('OK');
     }

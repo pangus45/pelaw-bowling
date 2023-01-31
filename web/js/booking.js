@@ -10,7 +10,18 @@ $(document).ready(function () {
     calendarsInit();
 
     formInit();
+
+    debugFormFill();
 });
+
+
+function debugFormFill() {
+
+    $('#locationSelector').val('clubhouse');
+    $('#organizationName').val('Joe Bloggs, Pelaw Society');
+    $('#email').val('dev@positivemint.com');
+    $('#reasonForBooking').val('We would like to practice bowling and some more space to test the big field');
+}
 
 
 function formInit() {
@@ -64,7 +75,7 @@ function bookingFormSubmit() {
 
     $.post('/bookingRequest', data, function (pResponse) {
 
-        if('OK' == pResponse){
+        if ('OK' == pResponse) {
             alert('Thanks. Your booking request has been received and we\'ll be in touch shortly');
         }
     });
