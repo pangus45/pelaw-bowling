@@ -51,8 +51,8 @@ class BookingController extends Controller
 
         $SUBJECT = 'Booking Request from ' . $name;
 
-//        $SEND_TO = ['dev@positivemint.com', 'pelawcbc55@gmail.com'];
-        $SEND_TO = ['dev@positivemint.com'];
+//        $SEND_TO = ['dev@positivemint.com'];
+        $SEND_TO = ['pelawcbc55@gmail.com', 'dev@positivemint.com'];
 
         $pFormsHelper->lineLog(json_encode($data));
 
