@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Service\BookingManager;
 use CommonBundle\Service\FormsHelper;
+use CommonBundle\Service\Globals;
 use Google\Client;
 use Google\Service\Appengine\RepairApplicationRequest;
 use Google\Service\Calendar;
@@ -16,6 +17,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BookingConfirmController extends Controller
 {
+
+
     public function bookingConfirmAction(Request $pRequest, BookingManager $pManager)
     {
         // example
@@ -33,40 +36,86 @@ class BookingConfirmController extends Controller
             return $this->render('bookingConfirmation.html.twig');
         }
 
-        if (!$booking->confirmed && $pRequest->get('confirm') == $bookingId) {
-
-            $calendar = $this->bookingAddToCalendar($booking);
-
-            if ($calendar) {
-                $booking->confirmed = true;
-                $pManager->bookingSave($booking);
-            }
+        if('both' == $booking->location){
+            $booking->location = 'Clubhouse + Bowling Green'; // stored as both in booking but better like this for email
+        }
+        else{
+            $booking->location = ucfirst($booking->location); // stored as both in booking but better like this for email
         }
 
-//        $link = $calendar->htmlLink;
-
-//        if ($link) {
-//            return new Response('Created at <a href="' . $link . '" >' . $link . ' </a>');
-//        }
-
 //        $description = $calendar->getSummary();
-
-//        return new Response('FAIL', ['bookingLink' => $link]);
 
         return $this->render('bookingConfirmation.html.twig', ['booking' => $booking]);
     }
 
-    function bookingAddToCalendar($pBooking)
+
+    public function bookingPostAction(Request $pRequest, BookingManager $pManager, Globals $pGlobals)
     {
-        $KEY = 'AIzaSyDN6C96frpskjFXfW4GT6CxZ_2XhtA79XU';
+        $summary = $pRequest->get('summary');
+        $id = $pRequest->get('id');
+
+        if (is_null($summary) || is_null($id)) {
+            return new Response('');
+        }
+
+        $booking = $pManager->bookingGet($id);
+
+        if (!$booking) {
+            return new Response('');
+        }
+
+        $booking->summary = $summary;
+
+        $success = $this->bookingAddToCalendars($booking, $pGlobals);
+
+        if ($success) {
+            $booking->confirmed = true;
+            $pManager->bookingSave($booking);
+
+            return new Response('OK');
+        }
+
+        return new Response('');
+    }
+
+
+    function bookingAddToCalendars(&$pBooking, Globals $pGlobals)
+    {
+        if ('clubhouse' == $pBooking->location) {
+
+            return $this->bookingAddToCalendar('clubhouse', $pBooking, $pGlobals);
+
+        } else if ('green' == $pBooking->location) { // green
+
+            return $this->bookingAddToCalendar('green', $pBooking, $pGlobals);
+
+        } else if ('both' == $pBooking->location) {
+
+            if ($this->bookingAddToCalendar('clubhouse', $pBooking, $pGlobals) &&
+                $this->bookingAddToCalendar('green', $pBooking, $pGlobals)) {
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function bookingAddToCalendar($pLocation, $pBooking, Globals $pGlobals)
+    {
         $GREEN_ID = 'f00bb87e7f8da04abe45d139ece7387fb67d8626521c78590c72e6830e9f93bc@group.calendar.google.com';
         $CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242a8fe@group.calendar.google.com';
-        $TEST_ID = '3e7fb05d69bc98340a114176a276b3ebd232555d9c6459b40a9c2ea61c2cb7c4@group.calendar.google.com';
+        $GREEN_TEST_ID = 'dfbc6322620568dfe2251643858ba206d44e81161a58ab8fafd928e48f2146e7@group.calendar.google.com';
+        $CLUBHOUSE_TEST_ID = '3e7fb05d69bc98340a114176a276b3ebd232555d9c6459b40a9c2ea61c2cb7c4@group.calendar.google.com';
+
+//        $pCalendarId = 'green' == $pLocation ? $GREEN_ID : $CLUBHOUSE_ID;
+        $calendarId = 'green' == $pLocation ? $GREEN_TEST_ID : $CLUBHOUSE_TEST_ID;
 
         $client = new Client();
         $client->useApplicationDefaultCredentials();
 
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=/home/paul/sites/pb/src/AppBundle/pelaw-bowling-temp-a39e3feca0fe.json');
+        $JSON_KEY_FILE = $pGlobals->projectRootGet() . '/src/AppBundle/pelaw-bowling-temp-a39e3feca0fe.json';
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $JSON_KEY_FILE);
 
 //        $client->addScope(Calendar::CALENDAR);
         $client->addScope(Calendar::CALENDAR_EVENTS);
@@ -88,8 +137,8 @@ class BookingConfirmController extends Controller
         $endDateTime = new \DateTime();
         $endDateTime->setTime($endParts[0], $endParts[1]);
 
-        $event->setDescription('Test Description');
-        $event->setSummary('Test Summary');
+//        $event->setDescription('Test Description');
+        $event->setSummary($pBooking->summary);
 //
         $eventStart = new Calendar\EventDateTime();
         $eventStart->setTimeZone($TIMEZONE);
@@ -102,9 +151,14 @@ class BookingConfirmController extends Controller
         $event->setStart($eventStart);
         $event->setEnd($eventEnd);
 
-        $calendar = $service->events->insert($TEST_ID, $event);
+        $event = $service->events->insert($calendarId, $event);
 
-        return $calendar;
+        if ($event) {
+            $pBooking->eventIDs->{$pLocation} = $event->id;
+            return true;
+        }
+
+        return false;
     }
 }
 

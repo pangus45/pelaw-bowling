@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Service\BookingManager;
 use CommonBundle\Service\FormsHelper;
+use CommonBundle\Service\Globals;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use AppBundle\Service\ContactForms;
@@ -13,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BookingController extends Controller
 {
-    public function bookingAction(Request $pRequest, FormsHelper $pFormsHelper, BookingManager $pManager)
+    public function bookingAction(Request $pRequest, FormsHelper $pFormsHelper, BookingManager $pManager, Globals $pGlobals)
     {
         $startTime = $pRequest->get('startTime');
         $endTime = $pRequest->get('endTime');
@@ -55,12 +56,23 @@ class BookingController extends Controller
 
         $pFormsHelper->lineLog(json_encode($data));
 
-        $pManager->bookingCreate($startTime, $endTime, $date, $location, $name, $email, $reason);
+        $id = $pManager->bookingCreate($startTime, $endTime, $date, $location, $name, $email, $reason);
 
-//        $pFormsHelper->mailSend($data,
-//            $SEND_TO,
-//            'bookingEmail.html.twig',
-//            $email, $SUBJECT);
+        if(!$id){
+            return new Response('');
+        }
+
+        $data['id'] = $id;
+        $data['baseUrl'] = $pGlobals->baseUrlGet();
+
+        if('both' == $data['location']){
+            $data['location'] = 'Clubhouse + Bowling Green'; // stored as both in booking but better like this for email
+        }
+
+        $pFormsHelper->mailSend($data,
+            $SEND_TO,
+            'bookingEmail.html.twig',
+            $email, $SUBJECT);
 
         return new Response('OK');
     }

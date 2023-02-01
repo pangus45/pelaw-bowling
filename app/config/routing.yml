@@ -70,12 +70,18 @@ bookingRequest:
   defaults:
     _controller: AppBundle\Controller\BookingController::bookingAction
 
-bookingConfirmation:
+bookingConfirmPage:
   path: /bookingConfirm/{id}
   defaults:
     _controller: AppBundle\Controller\BookingConfirmController::bookingConfirmAction
     css: [ css/bookingConfirm.css ]
     js: [ js/bookingConfirm.js ]
+
+bookingConfirmPost:
+  path: /post/bookingConfirm
+  methods: POST
+  defaults:
+    _controller: AppBundle\Controller\BookingConfirmController::bookingPostAction
 
 test1:
   path: /test1

@@ -1,4 +1,4 @@
-<b>{{ name }}</b> requested a booking from<br>
+<b>{{ name }}</b> requested a booking from...<br><br>
 <b>{{ startTime }}</b><br>
 until<br>
 <b>{{ endTime }}</b><br>
@@ -7,9 +7,12 @@ on<br>
 at the<br>
 <b>{{ location|capitalize }}</b><br><br>
 
-<span>Use: </span>{{ reason }}<br>
+{{ reason }}<br>
 <br>
-<a href="https://pelawcbc.com/bookingConfirm">Click here to accept booking</a><br>
-<br><br>or<br><br>
+<a href="{{ baseUrl }}/bookingConfirm/{{ id }}">Click here to accept booking</a><br>
+<br>
+or
+<br>
+<br>
 Reply to this email to contact <b>{{ name }}</b>
 

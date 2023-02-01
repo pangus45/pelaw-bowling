@@ -2,8 +2,14 @@ $(document).ready(function () {
 
     $('#confirmButton').click(function () {
 
-        var url = location.href.split('?');
+        var data = {
+            id: $('#bookingConfirmWrapper').data('id'),
+            summary: $('#summary').val()
+        };
 
-        location.href = url[0] + '?confirm=' + $('#bookingConfirmWrapper').data('id');
+        $.post('/post/bookingConfirm', data, function(){
+
+            location.reload();
+        });
     });
 });

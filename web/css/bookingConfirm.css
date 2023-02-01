@@ -1,6 +1,8 @@
 #bookingConfirmWrapper {
   padding-top: 20vh;
   text-align: center; }
+  #bookingConfirmWrapper h1 {
+    font-size: 20px; }
   #bookingConfirmWrapper #confirmButton {
     margin-top: 20px; }
   #bookingConfirmWrapper #bookingConfirmedMessage {

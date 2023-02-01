@@ -57,7 +57,8 @@ class BookingManager
             'name' => $pName,
             'email' => $pEmail,
             'reason' => $pReason,
-            'confirmed' => false
+            'confirmed' => false,
+            'eventIDs' => new \stdClass()
         ];
 
         $this->bookingSave(json_decode(json_encode($data)));
