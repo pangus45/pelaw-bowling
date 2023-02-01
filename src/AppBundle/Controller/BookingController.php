@@ -52,7 +52,7 @@ class BookingController extends Controller
         $SUBJECT = 'Booking Request from ' . $name;
 
 //        $SEND_TO = ['dev@positivemint.com', 'pelawcbc55@gmail.com'];
-        $SEND_TO = ['dev@positivemint.com', 'victor@positivemint.com'];
+        $SEND_TO = ['dev@positivemint.com'];
 
         $pFormsHelper->lineLog(json_encode($data));
 
@@ -71,7 +71,7 @@ class BookingController extends Controller
 
         $pFormsHelper->mailSend($data,
             $SEND_TO,
-            'bookingEmail.html.twig',
+            'adminBookingEmail.html.twig',
             $email, $SUBJECT);
 
         return new Response('OK');

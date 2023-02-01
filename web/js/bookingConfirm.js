@@ -7,8 +7,9 @@ $(document).ready(function () {
             summary: $('#summary').val()
         };
 
-        $.post('/post/bookingConfirm', data, function(){
+        $.post('/post/bookingConfirm', data, function (pResponse) {
 
+            console.log(pResponse);
             location.reload();
         });
     });

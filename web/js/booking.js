@@ -52,7 +52,12 @@ function formInit() {
     minsOptionsFill('#bookingStartTimeMins');
     minsOptionsFill('#bookingEndTimeMins');
 
-    $('#bookingFormSubmitButton').click(bookingFormSubmit);
+    $('#bookingFormSubmitButton').click(function(){
+
+        bookingFormSubmit();
+
+        return false;
+    });
 }
 
 

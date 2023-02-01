@@ -47,7 +47,7 @@ class BookingConfirmController extends Controller
     }
 
 
-    public function bookingPostAction(Request $pRequest, BookingManager $pManager, Globals $pGlobals)
+    public function bookingPostAction(Request $pRequest, BookingManager $pManager, Globals $pGlobals, FormsHelper $pFormsHelper)
     {
         $summary = $pRequest->get('summary');
         $id = $pRequest->get('id');
@@ -70,12 +70,38 @@ class BookingConfirmController extends Controller
             $booking->confirmed = true;
             $pManager->bookingSave($booking);
 
+            $this->userEmailSend($booking, $pFormsHelper);
+
             return new Response('OK');
         }
 
         return new Response('');
     }
 
+
+    function userEmailSend($pBooking, $pFormsHelper){
+
+        $pFormsHelper->lineLog(json_encode($pBooking));
+
+        if ('both' == $pBooking->location) {
+            $pBooking->location = 'Clubhouse + Bowling Green'; // stored as both in booking but better like this for email
+        }
+
+        $SUBJECT = 'Booking Confirmed at Pelaw Community Bowling Club - ' . ucfirst($pBooking->location);
+
+//        $SEND_TO = ['dev@positivemint.com', $pBooking->email];
+        $SEND_TO = [$pBooking->email, 'dev@positivemint.com'];
+
+        if($SEND_TO[0] == $SEND_TO[1]){
+            array_pop($SEND_TO);
+        }
+
+        $pFormsHelper->mailSend(json_decode(json_encode($pBooking), true),
+            $SEND_TO,
+            'userBookingEmail.html.twig',
+            'dev@positivemint.com', $SUBJECT);
+
+    }
 
     function bookingAddToCalendars(&$pBooking, Globals $pGlobals)
     {
