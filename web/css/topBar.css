@@ -92,13 +92,13 @@
 
   #topBarLeftLinks {
     padding-left: 4%; } }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
   #topBarRight {
     padding-right: 2%; }
 
   #topBarLeftLinks {
     padding-left: 2%; } }
-@media only screen and (max-width: 1064px) {
+@media only screen and (max-width: 1180px) {
   #topBarRight {
     display: none; }
 

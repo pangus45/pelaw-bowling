@@ -17,8 +17,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BookingConfirmController extends Controller
 {
-
-
     public function bookingConfirmAction(Request $pRequest, BookingManager $pManager)
     {
         // example
@@ -103,8 +101,8 @@ class BookingConfirmController extends Controller
 
     function bookingAddToCalendar($pLocation, $pBooking, Globals $pGlobals)
     {
-        $GREEN_ID = 'f00bb87e7f8da04abe45d139ece7387fb67d8626521c78590c72e6830e9f93bc@group.calendar.google.com';
-        $CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242a8fe@group.calendar.google.com';
+//        $GREEN_ID = 'f00bb87e7f8da04abe45d139ece7387fb67d8626521c78590c72e6830e9f93bc@group.calendar.google.com';
+//        $CLUBHOUSE_ID = 'db5812b2f4a67c74fa97a8deb43449d1148244e783d6e4edf4c261d66242a8fe@group.calendar.google.com';
         $GREEN_TEST_ID = 'dfbc6322620568dfe2251643858ba206d44e81161a58ab8fafd928e48f2146e7@group.calendar.google.com';
         $CLUBHOUSE_TEST_ID = '3e7fb05d69bc98340a114176a276b3ebd232555d9c6459b40a9c2ea61c2cb7c4@group.calendar.google.com';
 

@@ -52,20 +52,20 @@ class BookingController extends Controller
         $SUBJECT = 'Booking Request from ' . $name;
 
 //        $SEND_TO = ['dev@positivemint.com', 'pelawcbc55@gmail.com'];
-        $SEND_TO = ['dev@positivemint.com'];
+        $SEND_TO = ['dev@positivemint.com', 'victor@positivemint.com'];
 
         $pFormsHelper->lineLog(json_encode($data));
 
         $id = $pManager->bookingCreate($startTime, $endTime, $date, $location, $name, $email, $reason);
 
-        if(!$id){
+        if (!$id) {
             return new Response('');
         }
 
         $data['id'] = $id;
         $data['baseUrl'] = $pGlobals->baseUrlGet();
 
-        if('both' == $data['location']){
+        if ('both' == $data['location']) {
             $data['location'] = 'Clubhouse + Bowling Green'; // stored as both in booking but better like this for email
         }
 
