@@ -71,6 +71,9 @@ class BookingController extends Controller
         if ('both' == $data['location']) {
             $data['location'] = 'Clubhouse + Bowling Green'; // stored as both in booking but better like this for email
         }
+        else{
+            $data['location'] = ucfirst($data['location']);
+        }
 
         $pFormsHelper->mailSend($data,
             $SEND_TO,

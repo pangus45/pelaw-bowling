@@ -14,10 +14,55 @@ $(document).ready(function () {
 
     calendarsInit();
 
+    dateSelectorInit();
+
     formInit();
 
     // debugFormFill();
 });
+
+
+function dateSelectorInit() {
+
+    var selector = $('#dateSelector');
+
+    selector.change(function (){
+
+        mobileCalendarGet().gotoDate(selector.val());
+    });
+
+    selector.css('display', 'block');
+}
+
+
+
+function mobileCalendarElementGet() {
+    return currentLayoutSelectorGet().find('.bookingCalendar');
+}
+
+function mobileCalendarGet() {
+
+    return mobileCalendarElementGet().data('calendar');
+}
+
+
+
+function viewDatesChanged(pDateInfo){
+
+    dateSelectorUpdate(pDateInfo);
+}
+
+
+function dateSelectorUpdate(pDateInfo) {
+
+    var year = FullCalendar.formatDate(pDateInfo.start, {year: 'numeric'});
+    var month = FullCalendar.formatDate(pDateInfo.start, {month: '2-digit'});
+    var day = FullCalendar.formatDate(pDateInfo.start, {day: '2-digit'});
+
+    // alert(year + '-' + month + '-' + day);
+
+    $('#dateSelector').val(year + '-' + month + '-' + day);
+}
 
 
 function debugFormFill() {
@@ -231,6 +276,7 @@ function calendarsInit() {
         var options = {
             locale: 'en-gb',
             eventClick: eventClicked,
+            datesSet: viewDatesChanged,
             // initialView: 'dayGridWeek',
             initialView: 'timeGridDay',
             // initialView: 'listWeek',
@@ -270,6 +316,8 @@ function calendarsInit() {
         }
 
         var calendar = new FullCalendar.Calendar($(this)[0], options);
+
+        calendarElement.data('calendar', calendar);
 
         calendar.render();
     });

@@ -34,10 +34,9 @@ class BookingConfirmController extends Controller
             return $this->redirectToRoute('home');
         }
 
-        if('both' == $booking->location){
+        if ('both' == $booking->location) {
             $booking->location = 'Clubhouse + Bowling Green'; // stored as both in booking but better like this for email
-        }
-        else{
+        } else {
             $booking->location = ucfirst($booking->location); // stored as both in booking but better like this for email
         }
 
@@ -79,7 +78,8 @@ class BookingConfirmController extends Controller
     }
 
 
-    function userEmailSend($pBooking, $pFormsHelper){
+    function userEmailSend($pBooking, FormsHelper $pFormsHelper)
+    {
 
         $pFormsHelper->lineLog(json_encode($pBooking));
 
@@ -92,15 +92,16 @@ class BookingConfirmController extends Controller
 //        $SEND_TO = ['dev@positivemint.com', $pBooking->email];
         $SEND_TO = [$pBooking->email, 'dev@positivemint.com'];
 
-        if($SEND_TO[0] == $SEND_TO[1]){
+        $REPLY_TO = 'pelawcbc55@gmail.com';
+
+        if ($SEND_TO[0] == $SEND_TO[1]) {
             array_pop($SEND_TO);
         }
 
         $pFormsHelper->mailSend(json_decode(json_encode($pBooking), true),
             $SEND_TO,
             'userBookingEmail.html.twig',
-            'dev@positivemint.com', $SUBJECT);
-
+            $REPLY_TO, $SUBJECT);
     }
 
     function bookingAddToCalendars(&$pBooking, Globals $pGlobals)

@@ -10,7 +10,22 @@
 }
 
 
+.mobileLayout{
+  .fc-toolbar-title{
+    display: none;
+  }
+}
+
+
 .block-calendar {
+
+  #dateSelector{
+    width: 150px;
+    margin-bottom: -36px;
+    z-index: 1;
+    position: relative;
+    display: none;
+  }
 
   .fc-toolbar-title {
     font-size: 20px;
@@ -22,6 +37,7 @@
     background-color: darken(white, 6%);
   }
 }
+
 
 
 #bookingFormModal {
@@ -60,7 +76,7 @@
       }
 
       .timeInput {
-        width: 45px;
+        width: 47px;
         display: inline-block;
         padding-left: 2px;
         padding-right: 2px;

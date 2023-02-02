@@ -4,6 +4,15 @@
 .clubHouse {
   background-color: #69a1dd; }
 
+.mobileLayout .fc-toolbar-title {
+  display: none; }
+
+.block-calendar #dateSelector {
+  width: 150px;
+  margin-bottom: -36px;
+  z-index: 1;
+  position: relative;
+  display: none; }
 .block-calendar .fc-toolbar-title {
   font-size: 20px;
   position: relative;
@@ -39,7 +48,7 @@
         margin-left: 5px;
         margin-right: 5px; }
       #bookingFormModal #bookingFormModalInner form .timeInput {
-        width: 45px;
+        width: 47px;
         display: inline-block;
         padding-left: 2px;
         padding-right: 2px;
