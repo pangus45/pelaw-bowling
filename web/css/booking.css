@@ -33,6 +33,8 @@
     max-width: 500px; }
     #bookingFormModal #bookingFormModalInner form {
       width: 100%; }
+      #bookingFormModal #bookingFormModalInner form select, #bookingFormModal #bookingFormModalInner form input {
+        margin-bottom: 10px; }
       #bookingFormModal #bookingFormModalInner form #timeTo {
         margin-left: 5px;
         margin-right: 5px; }

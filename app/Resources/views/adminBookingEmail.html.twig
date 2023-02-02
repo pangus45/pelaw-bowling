@@ -1,7 +1,5 @@
 <b>{{ name }}</b> requested a booking from...<br><br>
-<b>{{ startTime }}</b><br>
-until<br>
-<b>{{ endTime }}</b><br>
+<b>{{ startTime }}</b> until <b>{{ endTime }}</b><br>
 on<br>
 <b>{{ date }}</b><br>
 at the<br>
@@ -14,5 +12,12 @@ at the<br>
 or
 <br>
 <br>
-Reply to this email to contact <b>{{ name }}</b>
+{% if phone %}
+    Call <a href="tel: {{ phone }}">{{ phone }}</a><br>
+    <br>
+    or
+    <br>
+    <br>
+{% endif %}
+Reply to this email
 

@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     formInit();
 
-    // debugFormFill();
+    debugFormFill();
 });
 
 
@@ -25,6 +25,7 @@ function debugFormFill() {
     $('#locationSelector').val('clubhouse');
     $('#organizationName').val('Joe Bloggs, Pelaw Society');
     $('#email').val('dev@positivemint.com');
+    $('#phone').val('07930 123456');
     $('#reasonForBooking').val('We would like to practice bowling and some more space to test the big field');
 }
 
@@ -51,7 +52,7 @@ function formInit() {
     minsOptionsFill('#bookingStartTimeMins');
     minsOptionsFill('#bookingEndTimeMins');
 
-    $('#bookingFormSubmitButton').click(function(){
+    $('#bookingFormSubmitButton').click(function () {
 
         bookingFormSubmit();
 
@@ -77,6 +78,7 @@ function bookingFormSubmit() {
         endTime: extraZerosAdd($('#bookingEndTimeHours').val()) + ':' + extraZerosAdd($('#bookingEndTimeMins').val()),
         date: $('#bookingDay').text(),
         email: $('#email').val(),
+        phone: $('#phone').val(),
         location: $('#locationSelector').val(),
         name: $('#organizationName').val(),
         reason: $('#reasonForBooking').val(),

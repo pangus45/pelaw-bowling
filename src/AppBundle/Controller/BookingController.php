@@ -22,6 +22,7 @@ class BookingController extends Controller
         $location = $pRequest->get('location');
         $name = $pRequest->get('name');
         $email = $pRequest->get('email');
+        $phone = $pRequest->get('phone');
         $reason = $pRequest->get('reason');
         $dummy = $pRequest->get('url');
 
@@ -32,6 +33,7 @@ class BookingController extends Controller
             is_null($location) ||
             is_null($name) ||
             is_null($email) ||
+            is_null($phone) ||
             is_null($reason) ||
             $dummy != '32948rndjf9823rds'
         ) {
@@ -46,6 +48,7 @@ class BookingController extends Controller
             'location' => $location,
             'name' => $name,
             'email' => $email,
+            'phone' => $phone,
             'reason' => $reason,
         ];
 
