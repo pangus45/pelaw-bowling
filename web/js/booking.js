@@ -26,18 +26,49 @@ function dateSelectorInit() {
 
     var selector = $('#dateSelector');
 
-    selector.change(function (){
+    selector.change(function () {
 
         mobileCalendarGet().gotoDate(selector.val());
     });
 
     selector.css('display', 'block');
+
+    $(window).scroll(function () {
+
+        var toolbar = $('.mobileLayout').find('.fc-header-toolbar');
+
+        selector.css('position', '');
+        selector.css('top', '');
+
+        toolbar.css('position', '');
+        toolbar.css('top', '');
+        toolbar.css('right', '');
+        toolbar.css('padding', '');
+        toolbar.css('border-bottom', '');
+
+        mobileCalendarElementGet().css('margin-top', '');
+
+        if (elementIsAboveViewport(selector, .03)) {
+
+            mobileCalendarElementGet().css('margin-top', toolbar.outerHeight() * 2);
+
+            selector.css('position', 'fixed');
+            selector.css('top', '2px');
+
+            toolbar.css('position', 'fixed');
+            toolbar.css('top', '-2px');
+            toolbar.css('right', '2px');
+            toolbar.css('width', '100%');
+            toolbar.css('padding', '1px');
+            // toolbar.css('border-bottom', 'solid rgba(0,0,0,.1) 1px');
+
+        }
+    });
 }
 
 
-
 function mobileCalendarElementGet() {
-    return currentLayoutSelectorGet().find('.bookingCalendar');
+    return $('.mobileLayout').find('.bookingCalendar');
 }
 
 function mobileCalendarGet() {
@@ -46,8 +77,7 @@ function mobileCalendarGet() {
 }
 
 
-
-function viewDatesChanged(pDateInfo){
+function viewDatesChanged(pDateInfo) {
 
     dateSelectorUpdate(pDateInfo);
 }
@@ -77,9 +107,13 @@ function debugFormFill() {
 
 function formInit() {
 
-    $('#bookingFormCancelButton').click(function () {
+    var modal = $('#bookingFormModal');
 
-        var modal = $('#bookingFormModal');
+    // modal.remove();
+    //
+    // $('body').append(modal);
+
+    $('#bookingFormCancelButton').click(function () {
 
         gsap.to(modal, .2, {
             opacity: 0,

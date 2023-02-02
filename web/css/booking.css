@@ -6,11 +6,13 @@
 
 .mobileLayout .fc-toolbar-title {
   display: none; }
+.mobileLayout .fc-header-toolbar {
+  z-index: 9; }
 
 .block-calendar #dateSelector {
   width: 150px;
   margin-bottom: -36px;
-  z-index: 1;
+  z-index: 10;
   position: relative;
   display: none; }
 .block-calendar .fc-toolbar-title {
@@ -25,6 +27,11 @@
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2000;
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  -webkit-transform: translateZ(1px);
+  transform: translateZ(1px);
   top: 0;
   left: 0;
   width: 100vw;

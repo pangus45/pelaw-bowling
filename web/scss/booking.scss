@@ -14,6 +14,11 @@
   .fc-toolbar-title{
     display: none;
   }
+
+  .fc-header-toolbar{
+    z-index: 9;
+    //background-color: white;
+  }
 }
 
 
@@ -22,7 +27,7 @@
   #dateSelector{
     width: 150px;
     margin-bottom: -36px;
-    z-index: 1;
+    z-index: 10;
     position: relative;
     display: none;
   }
@@ -45,6 +50,7 @@
   position: fixed;
   background-color: rgba(0, 0, 0, .5);
   z-index: 2000;
+  @include translateZ(1px);
   top: 0;
   left: 0;
   width: 100vw;
