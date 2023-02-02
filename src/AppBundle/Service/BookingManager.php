@@ -44,7 +44,7 @@ class BookingManager
 
 
     public
-    function bookingCreate($pStartTime, $pEndTime, $pDate, $pLocation, $pName, $pEmail, $pReason)
+    function bookingCreate($pStartTime, $pEndTime, $pDate, $pLocation, $pName, $pEmail, $pPhone, $pReason)
     {
         $id = uniqid();
 
@@ -56,6 +56,7 @@ class BookingManager
             'location' => $pLocation,
             'name' => $pName,
             'email' => $pEmail,
+            'phone' => $pPhone,
             'reason' => $pReason,
             'confirmed' => false,
             'eventIDs' => new \stdClass()

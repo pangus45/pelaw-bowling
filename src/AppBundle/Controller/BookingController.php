@@ -59,7 +59,7 @@ class BookingController extends Controller
 
         $pFormsHelper->lineLog(json_encode($data));
 
-        $id = $pManager->bookingCreate($startTime, $endTime, $date, $location, $name, $email, $reason);
+        $id = $pManager->bookingCreate($startTime, $endTime, $date, $location, $name, $email, $phone, $reason);
 
         if (!$id) {
             return new Response('');

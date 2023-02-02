@@ -11,6 +11,9 @@
         <div>{{ booking.location }}</div>
         <div>{{ booking.name }}</div>
         <div>{{ booking.email }}</div>
+        {% if booking.phone is defined %}
+            <div>{{ booking.phone }}</div>
+        {% endif %}
         <div>{{ booking.reason }}</div>
 
         {% if booking.confirmed %}
@@ -18,7 +21,8 @@
                 Booking Confirmed
             </div>
         {% else %}
-            <label id="descriptionLabel" for="">Short Description (as you'd like it to appear publicly on the calendar)</label>
+            <label id="descriptionLabel" for="">Short Description (as you'd like it to appear publicly on the
+                calendar)</label>
             <input id="summary" class="form-control" type="text">
             <button id="confirmButton" class="btn btn-primary">Confirm Booking</button>
         {% endif %}
