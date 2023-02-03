@@ -80,7 +80,6 @@ class BookingConfirmController extends Controller
 
     function userEmailSend($pBooking, FormsHelper $pFormsHelper)
     {
-
         $pFormsHelper->lineLog(json_encode($pBooking));
 
         if ('both' == $pBooking->location) {

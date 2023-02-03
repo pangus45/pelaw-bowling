@@ -6,6 +6,10 @@
     font-size: 20px; }
   #bookingConfirmWrapper #confirmButton {
     margin-top: 20px; }
+    #bookingConfirmWrapper #confirmButton i {
+      display: none; }
+    #bookingConfirmWrapper #confirmButton.pending i {
+      display: inline; }
   #bookingConfirmWrapper #bookingConfirmedMessage {
     background-color: #1d835b;
     font-size: 20px;
@@ -19,6 +23,8 @@
     max-width: 500px;
     margin-left: auto;
     margin-right: auto; }
+    #bookingConfirmWrapper input.error {
+      border-color: red; }
   #bookingConfirmWrapper #descriptionLabel {
     margin-top: 50px; }
 
